@@ -1990,216 +1990,6 @@
 			)
 			(embedded_fonts no)
 		)
-		(symbol "MADC_ARTY:ADP7142ACPZN"
-			(exclude_from_sim no)
-			(in_bom yes)
-			(on_board yes)
-			(property "Reference" "U"
-				(at 0 8.89 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(justify top)
-				)
-			)
-			(property "Value" "ADP7142ACPZN"
-				(at 0 6.35 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Footprint" "Package_CSP:LFCSP-6-1EP_2x2mm_P0.65mm_EP1x1.6mm"
-				(at 0 -10.16 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-						(italic yes)
-					)
-					(hide yes)
-				)
-			)
-			(property "Datasheet" "https://www.analog.com/media/en/technical-documentation/data-sheets/ADP7142.pdf"
-				(at 0 -12.7 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Description" "200mA, Low Noise, CMOS Low Dropout Regulator, Positive, Adjustable"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "ki_keywords" "linear regulator ldo adjustable positive"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "ki_fp_filters" "TSOT?23*"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(symbol "ADP7142ACPZN_0_1"
-				(rectangle
-					(start -7.62 5.08)
-					(end 7.62 -5.08)
-					(stroke
-						(width 0.254)
-						(type default)
-					)
-					(fill
-						(type background)
-					)
-				)
-			)
-			(symbol "ADP7142ACPZN_1_1"
-				(pin power_in line
-					(at -10.16 2.54 0)
-					(length 2.54)
-					(name "VIN"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "6"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin input line
-					(at -10.16 0 0)
-					(length 2.54)
-					(name "EN"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "4"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin input line
-					(at -10.16 -3.81 0)
-					(length 2.54)
-					(name "SS"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "5"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin power_in line
-					(at -1.27 -7.62 90)
-					(length 2.54)
-					(name "EPAD"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "7"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin power_in line
-					(at 1.27 -7.62 90)
-					(length 2.54)
-					(name "GND"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "3"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin power_out line
-					(at 10.16 2.54 180)
-					(length 2.54)
-					(name "VOUT"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "1"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin input line
-					(at 10.16 0 180)
-					(length 2.54)
-					(name "ADJ"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "2"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-			)
-			(embedded_fonts no)
-		)
 		(symbol "MADC_ARTY:ADP7182ACPZN"
 			(exclude_from_sim no)
 			(in_bom yes)
@@ -4709,16 +4499,16 @@
 		(uuid "24668adc-9e15-40e4-a52e-74c4e5fd2b09")
 	)
 	(junction
+		(at 106.68 39.37)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "24cb1516-21ed-427b-88b5-e23d477a5115")
+	)
+	(junction
 		(at 67.31 52.07)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "2a16315c-bde1-41d3-8699-939a05349843")
-	)
-	(junction
-		(at 105.41 39.37)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "2c965079-c4fd-412a-ac3e-7d50d8375e89")
 	)
 	(junction
 		(at 130.81 140.97)
@@ -4785,12 +4575,6 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "5e7fd3d0-896f-4e8d-9d6b-32536f6f67be")
-	)
-	(junction
-		(at 107.95 39.37)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "63d7ade7-9063-4927-b941-d36caa351919")
 	)
 	(junction
 		(at 213.36 109.22)
@@ -5135,8 +4919,8 @@
 		(uuid "f7c0ec50-6495-458c-857c-df90416cd6fe")
 	)
 	(no_connect
-		(at 96.52 29.21)
-		(uuid "03e8a729-ce98-4d6a-96e9-2b809909b3ee")
+		(at 116.84 27.94)
+		(uuid "7f68e19a-e9f2-4b67-abc7-a5a9e52d72fa")
 	)
 	(no_connect
 		(at 234.95 66.04)
@@ -5213,6 +4997,16 @@
 			(type default)
 		)
 		(uuid "039d522e-0a39-485e-a7a4-a5f80fa36e5f")
+	)
+	(wire
+		(pts
+			(xy 106.68 39.37) (xy 121.92 39.37)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "05db45cf-f6b4-4827-a376-57b1238e0313")
 	)
 	(wire
 		(pts
@@ -5473,16 +5267,6 @@
 			(type default)
 		)
 		(uuid "1827f87f-b9ca-4854-b063-313c3570bc12")
-	)
-	(wire
-		(pts
-			(xy 96.52 25.4) (xy 95.25 25.4)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "188a32be-fcf5-4f6e-b945-338829f7364d")
 	)
 	(wire
 		(pts
@@ -5766,7 +5550,17 @@
 	)
 	(wire
 		(pts
-			(xy 118.11 30.48) (xy 121.92 30.48)
+			(xy 106.68 33.02) (xy 106.68 39.37)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "340fbb76-da95-490f-92e6-cb6be651746f")
+	)
+	(wire
+		(pts
+			(xy 119.38 30.48) (xy 121.92 30.48)
 		)
 		(stroke
 			(width 0)
@@ -5783,6 +5577,16 @@
 			(type default)
 		)
 		(uuid "35f0dd5f-4d19-42ee-990b-267852a68da4")
+	)
+	(wire
+		(pts
+			(xy 96.52 27.94) (xy 95.25 27.94)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "37a747cd-b64c-42dd-a652-cac3a0761131")
 	)
 	(wire
 		(pts
@@ -6416,16 +6220,6 @@
 	)
 	(wire
 		(pts
-			(xy 105.41 33.02) (xy 105.41 39.37)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "6e6725c1-136a-48dc-8514-9ecad9499f00")
-	)
-	(wire
-		(pts
 			(xy 66.04 36.83) (xy 67.31 36.83)
 		)
 		(stroke
@@ -6553,16 +6347,6 @@
 			(type default)
 		)
 		(uuid "7ba00211-bd6a-479f-8bc8-49332b6465ad")
-	)
-	(wire
-		(pts
-			(xy 107.95 33.02) (xy 107.95 39.37)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "7beddeed-3958-498f-a968-7954c00c5797")
 	)
 	(wire
 		(pts
@@ -6886,7 +6670,7 @@
 	)
 	(wire
 		(pts
-			(xy 116.84 25.4) (xy 118.11 25.4)
+			(xy 116.84 25.4) (xy 119.38 25.4)
 		)
 		(stroke
 			(width 0)
@@ -7046,7 +6830,7 @@
 	)
 	(wire
 		(pts
-			(xy 118.11 25.4) (xy 118.11 30.48)
+			(xy 119.38 25.4) (xy 119.38 30.48)
 		)
 		(stroke
 			(width 0)
@@ -7336,7 +7120,7 @@
 	)
 	(wire
 		(pts
-			(xy 95.25 25.4) (xy 95.25 22.86)
+			(xy 95.25 22.86) (xy 95.25 27.94)
 		)
 		(stroke
 			(width 0)
@@ -7566,7 +7350,7 @@
 	)
 	(wire
 		(pts
-			(xy 107.95 39.37) (xy 121.92 39.37)
+			(xy 85.09 39.37) (xy 106.68 39.37)
 		)
 		(stroke
 			(width 0)
@@ -7613,16 +7397,6 @@
 			(type default)
 		)
 		(uuid "e078aab6-a08e-48e9-963a-40cfe5a7ec4d")
-	)
-	(wire
-		(pts
-			(xy 85.09 39.37) (xy 105.41 39.37)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "e104dd9c-ec63-467a-a0a0-9625fb831499")
 	)
 	(wire
 		(pts
@@ -7983,16 +7757,6 @@
 			(type default)
 		)
 		(uuid "fbc531d5-4172-4824-9812-7708dbcba093")
-	)
-	(wire
-		(pts
-			(xy 105.41 39.37) (xy 107.95 39.37)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "fc7b90c8-017f-47b8-aae4-70a9d008b189")
 	)
 	(wire
 		(pts
@@ -8456,7 +8220,7 @@
 				)
 			)
 		)
-		(property "Value" "ADP7182ACPZN"
+		(property "Value" "ADP7182ACPZN-R7"
 			(at 172.72 17.78 0)
 			(effects
 				(font
@@ -11358,7 +11122,7 @@
 				)
 			)
 		)
-		(property "Value" "ADP7182ACPZN"
+		(property "Value" "ADP7182ACPZN-R7"
 			(at 224.79 161.29 0)
 			(effects
 				(font
@@ -13826,7 +13590,7 @@
 				)
 			)
 		)
-		(property "Value" "ADP7142ARDZ"
+		(property "Value" "ADP7142ARDZ-R7"
 			(at 224.79 55.88 0)
 			(effects
 				(font
@@ -17129,7 +16893,7 @@
 		)
 	)
 	(symbol
-		(lib_id "MADC_ARTY:ADP7142ACPZN")
+		(lib_id "Regulator_Linear:ADP7142ARDZ")
 		(at 106.68 25.4 0)
 		(unit 1)
 		(exclude_from_sim no)
@@ -17146,7 +16910,7 @@
 				)
 			)
 		)
-		(property "Value" "ADP7142ACPZN"
+		(property "Value" "ADP7142ARDZ-R7"
 			(at 106.68 17.78 0)
 			(effects
 				(font
@@ -17154,7 +16918,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Package_CSP:LFCSP-6-1EP_2x2mm_P0.65mm_EP1x1.6mm"
+		(property "Footprint" "Package_SO:SOIC-8-1EP_3.9x4.9mm_P1.27mm_EP2.29x3mm"
 			(at 106.68 35.56 0)
 			(effects
 				(font
@@ -17173,7 +16937,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" "200mA, Low Noise, CMOS Low Dropout Regulator, Positive, Adjustable"
+		(property "Description" "200mA, Low Noise, CMOS Low Dropout Regulator, Positive, Adjustable, SOIC-8"
 			(at 106.68 25.4 0)
 			(effects
 				(font
@@ -17202,6 +16966,12 @@
 		)
 		(pin "5"
 			(uuid "0782cbed-ff7e-4ae2-9352-bad2f5fb9046")
+		)
+		(pin "9"
+			(uuid "733b1b8f-5aa8-4615-a919-3cd80b56e7b4")
+		)
+		(pin "8"
+			(uuid "c37f25f9-6d8f-4e36-b90c-d4ff6fad0e9d")
 		)
 		(instances
 			(project ""
@@ -18003,7 +17773,7 @@
 				)
 			)
 		)
-		(property "Value" "ADP7182ACPZN"
+		(property "Value" "ADP7182ACPZN-R7"
 			(at 224.79 119.38 0)
 			(effects
 				(font

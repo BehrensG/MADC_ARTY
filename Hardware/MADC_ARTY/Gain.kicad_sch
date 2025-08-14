@@ -3339,7 +3339,7 @@
 				)
 			)
 		)
-		(property "Value" "AD8422ARMZ"
+		(property "Value" "AD8422ARZ"
 			(at 179.832 102.616 0)
 			(effects
 				(font

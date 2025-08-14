@@ -38,8 +38,8 @@
         "other_text_upright": false,
         "pads": {
           "drill": 0.0,
-          "height": 1.5,
-          "width": 1.05
+          "height": 0.95,
+          "width": 0.8
         },
         "silk_line_width": 0.1,
         "silk_text_italic": false,
@@ -493,8 +493,8 @@
         "priority": 2147483647,
         "schematic_color": "rgba(0, 0, 0, 0.000)",
         "track_width": 0.127,
-        "via_diameter": 0.6,
-        "via_drill": 0.2,
+        "via_diameter": 0.65,
+        "via_drill": 0.25,
         "wire_width": 6
       }
     ],
@@ -510,7 +510,7 @@
       "gencad": "",
       "idf": "",
       "netlist": "",
-      "plot": "../../../../../tmp/",
+      "plot": "GERBER/",
       "pos_files": "",
       "specctra_dsn": "",
       "step": "",
