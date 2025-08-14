@@ -1,0 +1,4 @@
+(sym_lib_table
+  (version 7)
+  (lib (name "NJFET_MATCHING")(type "KiCad")(uri "${KIPRJMOD}/lib/sch/NJFET_MATCHING.kicad_sym")(options "")(descr ""))
+)

@@ -1,0 +1,121 @@
+(footprint "74408943100"
+	(version 20241229)
+	(generator "pcbnew")
+	(generator_version "9.0")
+	(layer "F.Cu")
+	(descr "WE-SPC SMT Shielded Power Inductor ")
+	(tags "inductor")
+	(property "Reference" "REF**"
+		(at 0 -4 0)
+		(unlocked yes)
+		(layer "F.SilkS")
+		(uuid "d397ea2f-0ae0-4a32-baf1-617b2bb578ff")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.1)
+			)
+		)
+	)
+	(property "Value" "74408943100"
+		(at 0 -0.762 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(uuid "7f313b86-8a15-4ff7-a9fe-a588ce7b2833")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Datasheet" "https://www.we-online.com/components/products/datasheet/74408943100.pdf"
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "59b9b40f-b722-4e1f-af49-0f7b1ab26ad6")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Description" ""
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "491c9aef-0bfa-461d-841d-b67c5b08147f")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(attr through_hole)
+	(fp_rect
+		(start -2.8 -3)
+		(end 2.8 3)
+		(stroke
+			(width 0.1)
+			(type default)
+		)
+		(fill no)
+		(layer "F.SilkS")
+		(uuid "f373bcc5-a3d2-4943-b857-06113bf87054")
+	)
+	(fp_rect
+		(start -3 -3.2)
+		(end 3 3.2)
+		(stroke
+			(width 0.05)
+			(type default)
+		)
+		(fill no)
+		(layer "F.CrtYd")
+		(uuid "53c884e4-2036-4247-88dd-c3680d1d865c")
+	)
+	(fp_text user "${REFERENCE}"
+		(at 0 0.738 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(uuid "57e7b207-f162-4965-ae26-fe5d40f773b3")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(pad "1" smd roundrect
+		(at 0 -1.75)
+		(size 5.3 2)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(roundrect_rratio 0.1)
+		(thermal_bridge_angle 45)
+		(uuid "a9a6ed87-4fbe-4bc3-bc6a-8a2ec6c58d74")
+	)
+	(pad "2" smd roundrect
+		(at 0 1.75)
+		(size 5.3 2)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(roundrect_rratio 0.1)
+		(thermal_bridge_angle 45)
+		(uuid "f8639bd6-0227-44d5-b5b2-7ae13531b28f")
+	)
+	(embedded_fonts no)
+	(model "${KIPRJMOD}/lib/3d/74408943100.stp"
+		(offset
+			(xyz 0 0 0)
+		)
+		(scale
+			(xyz 1 1 1)
+		)
+		(rotate
+			(xyz 0 0 0)
+		)
+	)
+)

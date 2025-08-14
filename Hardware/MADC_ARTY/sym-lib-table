@@ -1,0 +1,5 @@
+(sym_lib_table
+  (version 7)
+  (lib (name "MADC_ARTY")(type "KiCad")(uri "${KIPRJMOD}/lib/sch/MADC_ARTY.kicad_sym")(options "")(descr ""))
+  (lib (name "MADC")(type "KiCad")(uri "/home/grzegorz/git/MADC_ARTY_Test/Hardware/MADC/lib/sch/MADC.kicad_sym")(options "")(descr ""))
+)
