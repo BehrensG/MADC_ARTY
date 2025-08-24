@@ -1,0 +1,89 @@
+LTspice 24.1.9 for Windows
+Circuit: Z:\home\grzegorz\git\MADC_ARTY\LTSpice\Draft2.net
+Start Time: Sat Aug 23 21:11:31 2025
+solver = Normal
+Maximum thread count: 12
+tnom = 27
+temp = 27
+method = trap
+C3: Increased Cpar to 1e-12
+Direct Newton iteration failed to find .op point.  (Use ".option noopiter" to skip.)
+Starting Gmin stepping
+Gmin = 10
+Gmin = 1.07374
+Gmin = 0.115292
+vernier = 0.5
+vernier = 0.25
+vernier = 0.125
+Gmin = 0.0617303
+vernier = 0.0625
+vernier = 0.03125
+vernier = 0.015625
+Gmin = 0.0591636
+vernier = 0.0208333
+vernier = 0.0277778
+Gmin = 0.0561204
+vernier = 0.037037
+Gmin = 0.0516515
+vernier = 0.0493827
+vernier = 0.0658435
+Gmin = 0.0449518
+vernier = 0.0877914
+vernier = 0.117055
+Gmin = 0.0360529
+vernier = 0.156073
+Gmin = 0.0255325
+vernier = 0.208098
+vernier = 0.277464
+Gmin = 0.0144023
+vernier = 0.369952
+vernier = 0.493269
+Gmin = 0.00587051
+vernier = 0.657691
+Gmin = 0.00147912
+vernier = 0.876922
+vernier = 1
+Gmin = 0.000184437
+Gmin = 1.98037e-05
+Gmin = 2.12641e-06
+vernier = 0.5
+vernier = 0.25
+vernier = 0.125
+vernier = 0.0625
+Gmin = 1.19108e-06
+vernier = 0.0833333
+Gmin = 9.89187e-07
+vernier = 0.111111
+vernier = 0.148148
+Gmin = 7.25615e-07
+vernier = 0.197531
+vernier = 0.0987653
+vernier = 0.131687
+Gmin = 5.78209e-07
+vernier = 0.175583
+Gmin = 3.967e-07
+vernier = 0.23411
+vernier = 0.312147
+Gmin = 2.15621e-07
+vernier = 0.416196
+vernier = 0.554928
+Gmin = 8.34525e-08
+vernier = 0.739903
+Gmin = 1.86545e-08
+vernier = 0.986537
+vernier = 1
+Gmin = 2.14739e-09
+Gmin = 2.30574e-10
+Gmin = 2.47577e-11
+Gmin = 2.65834e-12
+Gmin = 2.85437e-13
+Gmin = 0
+Gmin stepping succeeded in finding the operating point.
+
+Total elapsed time: 0.196 seconds.
+
+Files loaded:
+Z:\home\grzegorz\git\MADC_ARTY\LTSpice\Draft2.net
+C:\users\grzegorz\AppData\Local\LTspice\lib\sub\ADP7102.lib
+C:\users\grzegorz\AppData\Local\LTspice\lib\sub\ADR1399E.sub
+
