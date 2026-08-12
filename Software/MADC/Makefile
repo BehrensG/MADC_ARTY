@@ -8,14 +8,14 @@ TOKEN   = $(WORKDIR)/.analyzed_token
 # --- Dynamic Testbench Handling ---
 # Default testbench if you just type 'make sim' without arguments
 TB ?= madc_tb
-RUN_TIME ?= 1ms
+RUN_TIME ?= 25ms
 WAVE_FILE = $(TB)_wave.fst
 
 # --- Grouped Source Files ---
 # 1. Base Hardware Architecture (STRICT ordering to prevent WORK library issues)
 RTL_SRCS = \
 	madc_package.vhd \
-	madc.vhd 
+	madc_ctr.vhd 
 
 # 2. All Simulation Testbench Files (Order does not matter here)
 SIM_SRCS = \
