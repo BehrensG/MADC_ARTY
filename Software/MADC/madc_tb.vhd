@@ -1,86 +1,138 @@
+
+
 library ieee;
 use ieee.std_logic_1164.all;
 use ieee.numeric_std.all;
-use work.madc_package.all;
 
 entity madc_tb is
 end entity madc_tb;
 
 architecture madc_tb_arch of madc_tb is
-    signal clk    : std_logic;
-    signal rst_n  : std_logic;
-    signal ad_cmp : std_logic;
-
-    component madc_ctr
+    component MADC
         generic(
-            DATA_SIZE : natural := 32;
-            ADRR_SIZE : natural := 4
+            DATA_SIZE : integer := 32;
+            ADDR_SIZE : integer := 4;
+            NPLC      : natural := 20000;
+            VREF      : natural := 1
         );
         port(
-            axi4l_clk    : in  std_logic;
-            axi4l_rst_n  : in  std_logic;
-            axi4l_wdata  : in  std_logic_vector(DATA_SIZE - 1 downto 0);
-            axi4l_awaddr : in  std_logic_vector(ADRR_SIZE - 1 downto 0);
-            axi4l_wstrb  : in  std_logic_vector((DATA_SIZE / 8) - 1 downto 0);
-            axi4l_araddr : in  std_logic_vector(ADRR_SIZE - 1 downto 0);
-            axi4l_rdata  : out std_logic_vector(DATA_SIZE - 1 downto 0);
-            ad_iin       : out std_logic;
-            ad_irn       : out std_logic;
-            ad_irp       : out std_logic;
-            sw_vrh       : out std_logic;
-            ad_id        : out std_logic;
-            ad_cmp       : in  std_logic
+            ad_iin          : out std_logic;
+            ad_irn          : out std_logic;
+            ad_irp          : out std_logic;
+            sw_vrh          : out std_logic;
+            ad_id           : out std_logic;
+            ad_cmp          : in  std_logic;
+            s00_axi_aclk    : in  std_logic;
+            s00_axi_aresetn : in  std_logic;
+            s00_axi_awaddr  : in  std_logic_vector(ADDR_SIZE - 1 downto 0);
+            s00_axi_awprot  : in  std_logic_vector(2 downto 0);
+            s00_axi_awvalid : in  std_logic;
+            s00_axi_awready : out std_logic;
+            s00_axi_wdata   : in  std_logic_vector(DATA_SIZE - 1 downto 0);
+            s00_axi_wstrb   : in  std_logic_vector((DATA_SIZE / 8) - 1 downto 0);
+            s00_axi_wvalid  : in  std_logic;
+            s00_axi_wready  : out std_logic;
+            s00_axi_bresp   : out std_logic_vector(1 downto 0);
+            s00_axi_bvalid  : out std_logic;
+            s00_axi_bready  : in  std_logic;
+            s00_axi_araddr  : in  std_logic_vector(ADDR_SIZE - 1 downto 0);
+            s00_axi_arprot  : in  std_logic_vector(2 downto 0);
+            s00_axi_arvalid : in  std_logic;
+            s00_axi_arready : out std_logic;
+            s00_axi_rdata   : out std_logic_vector(DATA_SIZE - 1 downto 0);
+            s00_axi_rresp   : out std_logic_vector(1 downto 0);
+            s00_axi_rvalid  : out std_logic;
+            s00_axi_rready  : in  std_logic
         );
-    end component madc_ctr;
+    end component MADC;
+
+    signal clock_period : time := 10 ns;
+
+    constant DATA_SIZE : integer := 32;
+    constant ADDR_SIZE : integer := 4;
+    constant NPLC      : natural := 20000;
+    constant VREF      : natural := 1;
+
+    signal ad_iin      : std_logic                                      := '0';
+    signal ad_irn      : std_logic                                      := '0';
+    signal ad_irp      : std_logic                                      := '0';
+    signal sw_vrh      : std_logic                                      := '0';
+    signal ad_id       : std_logic                                      := '0';
+    signal ad_cmp      : std_logic                                      := '0';
+    signal axi_aclk    : std_logic                                      := '0';
+    signal axi_aresetn : std_logic                                      := '0';
+    signal axi_awaddr  : std_logic_vector(ADDR_SIZE - 1 downto 0)       := (others => '0');
+    signal axi_awprot  : std_logic_vector(2 downto 0)                   := (others => '0');
+    signal axi_awvalid : std_logic                                      := '0';
+    signal axi_awready : std_logic                                      := '0';
+    signal axi_wdata   : std_logic_vector(DATA_SIZE - 1 downto 0)       := (others => '0');
+    signal axi_wstrb   : std_logic_vector((DATA_SIZE / 8) - 1 downto 0) := (others => '0');
+    signal axi_wvalid  : std_logic                                      := '0';
+    signal axi_wready  : std_logic                                      := '0';
+    signal axi_bresp   : std_logic_vector(1 downto 0)                   := (others => '0');
+    signal axi_bvalid  : std_logic                                      := '0';
+    signal axi_bready  : std_logic                                      := '0';
+    signal axi_araddr  : std_logic_vector(ADDR_SIZE - 1 downto 0)       := (others => '0');
+    signal axi_arprot  : std_logic_vector(2 downto 0)                   := (others => '0');
+    signal axi_arvalid : std_logic                                      := '0';
+    signal axi_arready : std_logic                                      := '0';
+    signal axi_rdata   : std_logic_vector(DATA_SIZE - 1 downto 0)       := (others => '0');
+    signal axi_rresp   : std_logic_vector(1 downto 0)                   := (others => '0');
+    signal axi_rvalid  : std_logic                                      := '0';
+    signal axi_rready  : std_logic                                      := '0';
 
 begin
 
-    madc_ctr_inst : component madc_ctr
+    MADC_inst : component MADC
         generic map(
-            DATA_SIZE => 32,
-            ADRR_SIZE => 4
+            DATA_SIZE => DATA_SIZE,
+            ADDR_SIZE => ADDR_SIZE,
+            NPLC      => NPLC,
+            VREF      => VREF
         )
         port map(
-            axi4l_clk    => clk,
-            axi4l_rst_n  => rst_n,
-            axi4l_wdata  => (others => '0'),
-            axi4l_awaddr => (others => '0'),
-            axi4l_wstrb  => (others => '0'),
-            axi4l_araddr => (others => '0'),
-            axi4l_rdata  => open,
-            ad_iin       => open,
-            ad_irn       => open,
-            ad_irp       => open,
-            sw_vrh       => open,
-            ad_id        => open,
-            ad_cmp       => ad_cmp
+            ad_iin          => ad_iin,
+            ad_irn          => ad_irn,
+            ad_irp          => ad_irp,
+            sw_vrh          => sw_vrh,
+            ad_id           => ad_id,
+            ad_cmp          => ad_cmp,
+            s00_axi_aclk    => axi_aclk,
+            s00_axi_aresetn => axi_aresetn,
+            s00_axi_awaddr  => axi_awaddr,
+            s00_axi_awprot  => axi_awprot,
+            s00_axi_awvalid => axi_awvalid,
+            s00_axi_awready => axi_awready,
+            s00_axi_wdata   => axi_wdata,
+            s00_axi_wstrb   => axi_wstrb,
+            s00_axi_wvalid  => axi_wvalid,
+            s00_axi_wready  => axi_wready,
+            s00_axi_bresp   => axi_bresp,
+            s00_axi_bvalid  => axi_bvalid,
+            s00_axi_bready  => axi_bready,
+            s00_axi_araddr  => axi_araddr,
+            s00_axi_arprot  => axi_arprot,
+            s00_axi_arvalid => axi_arvalid,
+            s00_axi_arready => axi_arready,
+            s00_axi_rdata   => axi_rdata,
+            s00_axi_rresp   => axi_rresp,
+            s00_axi_rvalid  => axi_rvalid,
+            s00_axi_rready  => axi_rready
         );
 
     clock_proc : process is
     begin
-        clk <= '0';
+        axi_aclk <= '0';
         wait for clock_period / 2;
-        clk <= '1';
+        axi_aclk <= '1';
         wait for clock_period / 2;
     end process clock_proc;
 
     uut : process is
-        variable T1       : time range 0 us to 1000 us := 0 us;
     begin
-        rst_n    <= '0';
-        T1       := 200 us;
-        ad_cmp   <= '0';
+        axi_aresetn <= '0';
         wait for 500 ns;
-        rst_n    <= '1';
-        wait for T1/2;
-        for i in 0 to 100 loop
-            if (i mod 2) = 0 then
-                ad_cmp <= '1';
-            else
-                ad_cmp <= '0';
-            end if;
-            wait for T1;
-        end loop;
+        axi_aresetn <= '1';
         wait;
     end process uut;
 

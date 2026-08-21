@@ -33,6 +33,8 @@ entity madc_ctr is
         -- Read data
         axi4l_araddr : in  std_logic_vector(ADDR_SIZE - 1 downto 0);
         axi4l_rdata  : out std_logic_vector(DATA_SIZE - 1 downto 0);
+        -- Control
+        madc_busy : out std_logic;
         -- MADC -------------------------------------------------------------------
         ad_iin       : out std_logic;
         ad_irn       : out std_logic;
@@ -79,6 +81,7 @@ architecture madc_ctr_arch of madc_ctr is
 begin
 
     madc_nplc <= unsigned(axi4l_reg_nplc);
+    madc_busy <= '0';
 
     sw_vrh <= '0' when (axi4l_reg_vref = std_logic_vector(to_unsigned(1,DATA_SIZE))) else '1';
 
