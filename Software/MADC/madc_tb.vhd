@@ -3,6 +3,7 @@
 library ieee;
 use ieee.std_logic_1164.all;
 use ieee.numeric_std.all;
+use work.madc_package.all;
 
 entity madc_tb is
 end entity madc_tb;
@@ -52,6 +53,12 @@ architecture madc_tb_arch of madc_tb is
     constant ADDR_SIZE : integer := 4;
     constant NPLC      : natural := 20000;
     constant VREF      : natural := 1;
+
+    constant STATUS_INDEX     : std_logic_vector(ADDR_SIZE - 1 downto 0) := std_logic_vector(to_unsigned(0, ADDR_SIZE));
+    constant NPLC_INDEX       : natural                                  := 1;
+    constant COUNT_P_INDEX    : std_logic_vector(ADDR_SIZE - 1 downto 0) := std_logic_vector(to_unsigned(2, ADDR_SIZE));
+    constant COUNT_N_INDEX    : std_logic_vector(ADDR_SIZE - 1 downto 0) := std_logic_vector(to_unsigned(3, ADDR_SIZE));
+    constant COUNT_TOTL_INDEX : std_logic_vector(ADDR_SIZE - 1 downto 0) := std_logic_vector(to_unsigned(4, ADDR_SIZE));
 
     signal ad_iin      : std_logic                                      := '0';
     signal ad_irn      : std_logic                                      := '0';
@@ -133,8 +140,12 @@ begin
         axi_aresetn <= '0';
         wait for 500 ns;
         axi_aresetn <= '1';
+        wait for 500 ns;
+        
         wait;
     end process uut;
+
+
 
 end architecture madc_tb_arch;
 

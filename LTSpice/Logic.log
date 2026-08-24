@@ -1,0 +1,14 @@
+LTspice 24.1.9 for Windows
+Circuit: Z:\home\grzegorz\git\MADC_ARTY\LTSpice\Logic.net
+Start Time: Mon Aug 24 22:59:45 2026
+solver = Alternate
+Maximum thread count: 12
+tnom = 27
+temp = 27
+method = modified trap
+Per .tran options, skipping operating point for transient analysis.
+Total elapsed time: 0.095 seconds.
+
+Files loaded:
+Z:\home\grzegorz\git\MADC_ARTY\LTSpice\Logic.net
+

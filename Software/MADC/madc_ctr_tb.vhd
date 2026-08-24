@@ -1,7 +1,7 @@
 library ieee;
 use ieee.std_logic_1164.all;
 use ieee.numeric_std.all;
-use work.madc_package.all;
+--use work.madc_package.all;
 
 entity madc_ctr_tb is
 end entity madc_ctr_tb;
@@ -39,6 +39,8 @@ architecture madc_ctr_tb_arch of madc_ctr_tb is
     constant ADDR_SIZE : natural := 4;
     constant NPLC      : natural := 20000;
     constant VREF      : natural := 1;
+
+    signal clock_period : time := 10 ns;
 
 begin
 

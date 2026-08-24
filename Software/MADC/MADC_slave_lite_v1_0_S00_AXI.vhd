@@ -138,8 +138,6 @@ begin
 	S_AXI_RVALID  <= axi_rvalid;
 	-- mem_logic     <= S_AXI_AWADDR(ADDR_LSB + OPT_MEM_ADDR_BITS downto ADDR_LSB) when (S_AXI_AWVALID = '1') else axi_awaddr(ADDR_LSB + OPT_MEM_ADDR_BITS downto ADDR_LSB);
 
-	-- Implement Write state machine
-	-- Outstanding write transactions are not supported by the slave i.e., master should assert bready to receive response on or before it starts sending the new transaction
 	address_read_proc : process(S_AXI_ACLK) is
 	begin
 		if rising_edge(S_AXI_ACLK) then

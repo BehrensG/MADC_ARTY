@@ -1,6 +1,6 @@
 LTspice 24.1.9 for Windows
 Circuit: Z:\home\grzegorz\git\MADC_ARTY\LTSpice\MADC.net
-Start Time: Thu Aug  6 22:00:38 2026
+Start Time: Tue Aug 25 01:20:57 2026
 solver = Alternate
 Maximum thread count: 12
 tnom = 27
@@ -8,9 +8,7 @@ temp = 27
 method = modified trap
 C1: Increased Cpar to 2.2e-15
 Per .tran options, skipping operating point for transient analysis.
-Changing Tseed to 2.92969e-09
-Changing Tseed to 2.92969e-11
-Total elapsed time: 10.233 seconds.
+Total elapsed time: 42.587 seconds.
 
 Files loaded:
 Z:\home\grzegorz\git\MADC_ARTY\LTSpice\MADC.net
@@ -18,8 +16,8 @@ C:\users\grzegorz\AppData\Local\LTspice\lib\cmp\standard.dio
 C:\users\grzegorz\AppData\Local\LTspice\lib\sub\ADA4077-1.sub
 C:\users\grzegorz\AppData\Local\LTspice\lib\sub\ADA4177.lib
 C:\users\grzegorz\AppData\Local\LTspice\lib\sub\ADA4620.sub
-C:\users\grzegorz\AppData\Local\LTspice\lib\sub\ADG412.sub
 C:\users\grzegorz\AppData\Local\LTspice\lib\sub\ADG419.sub
+C:\users\grzegorz\AppData\Local\LTspice\lib\sub\ADG5412.sub
 C:\users\grzegorz\AppData\Local\LTspice\lib\sub\LT5400-1.sub
 C:\users\grzegorz\AppData\Local\LTspice\lib\sub\LT5400.lib
 C:\users\grzegorz\AppData\Local\LTspice\lib\sub\LTC.lib

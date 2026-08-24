@@ -69,7 +69,6 @@ architecture madc_ctr_arch of madc_ctr is
     signal axi4l_reg_vref         : std_logic_vector(DATA_SIZE - 1 downto 0);
     ---- Internal signals ----------------------------------------------------------n := 32------------
     signal madc_clk               : std_logic;
-    signal madc_result            : std_logic_vector(48 downto 0);
     signal madc_nplc              : unsigned(DATA_SIZE - 1 downto 0);
     signal madc_p_cnt             : unsigned(DATA_SIZE - 1 downto 0);
     signal madc_n_cnt             : unsigned(DATA_SIZE - 1 downto 0);
@@ -171,7 +170,7 @@ begin
                     T2         := 100 - 1;
                     T3         := 100 - 1;
                     T4         := 100 - 1;
-                    max_cnt    <= to_unsigned(2000 - 1, DATA_SIZE);
+                    max_cnt    <= unsigned(axi4l_reg_nplc);
                     madc_n_cnt <= (others => '0');
                     madc_p_cnt <= (others => '0');
                     totl_cnt   <= (others => '0');
