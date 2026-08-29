@@ -1,15 +1,20 @@
 library ieee;
 use ieee.std_logic_1164.all;
 use ieee.numeric_std.all;
---use work.madc_package.all;
+use ieee.fixed_float_types.all;
+use ieee.float_pkg.all;
+use std.textio.all;
+
+use work.madc_package.all;
 
 entity madc_ctr_tb is
 end entity madc_ctr_tb;
 
 architecture madc_ctr_tb_arch of madc_ctr_tb is
-    signal clk    : std_logic;
-    signal rst_n  : std_logic;
-    signal ad_cmp : std_logic;
+    signal clk      : std_logic;
+    signal madc_clk : std_logic;
+    signal rst_n    : std_logic;
+    signal ad_cmp   : std_logic := '0';
 
     component madc_ctr
         generic(
@@ -41,6 +46,7 @@ architecture madc_ctr_tb_arch of madc_ctr_tb is
     constant VREF      : natural := 1;
 
     signal clock_period : time := 10 ns;
+    signal test         : std_logic_vector(DATA_SIZE - 1 downto 0);
 
 begin
 
@@ -76,25 +82,45 @@ begin
         wait for clock_period / 2;
     end process clock_proc;
 
-    uut : process is
-        variable T1 : time range 0 us to 1000 us := 0 us;
+    madc_clock_proc : process is
     begin
-        rst_n  <= '0';
-        T1     := 200 us;
-        ad_cmp <= '0';
+        madc_clk <= '0';
+        wait for 1 us / 2;
+        madc_clk <= '1';
+        wait for 1 us / 2;
+    end process madc_clock_proc;
+
+    uut : process is
+        variable T1                     : time range 0 us to 1000 us := 0 us;
+        alias    int_axi4l_reg_status   is <<signal .madc_ctr_tb.madc_ctr_inst.axi4l_reg_status : std_logic_vector(DATA_SIZE - 1 downto 0)>>;
+        alias    int_axi4l_reg_p_cnt    is <<signal  .madc_ctr_tb.madc_ctr_inst.axi4l_reg_p_cnt : std_logic_vector(DATA_SIZE - 1 downto 0)>>;
+        alias    int_axi4l_reg_n_cnt    is <<signal  .madc_ctr_tb.madc_ctr_inst.axi4l_reg_n_cnt : std_logic_vector(DATA_SIZE - 1 downto 0)>>;
+        alias    int_axi4l_reg_totl_cnt is <<signal  .madc_ctr_tb.madc_ctr_inst.axi4l_reg_totl_cnt :  std_logic_vector(DATA_SIZE - 1 downto 0)>>;
+        variable vref                   : real                       := 7.0;
+        variable measurement            : real;
+    begin
+        rst_n <= '0';
+        T1    := 200 us;
+        test  <= (others => '0');
         wait for 500 ns;
-        rst_n  <= '1';
-        wait for T1 / 2;
-        for i in 0 to 100 loop
-            if (i mod 2) = 0 then
-                ad_cmp <= '1';
-            else
-                ad_cmp <= '0';
-            end if;
-            wait for T1;
-        end loop;
+        rst_n <= '1';
+
+        wait until int_axi4l_reg_status = x"00_00_00_01";
+        measurement := vref * ((real(to_integer(unsigned(int_axi4l_reg_p_cnt))) - real(to_integer(unsigned(int_axi4l_reg_n_cnt)))) / real(to_integer(unsigned(int_axi4l_reg_totl_cnt))));
+        report "Test : " & to_string(to_integer(unsigned(int_axi4l_reg_p_cnt)));
+        report "Test : " & to_string(to_integer(unsigned(int_axi4l_reg_n_cnt)));
+
+        report "Test : " & to_string(to_integer(unsigned(int_axi4l_reg_totl_cnt)));
+                report "Test : " & to_string(measurement);
         wait;
     end process uut;
+
+    cmp_gen_proc : process is
+        constant file_name : string := "PLC_1_P5V.txt";
+    begin
+                wait for 50 us;
+        cmp_gen(string_name => file_name, ad_cmp => ad_cmp, clk => madc_clk);
+    end process cmp_gen_proc;
 
 end architecture madc_ctr_tb_arch;
 

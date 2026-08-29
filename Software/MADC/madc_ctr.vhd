@@ -34,7 +34,7 @@ entity madc_ctr is
         axi4l_araddr : in  std_logic_vector(ADDR_SIZE - 1 downto 0);
         axi4l_rdata  : out std_logic_vector(DATA_SIZE - 1 downto 0);
         -- Control
-        madc_busy : out std_logic;
+        madc_busy    : out std_logic;
         -- MADC -------------------------------------------------------------------
         ad_iin       : out std_logic;
         ad_irn       : out std_logic;
@@ -82,7 +82,7 @@ begin
     madc_nplc <= unsigned(axi4l_reg_nplc);
     madc_busy <= '0';
 
-    sw_vrh <= '0' when (axi4l_reg_vref = std_logic_vector(to_unsigned(1,DATA_SIZE))) else '1';
+    sw_vrh <= '0' when (axi4l_reg_vref = std_logic_vector(to_unsigned(1, DATA_SIZE))) else '1';
 
     axi4l_rdata <= axi4l_reg_status when (axi4l_araddr = STATUS_INDEX) else
                    axi4l_reg_nplc when (to_integer(unsigned(axi4l_awaddr)) = NPLC_INDEX) else
@@ -217,7 +217,7 @@ begin
                         ad_irn <= AD_OFF;
                         ad_irp <= AD_ON;
                         state  <= S6;
-                    elsif (totl_cnt = max_cnt) then
+                    elsif ((totl_cnt = max_cnt) or (totl_cnt > max_cnt)) then
                         state <= S8;
                     else
                         state <= S8;
@@ -231,6 +231,7 @@ begin
                         cnt   <= (others => '0');
                         state <= S5;
                     end if;
+
                 when S7 =>
                     if (cnt < T1) then
                         cnt        <= cnt + 1;
@@ -241,19 +242,20 @@ begin
                         state <= S5;
                     end if;
                 when S8 =>
-                    axi4l_reg_status <= std_logic_vector(to_unsigned(MADC_IDLE, DATA_SIZE));
-                    ad_irn           <= AD_OFF;
-                    ad_irp           <= AD_OFF;
-                    ad_id            <= AD_OFF;
-                    ad_iin           <= AD_OFF;
+                    ad_irn <= AD_OFF;
+                    ad_irp <= AD_OFF;
+                    ad_id  <= AD_OFF;
+                    ad_iin <= AD_OFF;
                     if (cnt < T3) then
-                        cnt <= cnt + 1;
+                        cnt   <= cnt + 1;
+                        state <= S8;
                     else
                         cnt   <= (others => '0');
                         state <= S9;
 
                     end if;
                 when S9 =>
+                    axi4l_reg_status   <= std_logic_vector(to_unsigned(MADC_IDLE, DATA_SIZE));
                     axi4l_reg_n_cnt    <= std_logic_vector(madc_n_cnt);
                     axi4l_reg_p_cnt    <= std_logic_vector(madc_p_cnt);
                     axi4l_reg_totl_cnt <= std_logic_vector(totl_cnt);

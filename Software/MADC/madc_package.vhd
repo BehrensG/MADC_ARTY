@@ -1,16 +1,20 @@
 library ieee;
 use ieee.std_logic_1164.all;
 use ieee.numeric_std.all;
+use std.textio.all;
 
 package madc_package is
-   constant DATA_SIZE : natural := 32;
-   
+
+    constant DATA_SIZE : natural := 32;
+    procedure cmp_gen(constant string_name : in  string;
+                     signal clk : in std_logic;
+                      signal   ad_cmp      : out std_logic);
+
 end package madc_package;
 
 package body madc_package is
-    
 
-   procedure axi_read_control(signal clk_in    : in  std_logic;
+    procedure axi_read_control(signal clk_in    : in  std_logic;
                                signal arvalid   : out std_logic;
                                signal arready   : in  std_logic;
                                signal rvalid    : in  std_logic;
@@ -37,7 +41,6 @@ package body madc_package is
         rready <= '0';
 
     end procedure axi_read_control;
-
 
     procedure axi_write_control(
         signal clk_in  : in  std_logic;
@@ -85,5 +88,22 @@ package body madc_package is
 
         bready <= '0';
     end procedure;
+
+    procedure cmp_gen(constant string_name : in  string;
+                     signal clk : in std_logic;
+                      signal   ad_cmp      : out std_logic) is
+
+        file     file_name : text open read_mode is string_name;
+        variable r_line      : line;
+        variable bit_v : std_logic;
+    begin
+        while not endfile(file_name) loop
+            readline(file_name, r_line);
+            read(r_line, bit_v);
+            ad_cmp <= bit_v;
+            wait until rising_edge(clk);
+        end loop;
+
+    end procedure cmp_gen;
 
 end package body madc_package;

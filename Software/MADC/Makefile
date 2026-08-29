@@ -8,7 +8,7 @@ TOKEN   = $(WORKDIR)/.analyzed_token
 # --- Dynamic Testbench Handling ---
 # Default testbench if you just type 'make sim' without arguments
 TB ?= madc_ctr_tb
-RUN_TIME ?= 25ms
+RUN_TIME ?= 21ms
 WAVE_FILE = $(TB)_wave.fst
 
 # --- Grouped Source Files ---
@@ -47,13 +47,13 @@ compile: $(ALL_SRCS)
 # Elaborates whichever testbench is currently specified in $(TB)
 elaborate: compile
 	@echo "Elaborating target testbench: $(TB)..."
-	$(VCOM) $(VFLAGS) -e $(TB)
+	$(VCOM) $(VFLAGS) -e  $(TB) 
 
 # 3. Dynamic Simulation Phase
 # Runs the simulation and labels the output wave file cleanly
 sim:  
 	@echo "Running simulation for $(TB)..."
-	$(VCOM) $(VFLAGS) -a ${AFLAGS} $(ALL_SRCS)  -e $(TB) -r --stop-time=$(RUN_TIME) --wave=$(WAVE_FILE)
+	$(VCOM) $(VFLAGS) -a ${AFLAGS} $(ALL_SRCS)  -e $(TB) -r --stop-time=$(RUN_TIME) --wave=$(WAVE_FILE) 
 
 # 4. Open Waveforms
 wave:
