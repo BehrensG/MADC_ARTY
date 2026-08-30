@@ -67,7 +67,6 @@ architecture madc_ctr_arch of madc_ctr is
     signal axi4l_reg_totl_cnt     : std_logic_vector(DATA_SIZE - 1 downto 0);
     signal axi4l_reg_nplc         : std_logic_vector(DATA_SIZE - 1 downto 0);
     signal axi4l_reg_vref         : std_logic_vector(DATA_SIZE - 1 downto 0);
-    signal rst : std_logic ;
     ---- Internal signals ----------------------------------------------------------n := 32------------
     signal madc_clk               : std_logic;
     signal madc_nplc              : unsigned(DATA_SIZE - 1 downto 0);
@@ -76,33 +75,12 @@ architecture madc_ctr_arch of madc_ctr is
     signal cnt, totl_cnt, max_cnt : unsigned(DATA_SIZE - 1 downto 0);
     type   state_t                is (S0, S1, S2, S3, S4, S5, S6, S7, S8, S9, S10);
     signal state                  : state_t := S0;
-    signal pll_locked             : std_logic;
     -- Constants -------------------------------------------------------------------------------
-
-    -- Component -------------------------------------------------------------------------------
-
-    component hardware_clk_gen_1mhz
-        port(
-            clk_100mhz_in : in  std_logic;
-            rst           : in  std_logic;
-            clk_1mhz_out  : out std_logic;
-            pll_locked    : out std_logic
-        );
-    end component hardware_clk_gen_1mhz;
 
 begin
 
-    hardware_clk_gen_1mhz_inst : component hardware_clk_gen_1mhz
-        port map(
-            clk_100mhz_in => axi4l_clk,
-            rst           => axi4l_rst_n,
-            clk_1mhz_out  => madc_clk,
-            pll_locked    => pll_locked
-        );
-
     madc_nplc <= unsigned(axi4l_reg_nplc);
     madc_busy <= '0';
-    rst <= not axi4l_rst_n;
 
     sw_vrh <= '0' when (axi4l_reg_vref = std_logic_vector(to_unsigned(1, DATA_SIZE))) else '1';
 
@@ -138,7 +116,7 @@ begin
         end if;
 
     end process axi4_write;
-    /*
+
     madc_clk_proc : process(all) is
         constant COUNT_MAX_LIMIT : natural range 0 to 100 := 50;
         variable count           : unsigned(5 downto 0);
@@ -155,7 +133,6 @@ begin
             end if;
         end if;
     end process madc_clk_proc;
-*/
 
     madc_proc : process(all) is
         variable T1, T2, T3, T4 : natural range 0 to 1000 := 0;
@@ -181,7 +158,6 @@ begin
             T3                 := 0;
             T4                 := 0;
             axi4l_reg_status   <= (others => '0');
-            pll_locked         <= '0';
         elsif (rising_edge(madc_clk)) then
             case state is
                 when S0 =>
@@ -189,6 +165,7 @@ begin
                     ad_iin     <= AD_OFF;
                     ad_irn     <= AD_OFF;
                     ad_irp     <= AD_OFF;
+                    state      <= S3;
                     T1         := 200 - 1;
                     T2         := 100 - 1;
                     T3         := 100 - 1;
@@ -197,11 +174,6 @@ begin
                     madc_n_cnt <= (others => '0');
                     madc_p_cnt <= (others => '0');
                     totl_cnt   <= (others => '0');
-                    if pll_locked then
-                        state <= S3;
-                    else
-                        state <= S0;
-                    end if;
 
                 when S3 =>
                     axi4l_reg_status <= std_logic_vector(to_unsigned(MADC_RUN, DATA_SIZE));

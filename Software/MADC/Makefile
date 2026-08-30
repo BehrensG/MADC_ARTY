@@ -14,6 +14,7 @@ WAVE_FILE = $(TB)_wave.fst
 # --- Grouped Source Files ---
 # 1. Base Hardware Architecture (STRICT ordering to prevent WORK library issues)
 RTL_SRCS = \
+	pll.vhd \
 	madc_package.vhd \
 	madc_ctr.vhd \
 	MADC_slave_lite_v1_0_S00_AXI.vhd \
@@ -53,7 +54,7 @@ elaborate: compile
 # Runs the simulation and labels the output wave file cleanly
 sim:  
 	@echo "Running simulation for $(TB)..."
-	$(VCOM) $(VFLAGS) -a ${AFLAGS} $(ALL_SRCS)  -e $(TB) -r --stop-time=$(RUN_TIME) --wave=$(WAVE_FILE) 
+	$(VCOM) $(VFLAGS) -a ${AFLAGS} $(ALL_SRCS)  -e $(TB) -r --stop-time=$(RUN_TIME) --wave=$(WAVE_FILE)  --dump-arrays
 
 # 4. Open Waveforms
 wave:

@@ -100,7 +100,7 @@ begin
         variable measurement            : real;
     begin
         rst_n <= '0';
-        T1    := 500 us;
+        T1    := 200 us;
         test  <= (others => '0');
         wait for 500 ns;
         rst_n <= '1';

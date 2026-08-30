@@ -7,7 +7,7 @@
 <Project Product="Vivado" Version="7" Minor="67" Path="/home/grzegorz/git/MADC_ARTY/Software/vivado/MADC_ARTY_Z7/MADC_ARTY_Z7.tmp/MADC_v1_0_project/MADC_v1_0_project.xpr">
   <DefaultLaunch Dir="$PRUNDIR"/>
   <Configuration>
-    <Option Name="Id" Val="2c8c8d9b84eb41f88dd704ca1f4eaa45"/>
+    <Option Name="Id" Val="9a9729bed49f4b77bae0c2a61ceb31c1"/>
     <Option Name="Part" Val="xc7a100tcsg324-1"/>
     <Option Name="CompiledLibDir" Val="$PCACHEDIR/compile_simlib"/>
     <Option Name="CompiledLibDirXSim" Val=""/>
@@ -94,14 +94,21 @@
     <FileSet Name="sources_1" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1" RelGenDir="$PGENDIR/sources_1">
       <Filter Type="Srcs"/>
       <File Path="$PPRDIR/../../../madc_ip_repo/MADC_1_0/hdl/MADC_slave_lite_v1_0_S00_AXI.vhd">
-        <FileInfo>
+        <FileInfo SFType="VHDL2008">
+          <Attr Name="Library" Val="xil_defaultlib"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PPRDIR/../../../madc_ip_repo/MADC_1_0/src/madc_ctr.vhd">
+        <FileInfo SFType="VHDL2008">
           <Attr Name="Library" Val="xil_defaultlib"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
       <File Path="$PPRDIR/../../../madc_ip_repo/MADC_1_0/hdl/MADC.vhd">
-        <FileInfo>
+        <FileInfo SFType="VHDL2008">
           <Attr Name="Library" Val="xil_defaultlib"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="simulation"/>
@@ -113,7 +120,7 @@
       <Config>
         <Option Name="DesignMode" Val="RTL"/>
         <Option Name="TopModule" Val="MADC"/>
-        <Option Name="TopRTLFile" Val="$PPRDIR/../../../madc_ip_repo/MADC_1_0/hdl/MADC.vhd"/>
+        <Option Name="TopRTLFile" Val="$PPRDIR/../../../madc_ip_repo/MADC_1_0/src/madc_ctr.vhd"/>
       </Config>
     </FileSet>
     <FileSet Name="constrs_1" Type="Constrs" RelSrcDir="$PSRCDIR/constrs_1" RelGenDir="$PGENDIR/constrs_1">

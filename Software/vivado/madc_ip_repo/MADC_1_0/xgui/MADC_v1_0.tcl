@@ -1,29 +1,46 @@
 # Definitional proc to organize widgets for parameters.
 proc init_gui { IPINST } {
   ipgui::add_param $IPINST -name "Component_Name"
-  #Adding Page
-  set Page_0 [ipgui::add_page $IPINST -name "Page 0"]
-  ipgui::add_param $IPINST -name "C_S00_AXI_BASEADDR" -parent ${Page_0}
-  ipgui::add_param $IPINST -name "C_S00_AXI_HIGHADDR" -parent ${Page_0}
-
+  ipgui::add_param $IPINST -name "DATA_SIZE"
+  ipgui::add_param $IPINST -name "ADDR_SIZE"
+  ipgui::add_param $IPINST -name "NPLC"
+  ipgui::add_param $IPINST -name "VREF"
 
 }
 
-proc update_PARAM_VALUE.C_S00_AXI_DATA_WIDTH { PARAM_VALUE.C_S00_AXI_DATA_WIDTH } {
-	# Procedure called to update C_S00_AXI_DATA_WIDTH when any of the dependent parameters in the arguments change
+proc update_PARAM_VALUE.ADDR_SIZE { PARAM_VALUE.ADDR_SIZE } {
+	# Procedure called to update ADDR_SIZE when any of the dependent parameters in the arguments change
 }
 
-proc validate_PARAM_VALUE.C_S00_AXI_DATA_WIDTH { PARAM_VALUE.C_S00_AXI_DATA_WIDTH } {
-	# Procedure called to validate C_S00_AXI_DATA_WIDTH
+proc validate_PARAM_VALUE.ADDR_SIZE { PARAM_VALUE.ADDR_SIZE } {
+	# Procedure called to validate ADDR_SIZE
 	return true
 }
 
-proc update_PARAM_VALUE.C_S00_AXI_ADDR_WIDTH { PARAM_VALUE.C_S00_AXI_ADDR_WIDTH } {
-	# Procedure called to update C_S00_AXI_ADDR_WIDTH when any of the dependent parameters in the arguments change
+proc update_PARAM_VALUE.DATA_SIZE { PARAM_VALUE.DATA_SIZE } {
+	# Procedure called to update DATA_SIZE when any of the dependent parameters in the arguments change
 }
 
-proc validate_PARAM_VALUE.C_S00_AXI_ADDR_WIDTH { PARAM_VALUE.C_S00_AXI_ADDR_WIDTH } {
-	# Procedure called to validate C_S00_AXI_ADDR_WIDTH
+proc validate_PARAM_VALUE.DATA_SIZE { PARAM_VALUE.DATA_SIZE } {
+	# Procedure called to validate DATA_SIZE
+	return true
+}
+
+proc update_PARAM_VALUE.NPLC { PARAM_VALUE.NPLC } {
+	# Procedure called to update NPLC when any of the dependent parameters in the arguments change
+}
+
+proc validate_PARAM_VALUE.NPLC { PARAM_VALUE.NPLC } {
+	# Procedure called to validate NPLC
+	return true
+}
+
+proc update_PARAM_VALUE.VREF { PARAM_VALUE.VREF } {
+	# Procedure called to update VREF when any of the dependent parameters in the arguments change
+}
+
+proc validate_PARAM_VALUE.VREF { PARAM_VALUE.VREF } {
+	# Procedure called to validate VREF
 	return true
 }
 
@@ -46,13 +63,23 @@ proc validate_PARAM_VALUE.C_S00_AXI_HIGHADDR { PARAM_VALUE.C_S00_AXI_HIGHADDR } 
 }
 
 
-proc update_MODELPARAM_VALUE.C_S00_AXI_DATA_WIDTH { MODELPARAM_VALUE.C_S00_AXI_DATA_WIDTH PARAM_VALUE.C_S00_AXI_DATA_WIDTH } {
+proc update_MODELPARAM_VALUE.DATA_SIZE { MODELPARAM_VALUE.DATA_SIZE PARAM_VALUE.DATA_SIZE } {
 	# Procedure called to set VHDL generic/Verilog parameter value(s) based on TCL parameter value
-	set_property value [get_property value ${PARAM_VALUE.C_S00_AXI_DATA_WIDTH}] ${MODELPARAM_VALUE.C_S00_AXI_DATA_WIDTH}
+	set_property value [get_property value ${PARAM_VALUE.DATA_SIZE}] ${MODELPARAM_VALUE.DATA_SIZE}
 }
 
-proc update_MODELPARAM_VALUE.C_S00_AXI_ADDR_WIDTH { MODELPARAM_VALUE.C_S00_AXI_ADDR_WIDTH PARAM_VALUE.C_S00_AXI_ADDR_WIDTH } {
+proc update_MODELPARAM_VALUE.ADDR_SIZE { MODELPARAM_VALUE.ADDR_SIZE PARAM_VALUE.ADDR_SIZE } {
 	# Procedure called to set VHDL generic/Verilog parameter value(s) based on TCL parameter value
-	set_property value [get_property value ${PARAM_VALUE.C_S00_AXI_ADDR_WIDTH}] ${MODELPARAM_VALUE.C_S00_AXI_ADDR_WIDTH}
+	set_property value [get_property value ${PARAM_VALUE.ADDR_SIZE}] ${MODELPARAM_VALUE.ADDR_SIZE}
+}
+
+proc update_MODELPARAM_VALUE.NPLC { MODELPARAM_VALUE.NPLC PARAM_VALUE.NPLC } {
+	# Procedure called to set VHDL generic/Verilog parameter value(s) based on TCL parameter value
+	set_property value [get_property value ${PARAM_VALUE.NPLC}] ${MODELPARAM_VALUE.NPLC}
+}
+
+proc update_MODELPARAM_VALUE.VREF { MODELPARAM_VALUE.VREF PARAM_VALUE.VREF } {
+	# Procedure called to set VHDL generic/Verilog parameter value(s) based on TCL parameter value
+	set_property value [get_property value ${PARAM_VALUE.VREF}] ${MODELPARAM_VALUE.VREF}
 }
 
