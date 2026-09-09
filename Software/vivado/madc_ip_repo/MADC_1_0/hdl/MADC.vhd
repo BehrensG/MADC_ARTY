@@ -10,11 +10,12 @@ entity MADC is
 		-- Do not modify the parameters beyond this line
 
 		-- Parameters of Axi Slave Bus Interface S00_AXI
-		DATA_SIZE : integer := 32;
-		ADDR_SIZE : integer := 4;
+		DATA_SIZE : natural := 32;
+		ADDR_SIZE : natural := 8;
 		-- Custom parameters
 		NPLC      : natural := 20000;
-		VREF      : natural := 1
+		VREF      : natural := 1;
+		NVC : natural range 0 to 1 := 0
 	);
 	port(
 		-- Users to add ports here
@@ -55,64 +56,67 @@ end MADC;
 
 architecture arch_imp of MADC is
 
-	-- component declaration
-	component MADC_slave_lite_v1_0_S00_AXI
-		generic(
-			C_S_AXI_DATA_WIDTH : integer := 32;
-			C_S_AXI_ADDR_WIDTH : integer := 4
-		);
-		port(
-			madc_busy     : in  std_logic;
-			S_AXI_ACLK    : in  std_logic;
-			S_AXI_ARESETN : in  std_logic;
-			S_AXI_AWADDR  : in  std_logic_vector(C_S_AXI_ADDR_WIDTH - 1 downto 0);
-			S_AXI_AWPROT  : in  std_logic_vector(2 downto 0);
-			S_AXI_AWVALID : in  std_logic;
-			S_AXI_AWREADY : out std_logic;
-			S_AXI_WDATA   : in  std_logic_vector(C_S_AXI_DATA_WIDTH - 1 downto 0);
-			S_AXI_WSTRB   : in  std_logic_vector((C_S_AXI_DATA_WIDTH / 8) - 1 downto 0);
-			S_AXI_WVALID  : in  std_logic;
-			S_AXI_WREADY  : out std_logic;
-			S_AXI_BRESP   : out std_logic_vector(1 downto 0);
-			S_AXI_BVALID  : out std_logic;
-			S_AXI_BREADY  : in  std_logic;
-			S_AXI_ARADDR  : in  std_logic_vector(C_S_AXI_ADDR_WIDTH - 1 downto 0);
-			S_AXI_ARPROT  : in  std_logic_vector(2 downto 0);
-			S_AXI_ARVALID : in  std_logic;
-			S_AXI_ARREADY : out std_logic;
-			S_AXI_RDATA   : out std_logic_vector(C_S_AXI_DATA_WIDTH - 1 downto 0);
-			S_AXI_RRESP   : out std_logic_vector(1 downto 0);
-			S_AXI_RVALID  : out std_logic;
-			S_AXI_RREADY  : in  std_logic
-		);
-	end component MADC_slave_lite_v1_0_S00_AXI;
+-- component declaration
+component MADC_slave_lite_v1_0_S00_AXI
+	generic(
+		C_S_AXI_DATA_WIDTH : natural := 32;
+		C_S_AXI_ADDR_WIDTH : natural := 8
+	);
+	port(
+		madc_busy     : in  std_logic;
+		S_AXI_ACLK    : in  std_logic;
+		S_AXI_ARESETN : in  std_logic;
+		S_AXI_AWADDR  : in  std_logic_vector(C_S_AXI_ADDR_WIDTH - 1 downto 0);
+		S_AXI_AWPROT  : in  std_logic_vector(2 downto 0);
+		S_AXI_AWVALID : in  std_logic;
+		S_AXI_AWREADY : out std_logic;
+		S_AXI_WDATA   : in  std_logic_vector(C_S_AXI_DATA_WIDTH - 1 downto 0);
+		S_AXI_WSTRB   : in  std_logic_vector((C_S_AXI_DATA_WIDTH / 8) - 1 downto 0);
+		S_AXI_WVALID  : in  std_logic;
+		S_AXI_WREADY  : out std_logic;
+		S_AXI_BRESP   : out std_logic_vector(1 downto 0);
+		S_AXI_BVALID  : out std_logic;
+		S_AXI_BREADY  : in  std_logic;
+		S_AXI_ARADDR  : in  std_logic_vector(C_S_AXI_ADDR_WIDTH - 1 downto 0);
+		S_AXI_ARPROT  : in  std_logic_vector(2 downto 0);
+		S_AXI_ARVALID : in  std_logic;
+		S_AXI_ARREADY : out std_logic;
+		S_AXI_RDATA   : out std_logic_vector(C_S_AXI_DATA_WIDTH - 1 downto 0);
+		S_AXI_RRESP   : out std_logic_vector(1 downto 0);
+		S_AXI_RVALID  : out std_logic;
+		S_AXI_RREADY  : in  std_logic
+	);
+end component MADC_slave_lite_v1_0_S00_AXI;
 
-	component madc_ctr
-		generic(
-			DATA_SIZE : natural := 32;
-			ADDR_SIZE : natural := 4;
-			NPLC      : natural := 20000;
-			VREF      : natural := 1
-		);
-		port(
-			axi4l_clk    : in  std_logic;
-			axi4l_rst_n  : in  std_logic;
-			axi4l_wdata  : in  std_logic_vector(DATA_SIZE - 1 downto 0);
-			axi4l_awaddr : in  std_logic_vector(ADDR_SIZE - 1 downto 0);
-			axi4l_wstrb  : in  std_logic_vector((DATA_SIZE / 8) - 1 downto 0);
-			axi4l_araddr : in  std_logic_vector(ADDR_SIZE - 1 downto 0);
-			axi4l_rdata  : out std_logic_vector(DATA_SIZE - 1 downto 0);
-			madc_busy    : out std_logic;
-			ad_iin       : out std_logic;
-			ad_irn       : out std_logic;
-			ad_irp       : out std_logic;
-			sw_vrh       : out std_logic;
-			ad_id        : out std_logic;
-			ad_cmp       : in  std_logic
-		);
-	end component madc_ctr;
+component madc_ctr
+	generic(
+		DATA_SIZE : natural              := 32;
+		ADDR_SIZE : natural              := 8;
+		PLC       : natural              := 20000;
+		VREF      : natural              := 1;
+		NVC       : natural range 0 to 1 := 0
+	);
+	port(
+		axi4l_clk    : in  std_logic;
+		axi4l_rst_n  : in  std_logic;
+		axi4l_wdata  : in  std_logic_vector(DATA_SIZE - 1 downto 0);
+		axi4l_awaddr : in  std_logic_vector(ADDR_SIZE - 1 downto 0);
+		axi4l_wstrb  : in  std_logic_vector((DATA_SIZE / 8) - 1 downto 0);
+		axi4l_araddr : in  std_logic_vector(ADDR_SIZE - 1 downto 0);
+		axi4l_rdata  : out std_logic_vector(DATA_SIZE - 1 downto 0);
+		madc_busy    : out std_logic;
+		ad_iin       : out std_logic;
+		ad_irn       : out std_logic;
+		ad_irp       : out std_logic;
+		sw_vrh       : out std_logic;
+		ad_id        : out std_logic;
+		ad_cmp       : in  std_logic
+	);
+end component madc_ctr;
 
-	signal madc_busy : std_logic;
+signal madc_busy : std_logic;
+
+
 begin
 	-- Instantiation of Axi Bus Interface S00_AXI
 	MADC_slave_lite_v1_0_S00_AXI_inst : MADC_slave_lite_v1_0_S00_AXI
@@ -139,7 +143,7 @@ begin
 			S_AXI_ARPROT  => s00_axi_arprot,
 			S_AXI_ARVALID => s00_axi_arvalid,
 			S_AXI_ARREADY => s00_axi_arready,
-			S_AXI_RDATA   => s00_axi_rdata,
+			S_AXI_RDATA   => open,
 			S_AXI_RRESP   => s00_axi_rresp,
 			S_AXI_RVALID  => s00_axi_rvalid,
 			S_AXI_RREADY  => s00_axi_rready
@@ -150,8 +154,9 @@ begin
 		generic map(
 			DATA_SIZE => DATA_SIZE,
 			ADDR_SIZE => ADDR_SIZE,
-			NPLC      => NPLC,
-			VREF      => VREF
+			PLC      => NPLC,
+			VREF      => VREF,
+			NVC => NVC
 		)
 		port map(
 			axi4l_clk    => s00_axi_aclk,
@@ -161,6 +166,7 @@ begin
 			axi4l_wstrb  => s00_axi_wstrb,
 			axi4l_araddr => s00_axi_araddr,
 			axi4l_rdata  => s00_axi_rdata,
+
 			madc_busy    => madc_busy,
 			ad_iin       => ad_iin,
 			ad_irn       => ad_irn,
@@ -170,6 +176,6 @@ begin
 			ad_cmp       => ad_cmp
 		);
 
-	-- User logic ends
+-- User logic ends
 
 end arch_imp;

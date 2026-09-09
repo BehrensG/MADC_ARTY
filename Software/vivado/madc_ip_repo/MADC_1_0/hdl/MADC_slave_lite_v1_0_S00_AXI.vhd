@@ -10,9 +10,9 @@ entity MADC_slave_lite_v1_0_S00_AXI is
 		-- Do not modify the parameters beyond this line
 
 		-- Width of S_AXI data bus
-		C_S_AXI_DATA_WIDTH : integer := 32;
+		C_S_AXI_DATA_WIDTH : natural := 32;
 		-- Width of S_AXI address bus
-		C_S_AXI_ADDR_WIDTH : integer := 4
+		C_S_AXI_ADDR_WIDTH : natural := 8
 	);
 	port(
 		-- Users to add ports here

@@ -17,10 +17,11 @@ use ieee.numeric_std.all;
 
 entity madc_ctr is
     generic(
-        DATA_SIZE : natural := 32;
-        ADDR_SIZE : natural := 4;
-        NPLC      : natural := 20000;
-        VREF      : natural := 1
+        DATA_SIZE : natural              := 32;
+        ADDR_SIZE : natural              := 8;
+        PLC      : natural              := 20000;
+        VREF      : natural              := 1;
+        NVC  : natural range 0 to 1 := 0
     );
     port(
         -- AXI 4 Lite ------------------------------------------------------------
@@ -49,11 +50,11 @@ architecture madc_ctr_arch of madc_ctr is
 
     -- Constants -------------------------------------------------------------------------------
     constant STATUS_INDEX     : std_logic_vector(ADDR_SIZE - 1 downto 0) := std_logic_vector(to_unsigned(0, ADDR_SIZE));
-    constant NPLC_INDEX       : natural                                  := 1;
-    constant COUNT_P_INDEX    : std_logic_vector(ADDR_SIZE - 1 downto 0) := std_logic_vector(to_unsigned(2, ADDR_SIZE));
-    constant COUNT_N_INDEX    : std_logic_vector(ADDR_SIZE - 1 downto 0) := std_logic_vector(to_unsigned(3, ADDR_SIZE));
-    constant COUNT_TOTL_INDEX : std_logic_vector(ADDR_SIZE - 1 downto 0) := std_logic_vector(to_unsigned(4, ADDR_SIZE));
-    constant VREF_INDEX       : natural                                  := 5;
+    constant PLC_INDEX       : std_logic_vector(ADDR_SIZE - 1 downto 0) := std_logic_vector(to_unsigned(4, ADDR_SIZE));
+    constant COUNT_P_INDEX    : std_logic_vector(ADDR_SIZE - 1 downto 0) := std_logic_vector(to_unsigned(8, ADDR_SIZE));
+    constant COUNT_N_INDEX    : std_logic_vector(ADDR_SIZE - 1 downto 0) := std_logic_vector(to_unsigned(12, ADDR_SIZE));
+    constant COUNT_TOTL_INDEX : std_logic_vector(ADDR_SIZE - 1 downto 0) := std_logic_vector(to_unsigned(16, ADDR_SIZE));
+    constant VREF_INDEX       : std_logic_vector(ADDR_SIZE - 1 downto 0) := std_logic_vector(to_unsigned(20, ADDR_SIZE));
     --constant COUNTER_SIZE : natural                                  := 32;
     constant AD_ON            : std_logic                                := '0';
     constant AD_OFF           : std_logic                                := '1';
@@ -67,16 +68,15 @@ architecture madc_ctr_arch of madc_ctr is
     signal axi4l_reg_totl_cnt     : std_logic_vector(DATA_SIZE - 1 downto 0);
     signal axi4l_reg_nplc         : std_logic_vector(DATA_SIZE - 1 downto 0);
     signal axi4l_reg_vref         : std_logic_vector(DATA_SIZE - 1 downto 0);
-    signal rst : std_logic ;
     ---- Internal signals ----------------------------------------------------------n := 32------------
     signal madc_clk               : std_logic;
-    signal madc_nplc              : unsigned(DATA_SIZE - 1 downto 0);
     signal madc_p_cnt             : unsigned(DATA_SIZE - 1 downto 0);
     signal madc_n_cnt             : unsigned(DATA_SIZE - 1 downto 0);
     signal cnt, totl_cnt, max_cnt : unsigned(DATA_SIZE - 1 downto 0);
     type   state_t                is (S0, S1, S2, S3, S4, S5, S6, S7, S8, S9, S10);
-    signal state                  : state_t := S0;
-    signal pll_locked             : std_logic;
+    signal state                  : state_t   := S0;
+    signal pll_locked             : std_logic := '0';
+    signal rst                    : std_logic;
     -- Constants -------------------------------------------------------------------------------
 
     -- Component -------------------------------------------------------------------------------
@@ -92,70 +92,78 @@ architecture madc_ctr_arch of madc_ctr is
 
 begin
 
-    hardware_clk_gen_1mhz_inst : component hardware_clk_gen_1mhz
-        port map(
-            clk_100mhz_in => axi4l_clk,
-            rst           => axi4l_rst_n,
-            clk_1mhz_out  => madc_clk,
-            pll_locked    => pll_locked
-        );
+    -- Xilinx PLL is in a generate block because the nvc simulation is very slow with xilinx specific code
 
-    madc_nplc <= unsigned(axi4l_reg_nplc);
-    madc_busy <= '0';
-    rst <= not axi4l_rst_n;
+    generate_madc_clock : if NVC = 0 generate
+    begin
 
-    sw_vrh <= '0' when (axi4l_reg_vref = std_logic_vector(to_unsigned(1, DATA_SIZE))) else '1';
+        hardware_clk_gen_1mhz_inst : component hardware_clk_gen_1mhz
+            port map(
+                clk_100mhz_in => axi4l_clk,
+                rst           => rst,
+                clk_1mhz_out  => madc_clk,
+                pll_locked    => pll_locked
+            );
+
+    elsif NVC = 1 generate
+    begin
+
+        madc_clk_proc : process(all) is
+            constant COUNT_MAX_LIMIT : natural range 0 to 100 := 50;
+            variable count           : unsigned(5 downto 0);
+        begin
+            if (axi4l_rst_n = '0') then
+                count    := (others => '0');
+                madc_clk <= '0';
+            elsif (rising_edge(axi4l_clk)) then
+                if (count = COUNT_MAX_LIMIT - 1) then
+                    count    := (others => '0');
+                    madc_clk <= not madc_clk;
+                else
+                    count := count + 1;
+                end if;
+            end if;
+        end process madc_clk_proc;
+
+        pll_locked <= '1';
+
+    end generate generate_madc_clock;
+
+    
+    rst       <= not axi4l_rst_n;
+
+    -- sw_vrh <= '0' when (axi4l_reg_vref = std_logic_vector(to_unsigned(1, DATA_SIZE))) else '1';
+    sw_vrh <= '1';
 
     axi4l_rdata <= axi4l_reg_status when (axi4l_araddr = STATUS_INDEX) else
-                   axi4l_reg_nplc when (to_integer(unsigned(axi4l_awaddr)) = NPLC_INDEX) else
+                   axi4l_reg_nplc when (axi4l_awaddr = PLC_INDEX) else
                    axi4l_reg_p_cnt when (axi4l_araddr = COUNT_P_INDEX) else
                    axi4l_reg_n_cnt when (axi4l_araddr = COUNT_N_INDEX) else
                    axi4l_reg_totl_cnt when (axi4l_araddr = COUNT_TOTL_INDEX) else
-                   axi4l_reg_vref when (to_integer(unsigned(axi4l_awaddr)) = VREF_INDEX) else
+                   axi4l_reg_vref when (axi4l_awaddr = VREF_INDEX) else
                    (others => '0');
 
     axi4_write : process(all) is
     begin
         if (axi4l_rst_n = '0') then
-            axi4l_reg_nplc <= std_logic_vector(to_unsigned(NPLC, DATA_SIZE));
+            axi4l_reg_nplc <= std_logic_vector(to_unsigned(PLC, DATA_SIZE));
             axi4l_reg_vref <= std_logic_vector(to_unsigned(VREF, DATA_SIZE));
         elsif rising_edge(axi4l_clk) then
-            case to_integer(unsigned(axi4l_awaddr)) is
-                when NPLC_INDEX =>
-                    for i in 0 to 3 loop
-                        if (axi4l_wstrb(i)) then
-                            axi4l_reg_nplc((i * 8 + 7) downto (i * 8)) <= axi4l_wdata((i * 8 + 7) downto (i * 8));
-                        end if;
-                    end loop;
-                when VREF_INDEX =>
-                    for i in 0 to 3 loop
-                        if (axi4l_wstrb(i)) then
-                            axi4l_reg_vref((i * 8 + 7) downto (i * 8)) <= axi4l_wdata((i * 8 + 7) downto (i * 8));
-                        end if;
-                    end loop;
-                when others => null;
-            end case;
-        end if;
-
-    end process axi4_write;
-    /*
-    madc_clk_proc : process(all) is
-        constant COUNT_MAX_LIMIT : natural range 0 to 100 := 50;
-        variable count           : unsigned(5 downto 0);
-    begin
-        if (axi4l_rst_n = '0') then
-            count    := (others => '0');
-            madc_clk <= '0';
-        elsif (rising_edge(axi4l_clk)) then
-            if (count = COUNT_MAX_LIMIT - 1) then
-                count    := (others => '0');
-                madc_clk <= not madc_clk;
-            else
-                count := count + 1;
+            if axi4l_awaddr = PLC_INDEX then
+                for i in 0 to 3 loop
+                    if (axi4l_wstrb(i)) then
+                        axi4l_reg_nplc((i * 8 + 7) downto (i * 8)) <= axi4l_wdata((i * 8 + 7) downto (i * 8));
+                    end if;
+                end loop;
+            elsif axi4l_awaddr = VREF_INDEX then
+                for i in 0 to 3 loop
+                    if (axi4l_wstrb(i)) then
+                        axi4l_reg_vref((i * 8 + 7) downto (i * 8)) <= axi4l_wdata((i * 8 + 7) downto (i * 8));
+                    end if;
+                end loop;
             end if;
         end if;
-    end process madc_clk_proc;
-*/
+    end process axi4_write;
 
     madc_proc : process(all) is
         variable T1, T2, T3, T4 : natural range 0 to 1000 := 0;
@@ -181,11 +189,12 @@ begin
             T3                 := 0;
             T4                 := 0;
             axi4l_reg_status   <= (others => '0');
-            pll_locked         <= '0';
+            madc_busy <= '0';
         elsif (rising_edge(madc_clk)) then
             case state is
                 when S0 =>
-                    ad_id      <= AD_ON;
+                    madc_busy <= '1';
+                    ad_id      <= AD_OFF;
                     ad_iin     <= AD_OFF;
                     ad_irn     <= AD_OFF;
                     ad_irp     <= AD_OFF;
@@ -207,6 +216,7 @@ begin
                     axi4l_reg_status <= std_logic_vector(to_unsigned(MADC_RUN, DATA_SIZE));
                     ad_irp           <= AD_OFF;
                     ad_irn           <= AD_OFF;
+                    ad_iin     <= AD_ON;
                     if (cnt < T2) then
                         cnt      <= cnt + 1;
                         totl_cnt <= totl_cnt + 1;
@@ -272,7 +282,7 @@ begin
                 when S8 =>
                     ad_irn <= AD_OFF;
                     ad_irp <= AD_OFF;
-                    ad_id  <= AD_OFF;
+                    ad_id  <= AD_ON;
                     ad_iin <= AD_OFF;
                     if (cnt < T3) then
                         cnt   <= cnt + 1;
@@ -287,9 +297,10 @@ begin
                     axi4l_reg_n_cnt    <= std_logic_vector(madc_n_cnt);
                     axi4l_reg_p_cnt    <= std_logic_vector(madc_p_cnt);
                     axi4l_reg_totl_cnt <= std_logic_vector(totl_cnt);
-                    ad_iin             <= AD_ON;
+                    madc_busy <= '0';
                     if (cnt < T4) then
-                        cnt <= cnt + 1;
+                        cnt   <= cnt + 1;
+                        state <= S9;
                     else
                         cnt   <= (others => '0');
                         state <= S0;

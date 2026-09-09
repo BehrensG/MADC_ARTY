@@ -1,0 +1,38 @@
+
+
+/***************************** Include Files *******************************/
+#include "MADC.h"
+
+/************************** Function Definitions ***************************/
+
+static void madc_wait(u32 status)
+{
+	u32 raw_data = 0;
+
+	do
+	{
+		raw_data = MADC_mReadReg(XPAR_MADC_0_S00_AXI_BASEADDR, MADC_AXI_REG_STATUS);
+	}
+	while(raw_data != status);
+}
+
+void madc_cfg_nplc(u32 nplc)
+{
+    madc_wait(MADC_IDLE);
+    MADC_mWriteReg(XPAR_MADC_0_S00_AXI_BASEADDR, MADC_AXI_REG_NPLC, nplc);
+}
+
+float madc_meas(float vref)
+{
+    u32 n_cnt = 0;
+    u32 p_cnt = 0;
+    u32 tot_cnt = 0;
+
+    madc_wait(MADC_IDLE);
+    n_cnt = MADC_mReadReg(XPAR_MADC_0_S00_AXI_BASEADDR, MADC_AXI_REG_N_CNT);
+    p_cnt = MADC_mReadReg(XPAR_MADC_0_S00_AXI_BASEADDR, MADC_AXI_REG_P_CNT);
+    tot_cnt = MADC_mReadReg(XPAR_MADC_0_S00_AXI_BASEADDR, MADC_AXI_REG_TOT_CNT);
+
+    return vref*((float(p_cnt) - float(n_cnt))/float(tot_cnt));
+
+}

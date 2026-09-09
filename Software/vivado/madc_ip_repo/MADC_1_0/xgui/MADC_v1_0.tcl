@@ -3,7 +3,8 @@ proc init_gui { IPINST } {
   ipgui::add_param $IPINST -name "Component_Name"
   ipgui::add_param $IPINST -name "DATA_SIZE"
   ipgui::add_param $IPINST -name "ADDR_SIZE"
-  ipgui::add_param $IPINST -name "NPLC"
+  set NPLC [ipgui::add_param $IPINST -name "NPLC" -widget comboBox]
+  set_property tooltip {Number of Power Line Cycles} ${NPLC}
   ipgui::add_param $IPINST -name "VREF"
 
 }
@@ -32,6 +33,15 @@ proc update_PARAM_VALUE.NPLC { PARAM_VALUE.NPLC } {
 
 proc validate_PARAM_VALUE.NPLC { PARAM_VALUE.NPLC } {
 	# Procedure called to validate NPLC
+	return true
+}
+
+proc update_PARAM_VALUE.NVC { PARAM_VALUE.NVC } {
+	# Procedure called to update NVC when any of the dependent parameters in the arguments change
+}
+
+proc validate_PARAM_VALUE.NVC { PARAM_VALUE.NVC } {
+	# Procedure called to validate NVC
 	return true
 }
 
@@ -81,5 +91,10 @@ proc update_MODELPARAM_VALUE.NPLC { MODELPARAM_VALUE.NPLC PARAM_VALUE.NPLC } {
 proc update_MODELPARAM_VALUE.VREF { MODELPARAM_VALUE.VREF PARAM_VALUE.VREF } {
 	# Procedure called to set VHDL generic/Verilog parameter value(s) based on TCL parameter value
 	set_property value [get_property value ${PARAM_VALUE.VREF}] ${MODELPARAM_VALUE.VREF}
+}
+
+proc update_MODELPARAM_VALUE.NVC { MODELPARAM_VALUE.NVC PARAM_VALUE.NVC } {
+	# Procedure called to set VHDL generic/Verilog parameter value(s) based on TCL parameter value
+	set_property value [get_property value ${PARAM_VALUE.NVC}] ${MODELPARAM_VALUE.NVC}
 }
 

@@ -6,21 +6,39 @@ use std.textio.all;
 package madc_package is
 
     constant DATA_SIZE : natural := 32;
+
     procedure cmp_gen(constant string_name : in  string;
-                     signal clk : in std_logic;
+                      signal   clk         : in  std_logic;
                       signal   ad_cmp      : out std_logic);
+
+    procedure axi_read(signal clk_in    : in  std_logic;
+                       signal arvalid   : out std_logic;
+                       signal arready   : in  std_logic;
+                       signal rvalid    : in  std_logic;
+                       signal rready    : out std_logic;
+                       signal rdata_out : out std_logic_vector(DATA_SIZE - 1 downto 0);
+                       signal rdata_in  : in  std_logic_vector(DATA_SIZE - 1 downto 0));
+
+    procedure axi_write(
+        signal clk_in  : in  std_logic;
+        signal awvalid : out std_logic;
+        signal awready : in  std_logic;
+        signal wvalid  : out std_logic;
+        signal wready  : in  std_logic;
+        signal bvalid  : in  std_logic;
+        signal bready  : out std_logic);
 
 end package madc_package;
 
 package body madc_package is
 
-    procedure axi_read_control(signal clk_in    : in  std_logic;
-                               signal arvalid   : out std_logic;
-                               signal arready   : in  std_logic;
-                               signal rvalid    : in  std_logic;
-                               signal rready    : out std_logic;
-                               signal rdata_out : out std_logic_vector(DATA_SIZE - 1 downto 0);
-                               signal rdata_in  : in  std_logic_vector(DATA_SIZE - 1 downto 0)) is
+    procedure axi_read(signal clk_in    : in  std_logic;
+                       signal arvalid   : out std_logic;
+                       signal arready   : in  std_logic;
+                       signal rvalid    : in  std_logic;
+                       signal rready    : out std_logic;
+                       signal rdata_out : out std_logic_vector(DATA_SIZE - 1 downto 0);
+                       signal rdata_in  : in  std_logic_vector(DATA_SIZE - 1 downto 0)) is
 
     begin
         arvalid <= '1';
@@ -40,9 +58,9 @@ package body madc_package is
         end loop;
         rready <= '0';
 
-    end procedure axi_read_control;
+    end procedure axi_read;
 
-    procedure axi_write_control(
+    procedure axi_write(
         signal clk_in  : in  std_logic;
         signal awvalid : out std_logic;
         signal awready : in  std_logic;
@@ -87,15 +105,15 @@ package body madc_package is
         end loop;
 
         bready <= '0';
-    end procedure;
+    end procedure axi_write;
 
     procedure cmp_gen(constant string_name : in  string;
-                     signal clk : in std_logic;
+                      signal   clk         : in  std_logic;
                       signal   ad_cmp      : out std_logic) is
 
         file     file_name : text open read_mode is string_name;
-        variable r_line      : line;
-        variable bit_v : std_logic;
+        variable r_line    : line;
+        variable bit_v     : std_logic;
     begin
         while not endfile(file_name) loop
             readline(file_name, r_line);

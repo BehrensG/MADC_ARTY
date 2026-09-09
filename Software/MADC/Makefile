@@ -7,7 +7,7 @@ TOKEN   = $(WORKDIR)/.analyzed_token
 
 # --- Dynamic Testbench Handling ---
 # Default testbench if you just type 'make sim' without arguments
-TB ?= madc_ctr_tb
+TB ?= madc_tb
 RUN_TIME ?= 21ms
 WAVE_FILE = $(TB)_wave.fst
 
@@ -54,7 +54,7 @@ elaborate: compile
 # Runs the simulation and labels the output wave file cleanly
 sim:  
 	@echo "Running simulation for $(TB)..."
-	$(VCOM) $(VFLAGS) -a ${AFLAGS} $(ALL_SRCS)  -e $(TB) -r --stop-time=$(RUN_TIME) --wave=$(WAVE_FILE)  --dump-arrays
+	$(VCOM) $(VFLAGS) -a --check-synthesis ${AFLAGS} $(ALL_SRCS)  -e $(TB) -g madc_inst.NVC=1 -r  --stop-time=$(RUN_TIME) --wave=$(WAVE_FILE) --format=fst 
 
 # 4. Open Waveforms
 wave:

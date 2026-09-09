@@ -18,10 +18,11 @@ architecture madc_ctr_tb_arch of madc_ctr_tb is
 
     component madc_ctr
         generic(
-            DATA_SIZE : natural := 32;
-            ADDR_SIZE : natural := 4;
-            NPLC      : natural := 20000;
-            VREF      : natural := 1
+            DATA_SIZE : natural              := 32;
+            ADDR_SIZE : natural              := 8;
+            NPLC      : natural              := 20000;
+            VREF      : natural              := 1;
+            SIMULATE  : natural range 0 to 1 := 1
         );
         port(
             axi4l_clk    : in  std_logic;
@@ -41,7 +42,7 @@ architecture madc_ctr_tb_arch of madc_ctr_tb is
         );
     end component madc_ctr;
     constant DATA_SIZE : natural := 32;
-    constant ADDR_SIZE : natural := 4;
+    constant ADDR_SIZE : natural := 8;
     constant NPLC      : natural := 20000;
     constant VREF      : natural := 1;
 
@@ -55,7 +56,8 @@ begin
             DATA_SIZE => DATA_SIZE,
             ADDR_SIZE => ADDR_SIZE,
             NPLC      => NPLC,
-            VREF      => VREF
+            VREF      => VREF,
+            SIMULATE  => 1
         )
         port map(
             axi4l_clk    => clk,
@@ -100,25 +102,25 @@ begin
         variable measurement            : real;
     begin
         rst_n <= '0';
-        T1    := 200 us;
+        T1    := 500 us;
         test  <= (others => '0');
         wait for 500 ns;
         rst_n <= '1';
 
         wait until int_axi4l_reg_status = x"00_00_00_01";
         measurement := vref * ((real(to_integer(unsigned(int_axi4l_reg_p_cnt))) - real(to_integer(unsigned(int_axi4l_reg_n_cnt)))) / real(to_integer(unsigned(int_axi4l_reg_totl_cnt))));
-        report "Test : " & to_string(to_integer(unsigned(int_axi4l_reg_p_cnt)));
-        report "Test : " & to_string(to_integer(unsigned(int_axi4l_reg_n_cnt)));
+        report "P COUNT : " & to_string(to_integer(unsigned(int_axi4l_reg_p_cnt)));
+        report "N COUNT : " & to_string(to_integer(unsigned(int_axi4l_reg_n_cnt)));
 
-        report "Test : " & to_string(to_integer(unsigned(int_axi4l_reg_totl_cnt)));
-                report "Test : " & to_string(measurement);
+        report "TOT COUNT : " & to_string(to_integer(unsigned(int_axi4l_reg_totl_cnt)));
+        report "MEAS : " & to_string(measurement);
         wait;
     end process uut;
 
     cmp_gen_proc : process is
-        constant file_name : string := "PLC_1_P5V.txt";
+        constant file_name : string := "PLC_1_0V.txt";
     begin
-                wait for 50 us;
+        wait for 50 us;
         cmp_gen(string_name => file_name, ad_cmp => ad_cmp, clk => madc_clk);
     end process cmp_gen_proc;
 

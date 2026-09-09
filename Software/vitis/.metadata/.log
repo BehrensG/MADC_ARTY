@@ -1,0 +1,1064 @@
+!SESSION 2026-09-09 13:57:09.816 -----------------------------------------------
+eclipse.buildId=2023.2
+java.version=11.0.16.1
+java.vendor=Eclipse Adoptium
+BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=en_US
+Command-line arguments:  -os linux -ws gtk -arch x86_64
+
+This is a continuation of log file /home/grzegorz/git/MADC_ARTY/Software/vitis/.metadata/.bak_1.log
+Created Time: 2026-09-09 20:18:35.577
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-09-09 20:18:35.578
+!MESSAGE XSCT Command: [::hsi::utils::get_hw_sw_details -json /home/grzegorz/git/MADC_ARTY/Software/vitis/MADC_ARTY_Z7_wrapper/export/MADC_ARTY_Z7_wrapper/hw/MADC_ARTY_Z7_wrapper.xsa /home/grzegorz/git/MADC_ARTY/Software/vitis/MADC_ARTY_Z7_wrapper/export/MADC_ARTY_Z7_wrapper/sw/MADC_ARTY_Z7_wrapper/standalone_ps7_cortexa9_0/system.mss], Thread: Worker-245: Build Project
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-09-09 20:18:35.579
+!MESSAGE XSCT command with result: [::hsi::utils::get_hw_sw_details -json /home/grzegorz/git/MADC_ARTY/Software/vitis/MADC_ARTY_Z7_wrapper/export/MADC_ARTY_Z7_wrapper/hw/MADC_ARTY_Z7_wrapper.xsa /home/grzegorz/git/MADC_ARTY/Software/vitis/MADC_ARTY_Z7_wrapper/export/MADC_ARTY_Z7_wrapper/sw/MADC_ARTY_Z7_wrapper/standalone_ps7_cortexa9_0/system.mss], Result: [null, {"procname": "ps7_cortexa9_0",
+"osname": "standalone",
+"osver": "9.1",
+}]. Thread: Worker-245: Build Project
+
+!ENTRY com.xilinx.sdk.utils 1 0 2026-09-09 20:18:35.579
+!MESSAGE Generating MD5 hash for file: /home/grzegorz/git/MADC_ARTY/Software/vitis/MADC_ARTY_Z7_wrapper/export/MADC_ARTY_Z7_wrapper/sw/MADC_ARTY_Z7_wrapper/standalone_ps7_cortexa9_0/system.mss ...
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-09-09 20:18:35.580
+!MESSAGE XSCT Command: [::hsi::utils::closesw /home/grzegorz/git/MADC_ARTY/Software/vitis/MADC_ARTY_Z7_wrapper/export/MADC_ARTY_Z7_wrapper/sw/MADC_ARTY_Z7_wrapper/standalone_ps7_cortexa9_0/system.mss], Thread: Worker-245: Build Project
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-09-09 20:18:35.580
+!MESSAGE XSCT command with result: [::hsi::utils::closesw /home/grzegorz/git/MADC_ARTY/Software/vitis/MADC_ARTY_Z7_wrapper/export/MADC_ARTY_Z7_wrapper/sw/MADC_ARTY_Z7_wrapper/standalone_ps7_cortexa9_0/system.mss], Result: [null, ]. Thread: Worker-245: Build Project
+
+!ENTRY com.xilinx.sdk.utils 1 0 2026-09-09 20:18:42.335
+!MESSAGE Tool usage for 'SDX_NO_OP_BUILD' updated to '33'
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-09-09 20:18:46.854
+!MESSAGE XSCT Command: [disconnect tcfchan#83], Thread: Thread-4866
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-09-09 20:18:46.857
+!MESSAGE XSCT command with result: [disconnect tcfchan#83], Result: [null, ]. Thread: Thread-4866
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-09-09 20:18:48.196
+!MESSAGE XSCT Command: [connect -url tcp:127.0.0.1:3121], Thread: Worker-245: Launching SystemDebugger_MADC_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-09-09 20:18:48.201
+!MESSAGE XSCT command with result: [connect -url tcp:127.0.0.1:3121], Result: [null, tcfchan#85]. Thread: Worker-245: Launching SystemDebugger_MADC_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-09-09 20:18:48.201
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-245: Launching SystemDebugger_MADC_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-09-09 20:18:48.799
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Digilent Arty Z7 003017B7ED73A]. Thread: Worker-245: Launching SystemDebugger_MADC_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-09-09 20:18:48.799
+!MESSAGE XSCT Command: [version -server], Thread: Worker-245: Launching SystemDebugger_MADC_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-09-09 20:18:48.801
+!MESSAGE XSCT command with result: [version -server], Result: [null, 2024.1]. Thread: Worker-245: Launching SystemDebugger_MADC_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-09-09 20:18:48.801
+!MESSAGE XSCT Command: [version], Thread: Worker-245: Launching SystemDebugger_MADC_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-09-09 20:18:48.801
+!MESSAGE XSCT command with result: [version], Result: [null, xsct 2024.1.0
+SW Build 0 on 2024-05-19-14:06:07
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.]. Thread: Worker-245: Launching SystemDebugger_MADC_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-09-09 20:18:48.801
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-245: Launching SystemDebugger_MADC_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-09-09 20:18:48.807
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Digilent Arty Z7 003017B7ED73A]. Thread: Worker-245: Launching SystemDebugger_MADC_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-09-09 20:18:48.807
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Digilent Arty Z7 003017B7ED73A" && level==1}], Thread: Worker-245: Launching SystemDebugger_MADC_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-09-09 20:18:48.824
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Digilent Arty Z7 003017B7ED73A" && level==1}], Result: [null,      2  arm_dap (idcode 4ba00477 irlen 4)
+     3  xc7z010 (idcode 13722093 irlen 6 fpga)]. Thread: Worker-245: Launching SystemDebugger_MADC_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-09-09 20:18:48.824
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-245: Launching SystemDebugger_MADC_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-09-09 20:18:48.829
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Digilent Arty Z7 003017B7ED73A]. Thread: Worker-245: Launching SystemDebugger_MADC_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-09-09 20:18:48.829
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Digilent Arty Z7 003017B7ED73A" && level==1}], Thread: Worker-245: Launching SystemDebugger_MADC_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-09-09 20:18:48.846
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Digilent Arty Z7 003017B7ED73A" && level==1}], Result: [null,      2  arm_dap (idcode 4ba00477 irlen 4)
+     3  xc7z010 (idcode 13722093 irlen 6 fpga)]. Thread: Worker-245: Launching SystemDebugger_MADC_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-09-09 20:18:48.847
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-245: Launching SystemDebugger_MADC_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-09-09 20:18:48.855
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Digilent Arty Z7 003017B7ED73A]. Thread: Worker-245: Launching SystemDebugger_MADC_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-09-09 20:18:48.855
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Digilent Arty Z7 003017B7ED73A" && level==1}], Thread: Worker-245: Launching SystemDebugger_MADC_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-09-09 20:18:48.870
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Digilent Arty Z7 003017B7ED73A" && level==1}], Result: [null,      2  arm_dap (idcode 4ba00477 irlen 4)
+     3  xc7z010 (idcode 13722093 irlen 6 fpga)]. Thread: Worker-245: Launching SystemDebugger_MADC_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-09-09 20:18:48.871
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-245: Launching SystemDebugger_MADC_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-09-09 20:18:48.875
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Digilent Arty Z7 003017B7ED73A]. Thread: Worker-245: Launching SystemDebugger_MADC_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-09-09 20:18:48.875
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Digilent Arty Z7 003017B7ED73A" && level==1}], Thread: Worker-245: Launching SystemDebugger_MADC_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-09-09 20:18:48.891
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Digilent Arty Z7 003017B7ED73A" && level==1}], Result: [null,      2  arm_dap (idcode 4ba00477 irlen 4)
+     3  xc7z010 (idcode 13722093 irlen 6 fpga)]. Thread: Worker-245: Launching SystemDebugger_MADC_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-09-09 20:18:48.891
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-245: Launching SystemDebugger_MADC_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-09-09 20:18:48.896
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Digilent Arty Z7 003017B7ED73A]. Thread: Worker-245: Launching SystemDebugger_MADC_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-09-09 20:18:48.897
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Digilent Arty Z7 003017B7ED73A" && level==1}], Thread: Worker-245: Launching SystemDebugger_MADC_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-09-09 20:18:48.912
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Digilent Arty Z7 003017B7ED73A" && level==1}], Result: [null,      2  arm_dap (idcode 4ba00477 irlen 4)
+     3  xc7z010 (idcode 13722093 irlen 6 fpga)]. Thread: Worker-245: Launching SystemDebugger_MADC_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-09-09 20:18:48.912
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-245: Launching SystemDebugger_MADC_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-09-09 20:18:48.917
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Digilent Arty Z7 003017B7ED73A]. Thread: Worker-245: Launching SystemDebugger_MADC_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-09-09 20:18:48.917
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Digilent Arty Z7 003017B7ED73A" && level==1}], Thread: Worker-245: Launching SystemDebugger_MADC_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-09-09 20:18:48.932
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Digilent Arty Z7 003017B7ED73A" && level==1}], Result: [null,      2  arm_dap (idcode 4ba00477 irlen 4)
+     3  xc7z010 (idcode 13722093 irlen 6 fpga)]. Thread: Worker-245: Launching SystemDebugger_MADC_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-09-09 20:18:48.932
+!MESSAGE XSCT Command: [jtag targets -set -filter {name =~ "Digilent Arty Z7 003017B7ED73A" && level == 0}], Thread: Worker-245: Launching SystemDebugger_MADC_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-09-09 20:18:48.947
+!MESSAGE XSCT command with result: [jtag targets -set -filter {name =~ "Digilent Arty Z7 003017B7ED73A" && level == 0}], Result: [null, ]. Thread: Worker-245: Launching SystemDebugger_MADC_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-09-09 20:18:48.947
+!MESSAGE XSCT Command: [jtag frequency], Thread: Worker-245: Launching SystemDebugger_MADC_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-09-09 20:18:48.956
+!MESSAGE XSCT command with result: [jtag frequency], Result: [null, 15000000]. Thread: Worker-245: Launching SystemDebugger_MADC_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-09-09 20:18:48.956
+!MESSAGE XSCT Command: [targets -set -nocase -filter {name =~"APU*"}], Thread: Worker-245: Launching SystemDebugger_MADC_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-09-09 20:18:48.963
+!MESSAGE XSCT command with result: [targets -set -nocase -filter {name =~"APU*"}], Result: [null, ]. Thread: Worker-245: Launching SystemDebugger_MADC_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-09-09 20:18:48.963
+!MESSAGE XSCT Command: [rst -system], Thread: Worker-245: Launching SystemDebugger_MADC_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-09-09 20:18:49.003
+!MESSAGE XSCT command with result: [rst -system], Result: [null, ]. Thread: Worker-245: Launching SystemDebugger_MADC_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-09-09 20:18:49.003
+!MESSAGE XSCT Command: [after 3000], Thread: Worker-245: Launching SystemDebugger_MADC_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-09-09 20:18:52.006
+!MESSAGE XSCT command with result: [after 3000], Result: [null, ]. Thread: Worker-245: Launching SystemDebugger_MADC_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-09-09 20:18:52.020
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-09-09 20:18:52.025
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Digilent Arty Z7 003017B7ED73A]. Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-09-09 20:18:52.025
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Digilent Arty Z7 003017B7ED73A" && level==1}], Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-09-09 20:18:52.040
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Digilent Arty Z7 003017B7ED73A" && level==1}], Result: [null,      2  arm_dap (idcode 4ba00477 irlen 4)
+     3  xc7z010 (idcode 13722093 irlen 6 fpga)]. Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-09-09 20:18:52.040
+!MESSAGE XSCT Command: [targets -set -filter {jtag_cable_name =~ "Digilent Arty Z7 003017B7ED73A" && level==0 && jtag_device_ctx=="jsn-Arty Z7-003017B7ED73A-13722093-0"}], Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-09-09 20:18:52.072
+!MESSAGE XSCT command with result: [targets -set -filter {jtag_cable_name =~ "Digilent Arty Z7 003017B7ED73A" && level==0 && jtag_device_ctx=="jsn-Arty Z7-003017B7ED73A-13722093-0"}], Result: [null, ]. Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-09-09 20:18:52.073
+!MESSAGE XSCT Command: [fpga -file /home/grzegorz/git/MADC_ARTY/Software/vitis/MADC/_ide/bitstream/MADC_ARTY_Z7_wrapper.bit], Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-09-09 20:18:53.275
+!MESSAGE XSCT command with result: [fpga -file /home/grzegorz/git/MADC_ARTY/Software/vitis/MADC/_ide/bitstream/MADC_ARTY_Z7_wrapper.bit], Result: [null, ]. Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-09-09 20:18:53.288
+!MESSAGE XSCT Command: [targets -set -nocase -filter {name =~"APU*"}], Thread: Worker-245: Launching SystemDebugger_MADC_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-09-09 20:18:53.296
+!MESSAGE XSCT command with result: [targets -set -nocase -filter {name =~"APU*"}], Result: [null, ]. Thread: Worker-245: Launching SystemDebugger_MADC_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-09-09 20:18:53.297
+!MESSAGE XSCT Command: [loadhw -hw /home/grzegorz/git/MADC_ARTY/Software/vitis/MADC_ARTY_Z7_wrapper/export/MADC_ARTY_Z7_wrapper/hw/MADC_ARTY_Z7_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs], Thread: Worker-245: Launching SystemDebugger_MADC_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-09-09 20:18:53.304
+!MESSAGE XSCT command with result: [loadhw -hw /home/grzegorz/git/MADC_ARTY/Software/vitis/MADC_ARTY_Z7_wrapper/export/MADC_ARTY_Z7_wrapper/hw/MADC_ARTY_Z7_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs], Result: [null, MADC_ARTY_Z7_wrapper_52]. Thread: Worker-245: Launching SystemDebugger_MADC_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-09-09 20:18:53.304
+!MESSAGE XSCT Command: [configparams force-mem-access 1], Thread: Worker-245: Launching SystemDebugger_MADC_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-09-09 20:18:53.305
+!MESSAGE XSCT command with result: [configparams force-mem-access 1], Result: [null, ]. Thread: Worker-245: Launching SystemDebugger_MADC_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-09-09 20:18:53.305
+!MESSAGE XSCT Command: [targets -set -nocase -filter {name =~"APU*"}], Thread: Worker-245: Launching SystemDebugger_MADC_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-09-09 20:18:53.311
+!MESSAGE XSCT command with result: [targets -set -nocase -filter {name =~"APU*"}], Result: [null, ]. Thread: Worker-245: Launching SystemDebugger_MADC_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-09-09 20:18:53.311
+!MESSAGE XSCT Command: [source /home/grzegorz/git/MADC_ARTY/Software/vitis/MADC/_ide/psinit/ps7_init.tcl], Thread: Worker-245: Launching SystemDebugger_MADC_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-09-09 20:18:53.312
+!MESSAGE XSCT command with result: [source /home/grzegorz/git/MADC_ARTY/Software/vitis/MADC/_ide/psinit/ps7_init.tcl], Result: [null, ]. Thread: Worker-245: Launching SystemDebugger_MADC_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-09-09 20:18:53.312
+!MESSAGE XSCT Command: [ps7_init], Thread: Worker-245: Launching SystemDebugger_MADC_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-09-09 20:18:53.519
+!MESSAGE XSCT command with result: [ps7_init], Result: [null, ]. Thread: Worker-245: Launching SystemDebugger_MADC_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-09-09 20:18:53.519
+!MESSAGE XSCT Command: [ps7_post_config], Thread: Worker-245: Launching SystemDebugger_MADC_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-09-09 20:18:53.523
+!MESSAGE XSCT command with result: [ps7_post_config], Result: [null, ]. Thread: Worker-245: Launching SystemDebugger_MADC_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-09-09 20:18:53.524
+!MESSAGE XSCT Command: [targets -set -nocase -filter {name =~ "*A9*#0"}], Thread: Worker-245: Launching SystemDebugger_MADC_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-09-09 20:18:53.530
+!MESSAGE XSCT command with result: [targets -set -nocase -filter {name =~ "*A9*#0"}], Result: [null, ]. Thread: Worker-245: Launching SystemDebugger_MADC_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-09-09 20:18:53.530
+!MESSAGE XSCT Command: [dow /home/grzegorz/git/MADC_ARTY/Software/vitis/MADC/Debug/MADC.elf], Thread: Worker-245: Launching SystemDebugger_MADC_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-09-09 20:18:53.632
+!MESSAGE XSCT command with result: [dow /home/grzegorz/git/MADC_ARTY/Software/vitis/MADC/Debug/MADC.elf], Result: [null, ]. Thread: Worker-245: Launching SystemDebugger_MADC_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-09-09 20:18:53.632
+!MESSAGE XSCT Command: [configparams force-mem-access 0], Thread: Worker-245: Launching SystemDebugger_MADC_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-09-09 20:18:53.658
+!MESSAGE XSCT command with result: [configparams force-mem-access 0], Result: [null, ]. Thread: Worker-245: Launching SystemDebugger_MADC_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-09-09 20:18:53.664
+!MESSAGE XSCT Command: [targets -set -nocase -filter {name =~ "*A9*#0"}], Thread: Worker-245: Launching SystemDebugger_MADC_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-09-09 20:18:53.672
+!MESSAGE XSCT command with result: [targets -set -nocase -filter {name =~ "*A9*#0"}], Result: [null, ]. Thread: Worker-245: Launching SystemDebugger_MADC_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-09-09 20:18:53.672
+!MESSAGE XSCT Command: [con], Thread: Worker-245: Launching SystemDebugger_MADC_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-09-09 20:18:53.686
+!MESSAGE XSCT command with result: [con], Result: [null, ]. Thread: Worker-245: Launching SystemDebugger_MADC_system
+
+!ENTRY com.xilinx.sdk.utils 1 0 2026-09-09 20:18:53.686
+!MESSAGE Tool usage for 'TCF_APP_DEBUG' updated to '35'
+
+!ENTRY com.xilinx.sdk.utils 1 0 2026-09-09 20:18:53.686
+!MESSAGE Tool usage for 'TCF_SYSTEM_DEBUG' updated to '35'
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-09-09 20:20:21.900
+!MESSAGE XSCT Command: [disconnect tcfchan#85], Thread: Thread-4960
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-09-09 20:20:21.902
+!MESSAGE XSCT command with result: [disconnect tcfchan#85], Result: [null, ]. Thread: Thread-4960
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-09-09 20:20:24.149
+!MESSAGE XSCT Command: [ ::hsi::utils::set_current_hw_sw /home/grzegorz/git/MADC_ARTY/Software/vitis/MADC_ARTY_Z7_wrapper/export/MADC_ARTY_Z7_wrapper/hw/MADC_ARTY_Z7_wrapper.xsa /home/grzegorz/git/MADC_ARTY/Software/vitis/MADC_ARTY_Z7_wrapper/export/MADC_ARTY_Z7_wrapper/sw/MADC_ARTY_Z7_wrapper/standalone_ps7_cortexa9_0/system.mss ], Thread: Worker-243: Build Project
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-09-09 20:20:24.151
+!MESSAGE XSCT command with result: [ ::hsi::utils::set_current_hw_sw /home/grzegorz/git/MADC_ARTY/Software/vitis/MADC_ARTY_Z7_wrapper/export/MADC_ARTY_Z7_wrapper/hw/MADC_ARTY_Z7_wrapper.xsa /home/grzegorz/git/MADC_ARTY/Software/vitis/MADC_ARTY_Z7_wrapper/export/MADC_ARTY_Z7_wrapper/sw/MADC_ARTY_Z7_wrapper/standalone_ps7_cortexa9_0/system.mss ], Result: [null, ]. Thread: Worker-243: Build Project
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-09-09 20:20:24.152
+!MESSAGE XSCT Command: [::hsi::utils::get_hw_sw_details -json /home/grzegorz/git/MADC_ARTY/Software/vitis/MADC_ARTY_Z7_wrapper/export/MADC_ARTY_Z7_wrapper/hw/MADC_ARTY_Z7_wrapper.xsa /home/grzegorz/git/MADC_ARTY/Software/vitis/MADC_ARTY_Z7_wrapper/export/MADC_ARTY_Z7_wrapper/sw/MADC_ARTY_Z7_wrapper/standalone_ps7_cortexa9_0/system.mss], Thread: Worker-243: Build Project
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-09-09 20:20:24.153
+!MESSAGE XSCT command with result: [::hsi::utils::get_hw_sw_details -json /home/grzegorz/git/MADC_ARTY/Software/vitis/MADC_ARTY_Z7_wrapper/export/MADC_ARTY_Z7_wrapper/hw/MADC_ARTY_Z7_wrapper.xsa /home/grzegorz/git/MADC_ARTY/Software/vitis/MADC_ARTY_Z7_wrapper/export/MADC_ARTY_Z7_wrapper/sw/MADC_ARTY_Z7_wrapper/standalone_ps7_cortexa9_0/system.mss], Result: [null, {"procname": "ps7_cortexa9_0",
+"osname": "standalone",
+"osver": "9.1",
+}]. Thread: Worker-243: Build Project
+
+!ENTRY com.xilinx.sdk.utils 1 0 2026-09-09 20:20:24.153
+!MESSAGE Generating MD5 hash for file: /home/grzegorz/git/MADC_ARTY/Software/vitis/MADC_ARTY_Z7_wrapper/export/MADC_ARTY_Z7_wrapper/sw/MADC_ARTY_Z7_wrapper/standalone_ps7_cortexa9_0/system.mss ...
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-09-09 20:20:24.154
+!MESSAGE XSCT Command: [::hsi::utils::closesw /home/grzegorz/git/MADC_ARTY/Software/vitis/MADC_ARTY_Z7_wrapper/export/MADC_ARTY_Z7_wrapper/sw/MADC_ARTY_Z7_wrapper/standalone_ps7_cortexa9_0/system.mss], Thread: Worker-243: Build Project
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-09-09 20:20:24.157
+!MESSAGE XSCT command with result: [::hsi::utils::closesw /home/grzegorz/git/MADC_ARTY/Software/vitis/MADC_ARTY_Z7_wrapper/export/MADC_ARTY_Z7_wrapper/sw/MADC_ARTY_Z7_wrapper/standalone_ps7_cortexa9_0/system.mss], Result: [null, ]. Thread: Worker-243: Build Project
+
+!ENTRY com.xilinx.sdk.utils 1 0 2026-09-09 20:20:30.915
+!MESSAGE Tool usage for 'SDX_NO_OP_BUILD' updated to '34'
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-09-09 20:20:36.928
+!MESSAGE XSCT Command: [connect -url tcp:127.0.0.1:3121], Thread: Worker-246: Launching SystemDebugger_MADC_system
+
+!ENTRY org.eclipse.tcf 4 0 2026-09-09 20:20:37.052
+!MESSAGE Invalid peerAdded event
+!STACK 0
+java.lang.Error
+	at org.eclipse.tcf.internal.services.remote.LocatorProxy$1.event(LocatorProxy.java:64)
+	at org.eclipse.tcf.core.AbstractChannel.handleInput(AbstractChannel.java:1191)
+	at org.eclipse.tcf.core.AbstractChannel$1$1.run(AbstractChannel.java:371)
+	at org.eclipse.tcf.EventQueue.run(EventQueue.java:98)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+
+!ENTRY org.eclipse.tcf 4 0 2026-09-09 20:20:37.052
+!MESSAGE Invalid peerAdded event
+!STACK 0
+java.lang.Error
+	at org.eclipse.tcf.internal.services.remote.LocatorProxy$1.event(LocatorProxy.java:64)
+	at org.eclipse.tcf.core.AbstractChannel.handleInput(AbstractChannel.java:1191)
+	at org.eclipse.tcf.core.AbstractChannel$1$1.run(AbstractChannel.java:371)
+	at org.eclipse.tcf.EventQueue.run(EventQueue.java:98)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+
+!ENTRY org.eclipse.tcf 4 0 2026-09-09 20:20:37.053
+!MESSAGE Invalid peerAdded event
+!STACK 0
+java.lang.Error
+	at org.eclipse.tcf.internal.services.remote.LocatorProxy$1.event(LocatorProxy.java:64)
+	at org.eclipse.tcf.core.AbstractChannel.handleInput(AbstractChannel.java:1191)
+	at org.eclipse.tcf.core.AbstractChannel$1$1.run(AbstractChannel.java:371)
+	at org.eclipse.tcf.EventQueue.run(EventQueue.java:98)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+
+!ENTRY org.eclipse.tcf 4 0 2026-09-09 20:20:37.053
+!MESSAGE Invalid peerAdded event
+!STACK 0
+java.lang.Error
+	at org.eclipse.tcf.internal.services.remote.LocatorProxy$1.event(LocatorProxy.java:64)
+	at org.eclipse.tcf.core.AbstractChannel.handleInput(AbstractChannel.java:1191)
+	at org.eclipse.tcf.core.AbstractChannel$1$1.run(AbstractChannel.java:371)
+	at org.eclipse.tcf.EventQueue.run(EventQueue.java:98)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+
+!ENTRY org.eclipse.tcf 4 0 2026-09-09 20:20:37.053
+!MESSAGE Invalid peerAdded event
+!STACK 0
+java.lang.Error
+	at org.eclipse.tcf.internal.services.remote.LocatorProxy$1.event(LocatorProxy.java:64)
+	at org.eclipse.tcf.core.AbstractChannel.handleInput(AbstractChannel.java:1191)
+	at org.eclipse.tcf.core.AbstractChannel$1$1.run(AbstractChannel.java:371)
+	at org.eclipse.tcf.EventQueue.run(EventQueue.java:98)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+
+!ENTRY org.eclipse.tcf 4 0 2026-09-09 20:20:37.053
+!MESSAGE Invalid peerAdded event
+!STACK 0
+java.lang.Error
+	at org.eclipse.tcf.internal.services.remote.LocatorProxy$1.event(LocatorProxy.java:64)
+	at org.eclipse.tcf.core.AbstractChannel.handleInput(AbstractChannel.java:1191)
+	at org.eclipse.tcf.core.AbstractChannel$1$1.run(AbstractChannel.java:371)
+	at org.eclipse.tcf.EventQueue.run(EventQueue.java:98)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+
+!ENTRY org.eclipse.tcf 4 0 2026-09-09 20:20:37.054
+!MESSAGE Invalid peerAdded event
+!STACK 0
+java.lang.Error
+	at org.eclipse.tcf.internal.services.remote.LocatorProxy$1.event(LocatorProxy.java:64)
+	at org.eclipse.tcf.core.AbstractChannel.handleInput(AbstractChannel.java:1191)
+	at org.eclipse.tcf.core.AbstractChannel$1$1.run(AbstractChannel.java:371)
+	at org.eclipse.tcf.EventQueue.run(EventQueue.java:98)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+
+!ENTRY org.eclipse.tcf 4 0 2026-09-09 20:20:37.054
+!MESSAGE Invalid peerAdded event
+!STACK 0
+java.lang.Error
+	at org.eclipse.tcf.internal.services.remote.LocatorProxy$1.event(LocatorProxy.java:64)
+	at org.eclipse.tcf.core.AbstractChannel.handleInput(AbstractChannel.java:1191)
+	at org.eclipse.tcf.core.AbstractChannel$1$1.run(AbstractChannel.java:371)
+	at org.eclipse.tcf.EventQueue.run(EventQueue.java:98)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+
+!ENTRY org.eclipse.tcf 4 0 2026-09-09 20:20:37.054
+!MESSAGE Invalid peerAdded event
+!STACK 0
+java.lang.Error
+	at org.eclipse.tcf.internal.services.remote.LocatorProxy$1.event(LocatorProxy.java:64)
+	at org.eclipse.tcf.core.AbstractChannel.handleInput(AbstractChannel.java:1191)
+	at org.eclipse.tcf.core.AbstractChannel$1$1.run(AbstractChannel.java:371)
+	at org.eclipse.tcf.EventQueue.run(EventQueue.java:98)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+
+!ENTRY org.eclipse.tcf 4 0 2026-09-09 20:20:37.054
+!MESSAGE Invalid peerAdded event
+!STACK 0
+java.lang.Error
+	at org.eclipse.tcf.internal.services.remote.LocatorProxy$1.event(LocatorProxy.java:64)
+	at org.eclipse.tcf.core.AbstractChannel.handleInput(AbstractChannel.java:1191)
+	at org.eclipse.tcf.core.AbstractChannel$1$1.run(AbstractChannel.java:371)
+	at org.eclipse.tcf.EventQueue.run(EventQueue.java:98)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+
+!ENTRY org.eclipse.tcf 4 0 2026-09-09 20:20:37.055
+!MESSAGE Invalid peerAdded event
+!STACK 0
+java.lang.Error
+	at org.eclipse.tcf.internal.services.remote.LocatorProxy$1.event(LocatorProxy.java:64)
+	at org.eclipse.tcf.core.AbstractChannel.handleInput(AbstractChannel.java:1191)
+	at org.eclipse.tcf.core.AbstractChannel$1$1.run(AbstractChannel.java:371)
+	at org.eclipse.tcf.EventQueue.run(EventQueue.java:98)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+
+!ENTRY org.eclipse.tcf 4 0 2026-09-09 20:20:37.055
+!MESSAGE Invalid peerAdded event
+!STACK 0
+java.lang.Error
+	at org.eclipse.tcf.internal.services.remote.LocatorProxy$1.event(LocatorProxy.java:64)
+	at org.eclipse.tcf.core.AbstractChannel.handleInput(AbstractChannel.java:1191)
+	at org.eclipse.tcf.core.AbstractChannel$1$1.run(AbstractChannel.java:371)
+	at org.eclipse.tcf.EventQueue.run(EventQueue.java:98)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+
+!ENTRY org.eclipse.tcf 4 0 2026-09-09 20:20:37.055
+!MESSAGE Invalid peerAdded event
+!STACK 0
+java.lang.Error
+	at org.eclipse.tcf.internal.services.remote.LocatorProxy$1.event(LocatorProxy.java:64)
+	at org.eclipse.tcf.core.AbstractChannel.handleInput(AbstractChannel.java:1191)
+	at org.eclipse.tcf.core.AbstractChannel$1$1.run(AbstractChannel.java:371)
+	at org.eclipse.tcf.EventQueue.run(EventQueue.java:98)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+
+!ENTRY org.eclipse.tcf 4 0 2026-09-09 20:20:37.055
+!MESSAGE Invalid peerAdded event
+!STACK 0
+java.lang.Error
+	at org.eclipse.tcf.internal.services.remote.LocatorProxy$1.event(LocatorProxy.java:64)
+	at org.eclipse.tcf.core.AbstractChannel.handleInput(AbstractChannel.java:1191)
+	at org.eclipse.tcf.core.AbstractChannel$1$1.run(AbstractChannel.java:371)
+	at org.eclipse.tcf.EventQueue.run(EventQueue.java:98)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+
+!ENTRY org.eclipse.tcf 4 0 2026-09-09 20:20:37.056
+!MESSAGE Invalid peerAdded event
+!STACK 0
+java.lang.Error
+	at org.eclipse.tcf.internal.services.remote.LocatorProxy$1.event(LocatorProxy.java:64)
+	at org.eclipse.tcf.core.AbstractChannel.handleInput(AbstractChannel.java:1191)
+	at org.eclipse.tcf.core.AbstractChannel$1$1.run(AbstractChannel.java:371)
+	at org.eclipse.tcf.EventQueue.run(EventQueue.java:98)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+
+!ENTRY org.eclipse.tcf 4 0 2026-09-09 20:20:37.056
+!MESSAGE Invalid peerAdded event
+!STACK 0
+java.lang.Error
+	at org.eclipse.tcf.internal.services.remote.LocatorProxy$1.event(LocatorProxy.java:64)
+	at org.eclipse.tcf.core.AbstractChannel.handleInput(AbstractChannel.java:1191)
+	at org.eclipse.tcf.core.AbstractChannel$1$1.run(AbstractChannel.java:371)
+	at org.eclipse.tcf.EventQueue.run(EventQueue.java:98)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+
+!ENTRY org.eclipse.tcf 4 0 2026-09-09 20:20:37.056
+!MESSAGE Invalid peerAdded event
+!STACK 0
+java.lang.Error
+	at org.eclipse.tcf.internal.services.remote.LocatorProxy$1.event(LocatorProxy.java:64)
+	at org.eclipse.tcf.core.AbstractChannel.handleInput(AbstractChannel.java:1191)
+	at org.eclipse.tcf.core.AbstractChannel$1$1.run(AbstractChannel.java:371)
+	at org.eclipse.tcf.EventQueue.run(EventQueue.java:98)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+
+!ENTRY org.eclipse.tcf 4 0 2026-09-09 20:20:37.056
+!MESSAGE Invalid peerAdded event
+!STACK 0
+java.lang.Error
+	at org.eclipse.tcf.internal.services.remote.LocatorProxy$1.event(LocatorProxy.java:64)
+	at org.eclipse.tcf.core.AbstractChannel.handleInput(AbstractChannel.java:1191)
+	at org.eclipse.tcf.core.AbstractChannel$1$1.run(AbstractChannel.java:371)
+	at org.eclipse.tcf.EventQueue.run(EventQueue.java:98)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+
+!ENTRY org.eclipse.tcf 4 0 2026-09-09 20:20:37.057
+!MESSAGE Invalid peerAdded event
+!STACK 0
+java.lang.Error
+	at org.eclipse.tcf.internal.services.remote.LocatorProxy$1.event(LocatorProxy.java:64)
+	at org.eclipse.tcf.core.AbstractChannel.handleInput(AbstractChannel.java:1191)
+	at org.eclipse.tcf.core.AbstractChannel$1$1.run(AbstractChannel.java:371)
+	at org.eclipse.tcf.EventQueue.run(EventQueue.java:98)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+
+!ENTRY org.eclipse.tcf 4 0 2026-09-09 20:20:37.057
+!MESSAGE Invalid peerAdded event
+!STACK 0
+java.lang.Error
+	at org.eclipse.tcf.internal.services.remote.LocatorProxy$1.event(LocatorProxy.java:64)
+	at org.eclipse.tcf.core.AbstractChannel.handleInput(AbstractChannel.java:1191)
+	at org.eclipse.tcf.core.AbstractChannel$1$1.run(AbstractChannel.java:371)
+	at org.eclipse.tcf.EventQueue.run(EventQueue.java:98)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+
+!ENTRY org.eclipse.tcf 4 0 2026-09-09 20:20:37.057
+!MESSAGE Invalid peerAdded event
+!STACK 0
+java.lang.Error
+	at org.eclipse.tcf.internal.services.remote.LocatorProxy$1.event(LocatorProxy.java:64)
+	at org.eclipse.tcf.core.AbstractChannel.handleInput(AbstractChannel.java:1191)
+	at org.eclipse.tcf.core.AbstractChannel$1$1.run(AbstractChannel.java:371)
+	at org.eclipse.tcf.EventQueue.run(EventQueue.java:98)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+
+!ENTRY org.eclipse.tcf 4 0 2026-09-09 20:20:37.058
+!MESSAGE Invalid peerAdded event
+!STACK 0
+java.lang.Error
+	at org.eclipse.tcf.internal.services.remote.LocatorProxy$1.event(LocatorProxy.java:64)
+	at org.eclipse.tcf.core.AbstractChannel.handleInput(AbstractChannel.java:1191)
+	at org.eclipse.tcf.core.AbstractChannel$1$1.run(AbstractChannel.java:371)
+	at org.eclipse.tcf.EventQueue.run(EventQueue.java:98)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+
+!ENTRY org.eclipse.tcf 4 0 2026-09-09 20:20:37.058
+!MESSAGE Invalid peerAdded event
+!STACK 0
+java.lang.Error
+	at org.eclipse.tcf.internal.services.remote.LocatorProxy$1.event(LocatorProxy.java:64)
+	at org.eclipse.tcf.core.AbstractChannel.handleInput(AbstractChannel.java:1191)
+	at org.eclipse.tcf.core.AbstractChannel$1$1.run(AbstractChannel.java:371)
+	at org.eclipse.tcf.EventQueue.run(EventQueue.java:98)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+
+!ENTRY org.eclipse.tcf 4 0 2026-09-09 20:20:37.058
+!MESSAGE Invalid peerAdded event
+!STACK 0
+java.lang.Error
+	at org.eclipse.tcf.internal.services.remote.LocatorProxy$1.event(LocatorProxy.java:64)
+	at org.eclipse.tcf.core.AbstractChannel.handleInput(AbstractChannel.java:1191)
+	at org.eclipse.tcf.core.AbstractChannel$1$1.run(AbstractChannel.java:371)
+	at org.eclipse.tcf.EventQueue.run(EventQueue.java:98)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+
+!ENTRY org.eclipse.tcf 4 0 2026-09-09 20:20:37.058
+!MESSAGE Invalid peerAdded event
+!STACK 0
+java.lang.Error
+	at org.eclipse.tcf.internal.services.remote.LocatorProxy$1.event(LocatorProxy.java:64)
+	at org.eclipse.tcf.core.AbstractChannel.handleInput(AbstractChannel.java:1191)
+	at org.eclipse.tcf.core.AbstractChannel$1$1.run(AbstractChannel.java:371)
+	at org.eclipse.tcf.EventQueue.run(EventQueue.java:98)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+
+!ENTRY org.eclipse.tcf 4 0 2026-09-09 20:20:37.058
+!MESSAGE Invalid peerAdded event
+!STACK 0
+java.lang.Error
+	at org.eclipse.tcf.internal.services.remote.LocatorProxy$1.event(LocatorProxy.java:64)
+	at org.eclipse.tcf.core.AbstractChannel.handleInput(AbstractChannel.java:1191)
+	at org.eclipse.tcf.core.AbstractChannel$1$1.run(AbstractChannel.java:371)
+	at org.eclipse.tcf.EventQueue.run(EventQueue.java:98)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+
+!ENTRY org.eclipse.tcf 4 0 2026-09-09 20:20:37.058
+!MESSAGE Invalid peerAdded event
+!STACK 0
+java.lang.Error
+	at org.eclipse.tcf.internal.services.remote.LocatorProxy$1.event(LocatorProxy.java:64)
+	at org.eclipse.tcf.core.AbstractChannel.handleInput(AbstractChannel.java:1191)
+	at org.eclipse.tcf.core.AbstractChannel$1$1.run(AbstractChannel.java:371)
+	at org.eclipse.tcf.EventQueue.run(EventQueue.java:98)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+
+!ENTRY org.eclipse.tcf 4 0 2026-09-09 20:20:37.058
+!MESSAGE Invalid peerAdded event
+!STACK 0
+java.lang.Error
+	at org.eclipse.tcf.internal.services.remote.LocatorProxy$1.event(LocatorProxy.java:64)
+	at org.eclipse.tcf.core.AbstractChannel.handleInput(AbstractChannel.java:1191)
+	at org.eclipse.tcf.core.AbstractChannel$1$1.run(AbstractChannel.java:371)
+	at org.eclipse.tcf.EventQueue.run(EventQueue.java:98)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+
+!ENTRY org.eclipse.tcf 4 0 2026-09-09 20:20:37.058
+!MESSAGE Invalid peerAdded event
+!STACK 0
+java.lang.Error
+	at org.eclipse.tcf.internal.services.remote.LocatorProxy$1.event(LocatorProxy.java:64)
+	at org.eclipse.tcf.core.AbstractChannel.handleInput(AbstractChannel.java:1191)
+	at org.eclipse.tcf.core.AbstractChannel$1$1.run(AbstractChannel.java:371)
+	at org.eclipse.tcf.EventQueue.run(EventQueue.java:98)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+
+!ENTRY org.eclipse.tcf 4 0 2026-09-09 20:20:37.058
+!MESSAGE Invalid peerAdded event
+!STACK 0
+java.lang.Error
+	at org.eclipse.tcf.internal.services.remote.LocatorProxy$1.event(LocatorProxy.java:64)
+	at org.eclipse.tcf.core.AbstractChannel.handleInput(AbstractChannel.java:1191)
+	at org.eclipse.tcf.core.AbstractChannel$1$1.run(AbstractChannel.java:371)
+	at org.eclipse.tcf.EventQueue.run(EventQueue.java:98)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+
+!ENTRY org.eclipse.tcf 4 0 2026-09-09 20:20:37.058
+!MESSAGE Invalid peerAdded event
+!STACK 0
+java.lang.Error
+	at org.eclipse.tcf.internal.services.remote.LocatorProxy$1.event(LocatorProxy.java:64)
+	at org.eclipse.tcf.core.AbstractChannel.handleInput(AbstractChannel.java:1191)
+	at org.eclipse.tcf.core.AbstractChannel$1$1.run(AbstractChannel.java:371)
+	at org.eclipse.tcf.EventQueue.run(EventQueue.java:98)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+
+!ENTRY org.eclipse.tcf 4 0 2026-09-09 20:20:37.059
+!MESSAGE Invalid peerAdded event
+!STACK 0
+java.lang.Error
+	at org.eclipse.tcf.internal.services.remote.LocatorProxy$1.event(LocatorProxy.java:64)
+	at org.eclipse.tcf.core.AbstractChannel.handleInput(AbstractChannel.java:1191)
+	at org.eclipse.tcf.core.AbstractChannel$1$1.run(AbstractChannel.java:371)
+	at org.eclipse.tcf.EventQueue.run(EventQueue.java:98)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+
+!ENTRY org.eclipse.tcf 4 0 2026-09-09 20:20:37.059
+!MESSAGE Invalid peerAdded event
+!STACK 0
+java.lang.Error
+	at org.eclipse.tcf.internal.services.remote.LocatorProxy$1.event(LocatorProxy.java:64)
+	at org.eclipse.tcf.core.AbstractChannel.handleInput(AbstractChannel.java:1191)
+	at org.eclipse.tcf.core.AbstractChannel$1$1.run(AbstractChannel.java:371)
+	at org.eclipse.tcf.EventQueue.run(EventQueue.java:98)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+
+!ENTRY org.eclipse.tcf 4 0 2026-09-09 20:20:37.059
+!MESSAGE Invalid peerAdded event
+!STACK 0
+java.lang.Error
+	at org.eclipse.tcf.internal.services.remote.LocatorProxy$1.event(LocatorProxy.java:64)
+	at org.eclipse.tcf.core.AbstractChannel.handleInput(AbstractChannel.java:1191)
+	at org.eclipse.tcf.core.AbstractChannel$1$1.run(AbstractChannel.java:371)
+	at org.eclipse.tcf.EventQueue.run(EventQueue.java:98)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+
+!ENTRY org.eclipse.tcf 4 0 2026-09-09 20:20:37.059
+!MESSAGE Invalid peerAdded event
+!STACK 0
+java.lang.Error
+	at org.eclipse.tcf.internal.services.remote.LocatorProxy$1.event(LocatorProxy.java:64)
+	at org.eclipse.tcf.core.AbstractChannel.handleInput(AbstractChannel.java:1191)
+	at org.eclipse.tcf.core.AbstractChannel$1$1.run(AbstractChannel.java:371)
+	at org.eclipse.tcf.EventQueue.run(EventQueue.java:98)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+
+!ENTRY org.eclipse.tcf 4 0 2026-09-09 20:20:37.059
+!MESSAGE Invalid peerAdded event
+!STACK 0
+java.lang.Error
+	at org.eclipse.tcf.internal.services.remote.LocatorProxy$1.event(LocatorProxy.java:64)
+	at org.eclipse.tcf.core.AbstractChannel.handleInput(AbstractChannel.java:1191)
+	at org.eclipse.tcf.core.AbstractChannel$1$1.run(AbstractChannel.java:371)
+	at org.eclipse.tcf.EventQueue.run(EventQueue.java:98)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+
+!ENTRY org.eclipse.tcf 4 0 2026-09-09 20:20:37.059
+!MESSAGE Invalid peerAdded event
+!STACK 0
+java.lang.Error
+	at org.eclipse.tcf.internal.services.remote.LocatorProxy$1.event(LocatorProxy.java:64)
+	at org.eclipse.tcf.core.AbstractChannel.handleInput(AbstractChannel.java:1191)
+	at org.eclipse.tcf.core.AbstractChannel$1$1.run(AbstractChannel.java:371)
+	at org.eclipse.tcf.EventQueue.run(EventQueue.java:98)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+
+!ENTRY org.eclipse.tcf 4 0 2026-09-09 20:20:37.059
+!MESSAGE Invalid peerAdded event
+!STACK 0
+java.lang.Error
+	at org.eclipse.tcf.internal.services.remote.LocatorProxy$1.event(LocatorProxy.java:64)
+	at org.eclipse.tcf.core.AbstractChannel.handleInput(AbstractChannel.java:1191)
+	at org.eclipse.tcf.core.AbstractChannel$1$1.run(AbstractChannel.java:371)
+	at org.eclipse.tcf.EventQueue.run(EventQueue.java:98)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+
+!ENTRY org.eclipse.tcf 4 0 2026-09-09 20:20:37.059
+!MESSAGE Invalid peerAdded event
+!STACK 0
+java.lang.Error
+	at org.eclipse.tcf.internal.services.remote.LocatorProxy$1.event(LocatorProxy.java:64)
+	at org.eclipse.tcf.core.AbstractChannel.handleInput(AbstractChannel.java:1191)
+	at org.eclipse.tcf.core.AbstractChannel$1$1.run(AbstractChannel.java:371)
+	at org.eclipse.tcf.EventQueue.run(EventQueue.java:98)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+
+!ENTRY org.eclipse.tcf 4 0 2026-09-09 20:20:37.059
+!MESSAGE Invalid peerAdded event
+!STACK 0
+java.lang.Error
+	at org.eclipse.tcf.internal.services.remote.LocatorProxy$1.event(LocatorProxy.java:64)
+	at org.eclipse.tcf.core.AbstractChannel.handleInput(AbstractChannel.java:1191)
+	at org.eclipse.tcf.core.AbstractChannel$1$1.run(AbstractChannel.java:371)
+	at org.eclipse.tcf.EventQueue.run(EventQueue.java:98)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+
+!ENTRY org.eclipse.tcf 4 0 2026-09-09 20:20:37.059
+!MESSAGE Invalid peerAdded event
+!STACK 0
+java.lang.Error
+	at org.eclipse.tcf.internal.services.remote.LocatorProxy$1.event(LocatorProxy.java:64)
+	at org.eclipse.tcf.core.AbstractChannel.handleInput(AbstractChannel.java:1191)
+	at org.eclipse.tcf.core.AbstractChannel$1$1.run(AbstractChannel.java:371)
+	at org.eclipse.tcf.EventQueue.run(EventQueue.java:98)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+
+!ENTRY org.eclipse.tcf 4 0 2026-09-09 20:20:37.059
+!MESSAGE Invalid peerAdded event
+!STACK 0
+java.lang.Error
+	at org.eclipse.tcf.internal.services.remote.LocatorProxy$1.event(LocatorProxy.java:64)
+	at org.eclipse.tcf.core.AbstractChannel.handleInput(AbstractChannel.java:1191)
+	at org.eclipse.tcf.core.AbstractChannel$1$1.run(AbstractChannel.java:371)
+	at org.eclipse.tcf.EventQueue.run(EventQueue.java:98)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+
+!ENTRY org.eclipse.tcf 4 0 2026-09-09 20:20:37.059
+!MESSAGE Invalid peerAdded event
+!STACK 0
+java.lang.Error
+	at org.eclipse.tcf.internal.services.remote.LocatorProxy$1.event(LocatorProxy.java:64)
+	at org.eclipse.tcf.core.AbstractChannel.handleInput(AbstractChannel.java:1191)
+	at org.eclipse.tcf.core.AbstractChannel$1$1.run(AbstractChannel.java:371)
+	at org.eclipse.tcf.EventQueue.run(EventQueue.java:98)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+
+!ENTRY org.eclipse.tcf 4 0 2026-09-09 20:20:37.059
+!MESSAGE Invalid peerAdded event
+!STACK 0
+java.lang.Error
+	at org.eclipse.tcf.internal.services.remote.LocatorProxy$1.event(LocatorProxy.java:64)
+	at org.eclipse.tcf.core.AbstractChannel.handleInput(AbstractChannel.java:1191)
+	at org.eclipse.tcf.core.AbstractChannel$1$1.run(AbstractChannel.java:371)
+	at org.eclipse.tcf.EventQueue.run(EventQueue.java:98)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+
+!ENTRY org.eclipse.tcf 4 0 2026-09-09 20:20:37.059
+!MESSAGE Invalid peerAdded event
+!STACK 0
+java.lang.Error
+	at org.eclipse.tcf.internal.services.remote.LocatorProxy$1.event(LocatorProxy.java:64)
+	at org.eclipse.tcf.core.AbstractChannel.handleInput(AbstractChannel.java:1191)
+	at org.eclipse.tcf.core.AbstractChannel$1$1.run(AbstractChannel.java:371)
+	at org.eclipse.tcf.EventQueue.run(EventQueue.java:98)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+
+!ENTRY org.eclipse.tcf 4 0 2026-09-09 20:20:37.059
+!MESSAGE Invalid peerAdded event
+!STACK 0
+java.lang.Error
+	at org.eclipse.tcf.internal.services.remote.LocatorProxy$1.event(LocatorProxy.java:64)
+	at org.eclipse.tcf.core.AbstractChannel.handleInput(AbstractChannel.java:1191)
+	at org.eclipse.tcf.core.AbstractChannel$1$1.run(AbstractChannel.java:371)
+	at org.eclipse.tcf.EventQueue.run(EventQueue.java:98)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+
+!ENTRY org.eclipse.tcf 4 0 2026-09-09 20:20:37.059
+!MESSAGE Invalid peerAdded event
+!STACK 0
+java.lang.Error
+	at org.eclipse.tcf.internal.services.remote.LocatorProxy$1.event(LocatorProxy.java:64)
+	at org.eclipse.tcf.core.AbstractChannel.handleInput(AbstractChannel.java:1191)
+	at org.eclipse.tcf.core.AbstractChannel$1$1.run(AbstractChannel.java:371)
+	at org.eclipse.tcf.EventQueue.run(EventQueue.java:98)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+
+!ENTRY org.eclipse.tcf 4 0 2026-09-09 20:20:37.059
+!MESSAGE Invalid peerAdded event
+!STACK 0
+java.lang.Error
+	at org.eclipse.tcf.internal.services.remote.LocatorProxy$1.event(LocatorProxy.java:64)
+	at org.eclipse.tcf.core.AbstractChannel.handleInput(AbstractChannel.java:1191)
+	at org.eclipse.tcf.core.AbstractChannel$1$1.run(AbstractChannel.java:371)
+	at org.eclipse.tcf.EventQueue.run(EventQueue.java:98)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+
+!ENTRY org.eclipse.tcf 4 0 2026-09-09 20:20:37.059
+!MESSAGE Invalid peerAdded event
+!STACK 0
+java.lang.Error
+	at org.eclipse.tcf.internal.services.remote.LocatorProxy$1.event(LocatorProxy.java:64)
+	at org.eclipse.tcf.core.AbstractChannel.handleInput(AbstractChannel.java:1191)
+	at org.eclipse.tcf.core.AbstractChannel$1$1.run(AbstractChannel.java:371)
+	at org.eclipse.tcf.EventQueue.run(EventQueue.java:98)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+
+!ENTRY org.eclipse.tcf 4 0 2026-09-09 20:20:37.059
+!MESSAGE Invalid peerAdded event
+!STACK 0
+java.lang.Error
+	at org.eclipse.tcf.internal.services.remote.LocatorProxy$1.event(LocatorProxy.java:64)
+	at org.eclipse.tcf.core.AbstractChannel.handleInput(AbstractChannel.java:1191)
+	at org.eclipse.tcf.core.AbstractChannel$1$1.run(AbstractChannel.java:371)
+	at org.eclipse.tcf.EventQueue.run(EventQueue.java:98)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+
+!ENTRY org.eclipse.tcf 4 0 2026-09-09 20:20:37.060
+!MESSAGE Invalid peerAdded event
+!STACK 0
+java.lang.Error
+	at org.eclipse.tcf.internal.services.remote.LocatorProxy$1.event(LocatorProxy.java:64)
+	at org.eclipse.tcf.core.AbstractChannel.handleInput(AbstractChannel.java:1191)
+	at org.eclipse.tcf.core.AbstractChannel$1$1.run(AbstractChannel.java:371)
+	at org.eclipse.tcf.EventQueue.run(EventQueue.java:98)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-09-09 20:20:37.060
+!MESSAGE XSCT command with result: [connect -url tcp:127.0.0.1:3121], Result: [null, tcfchan#87]. Thread: Worker-246: Launching SystemDebugger_MADC_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-09-09 20:20:37.060
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-246: Launching SystemDebugger_MADC_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-09-09 20:20:37.238
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Digilent Arty Z7 003017B7ED73A]. Thread: Worker-246: Launching SystemDebugger_MADC_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-09-09 20:20:37.238
+!MESSAGE XSCT Command: [version -server], Thread: Worker-246: Launching SystemDebugger_MADC_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-09-09 20:20:37.240
+!MESSAGE XSCT command with result: [version -server], Result: [null, 2024.1]. Thread: Worker-246: Launching SystemDebugger_MADC_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-09-09 20:20:37.241
+!MESSAGE XSCT Command: [version], Thread: Worker-246: Launching SystemDebugger_MADC_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-09-09 20:20:37.241
+!MESSAGE XSCT command with result: [version], Result: [null, xsct 2024.1.0
+SW Build 0 on 2024-05-19-14:06:07
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.]. Thread: Worker-246: Launching SystemDebugger_MADC_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-09-09 20:20:37.241
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-246: Launching SystemDebugger_MADC_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-09-09 20:20:37.245
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Digilent Arty Z7 003017B7ED73A]. Thread: Worker-246: Launching SystemDebugger_MADC_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-09-09 20:20:37.245
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Digilent Arty Z7 003017B7ED73A" && level==1}], Thread: Worker-246: Launching SystemDebugger_MADC_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-09-09 20:20:37.259
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Digilent Arty Z7 003017B7ED73A" && level==1}], Result: [null,      2  arm_dap (idcode 4ba00477 irlen 4)
+     3  xc7z010 (idcode 13722093 irlen 6 fpga)]. Thread: Worker-246: Launching SystemDebugger_MADC_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-09-09 20:20:37.259
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-246: Launching SystemDebugger_MADC_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-09-09 20:20:37.263
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Digilent Arty Z7 003017B7ED73A]. Thread: Worker-246: Launching SystemDebugger_MADC_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-09-09 20:20:37.263
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Digilent Arty Z7 003017B7ED73A" && level==1}], Thread: Worker-246: Launching SystemDebugger_MADC_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-09-09 20:20:37.277
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Digilent Arty Z7 003017B7ED73A" && level==1}], Result: [null,      2  arm_dap (idcode 4ba00477 irlen 4)
+     3  xc7z010 (idcode 13722093 irlen 6 fpga)]. Thread: Worker-246: Launching SystemDebugger_MADC_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-09-09 20:20:37.277
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-246: Launching SystemDebugger_MADC_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-09-09 20:20:37.282
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Digilent Arty Z7 003017B7ED73A]. Thread: Worker-246: Launching SystemDebugger_MADC_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-09-09 20:20:37.282
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Digilent Arty Z7 003017B7ED73A" && level==1}], Thread: Worker-246: Launching SystemDebugger_MADC_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-09-09 20:20:37.300
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Digilent Arty Z7 003017B7ED73A" && level==1}], Result: [null,      2  arm_dap (idcode 4ba00477 irlen 4)
+     3  xc7z010 (idcode 13722093 irlen 6 fpga)]. Thread: Worker-246: Launching SystemDebugger_MADC_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-09-09 20:20:37.300
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-246: Launching SystemDebugger_MADC_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-09-09 20:20:37.305
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Digilent Arty Z7 003017B7ED73A]. Thread: Worker-246: Launching SystemDebugger_MADC_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-09-09 20:20:37.306
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Digilent Arty Z7 003017B7ED73A" && level==1}], Thread: Worker-246: Launching SystemDebugger_MADC_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-09-09 20:20:37.321
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Digilent Arty Z7 003017B7ED73A" && level==1}], Result: [null,      2  arm_dap (idcode 4ba00477 irlen 4)
+     3  xc7z010 (idcode 13722093 irlen 6 fpga)]. Thread: Worker-246: Launching SystemDebugger_MADC_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-09-09 20:20:37.322
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-246: Launching SystemDebugger_MADC_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-09-09 20:20:37.326
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Digilent Arty Z7 003017B7ED73A]. Thread: Worker-246: Launching SystemDebugger_MADC_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-09-09 20:20:37.326
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Digilent Arty Z7 003017B7ED73A" && level==1}], Thread: Worker-246: Launching SystemDebugger_MADC_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-09-09 20:20:37.340
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Digilent Arty Z7 003017B7ED73A" && level==1}], Result: [null,      2  arm_dap (idcode 4ba00477 irlen 4)
+     3  xc7z010 (idcode 13722093 irlen 6 fpga)]. Thread: Worker-246: Launching SystemDebugger_MADC_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-09-09 20:20:37.341
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-246: Launching SystemDebugger_MADC_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-09-09 20:20:37.345
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Digilent Arty Z7 003017B7ED73A]. Thread: Worker-246: Launching SystemDebugger_MADC_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-09-09 20:20:37.345
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Digilent Arty Z7 003017B7ED73A" && level==1}], Thread: Worker-246: Launching SystemDebugger_MADC_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-09-09 20:20:37.359
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Digilent Arty Z7 003017B7ED73A" && level==1}], Result: [null,      2  arm_dap (idcode 4ba00477 irlen 4)
+     3  xc7z010 (idcode 13722093 irlen 6 fpga)]. Thread: Worker-246: Launching SystemDebugger_MADC_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-09-09 20:20:37.359
+!MESSAGE XSCT Command: [jtag targets -set -filter {name =~ "Digilent Arty Z7 003017B7ED73A" && level == 0}], Thread: Worker-246: Launching SystemDebugger_MADC_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-09-09 20:20:37.373
+!MESSAGE XSCT command with result: [jtag targets -set -filter {name =~ "Digilent Arty Z7 003017B7ED73A" && level == 0}], Result: [null, ]. Thread: Worker-246: Launching SystemDebugger_MADC_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-09-09 20:20:37.373
+!MESSAGE XSCT Command: [jtag frequency], Thread: Worker-246: Launching SystemDebugger_MADC_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-09-09 20:20:37.393
+!MESSAGE XSCT command with result: [jtag frequency], Result: [null, 15000000]. Thread: Worker-246: Launching SystemDebugger_MADC_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-09-09 20:20:37.393
+!MESSAGE XSCT Command: [targets -set -nocase -filter {name =~"APU*"}], Thread: Worker-246: Launching SystemDebugger_MADC_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-09-09 20:20:37.399
+!MESSAGE XSCT command with result: [targets -set -nocase -filter {name =~"APU*"}], Result: [null, ]. Thread: Worker-246: Launching SystemDebugger_MADC_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-09-09 20:20:37.400
+!MESSAGE XSCT Command: [rst -system], Thread: Worker-246: Launching SystemDebugger_MADC_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-09-09 20:20:37.441
+!MESSAGE XSCT command with result: [rst -system], Result: [null, ]. Thread: Worker-246: Launching SystemDebugger_MADC_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-09-09 20:20:37.441
+!MESSAGE XSCT Command: [after 3000], Thread: Worker-246: Launching SystemDebugger_MADC_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-09-09 20:20:40.444
+!MESSAGE XSCT command with result: [after 3000], Result: [null, ]. Thread: Worker-246: Launching SystemDebugger_MADC_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-09-09 20:20:40.454
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-09-09 20:20:40.459
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Digilent Arty Z7 003017B7ED73A]. Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-09-09 20:20:40.459
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Digilent Arty Z7 003017B7ED73A" && level==1}], Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-09-09 20:20:40.473
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Digilent Arty Z7 003017B7ED73A" && level==1}], Result: [null,      2  arm_dap (idcode 4ba00477 irlen 4)
+     3  xc7z010 (idcode 13722093 irlen 6 fpga)]. Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-09-09 20:20:40.474
+!MESSAGE XSCT Command: [targets -set -filter {jtag_cable_name =~ "Digilent Arty Z7 003017B7ED73A" && level==0 && jtag_device_ctx=="jsn-Arty Z7-003017B7ED73A-13722093-0"}], Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-09-09 20:20:40.518
+!MESSAGE XSCT command with result: [targets -set -filter {jtag_cable_name =~ "Digilent Arty Z7 003017B7ED73A" && level==0 && jtag_device_ctx=="jsn-Arty Z7-003017B7ED73A-13722093-0"}], Result: [null, ]. Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-09-09 20:20:40.518
+!MESSAGE XSCT Command: [fpga -file /home/grzegorz/git/MADC_ARTY/Software/vitis/MADC/_ide/bitstream/MADC_ARTY_Z7_wrapper.bit], Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-09-09 20:20:41.738
+!MESSAGE XSCT command with result: [fpga -file /home/grzegorz/git/MADC_ARTY/Software/vitis/MADC/_ide/bitstream/MADC_ARTY_Z7_wrapper.bit], Result: [null, ]. Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-09-09 20:20:41.764
+!MESSAGE XSCT Command: [targets -set -nocase -filter {name =~"APU*"}], Thread: Worker-246: Launching SystemDebugger_MADC_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-09-09 20:20:41.773
+!MESSAGE XSCT command with result: [targets -set -nocase -filter {name =~"APU*"}], Result: [null, ]. Thread: Worker-246: Launching SystemDebugger_MADC_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-09-09 20:20:41.773
+!MESSAGE XSCT Command: [loadhw -hw /home/grzegorz/git/MADC_ARTY/Software/vitis/MADC_ARTY_Z7_wrapper/export/MADC_ARTY_Z7_wrapper/hw/MADC_ARTY_Z7_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs], Thread: Worker-246: Launching SystemDebugger_MADC_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-09-09 20:20:41.782
+!MESSAGE XSCT command with result: [loadhw -hw /home/grzegorz/git/MADC_ARTY/Software/vitis/MADC_ARTY_Z7_wrapper/export/MADC_ARTY_Z7_wrapper/hw/MADC_ARTY_Z7_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs], Result: [null, MADC_ARTY_Z7_wrapper_52]. Thread: Worker-246: Launching SystemDebugger_MADC_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-09-09 20:20:41.782
+!MESSAGE XSCT Command: [configparams force-mem-access 1], Thread: Worker-246: Launching SystemDebugger_MADC_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-09-09 20:20:41.783
+!MESSAGE XSCT command with result: [configparams force-mem-access 1], Result: [null, ]. Thread: Worker-246: Launching SystemDebugger_MADC_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-09-09 20:20:41.783
+!MESSAGE XSCT Command: [targets -set -nocase -filter {name =~"APU*"}], Thread: Worker-246: Launching SystemDebugger_MADC_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-09-09 20:20:41.790
+!MESSAGE XSCT command with result: [targets -set -nocase -filter {name =~"APU*"}], Result: [null, ]. Thread: Worker-246: Launching SystemDebugger_MADC_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-09-09 20:20:41.790
+!MESSAGE XSCT Command: [source /home/grzegorz/git/MADC_ARTY/Software/vitis/MADC/_ide/psinit/ps7_init.tcl], Thread: Worker-246: Launching SystemDebugger_MADC_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-09-09 20:20:41.791
+!MESSAGE XSCT command with result: [source /home/grzegorz/git/MADC_ARTY/Software/vitis/MADC/_ide/psinit/ps7_init.tcl], Result: [null, ]. Thread: Worker-246: Launching SystemDebugger_MADC_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-09-09 20:20:41.791
+!MESSAGE XSCT Command: [ps7_init], Thread: Worker-246: Launching SystemDebugger_MADC_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-09-09 20:20:42.025
+!MESSAGE XSCT command with result: [ps7_init], Result: [null, ]. Thread: Worker-246: Launching SystemDebugger_MADC_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-09-09 20:20:42.036
+!MESSAGE XSCT Command: [ps7_post_config], Thread: Worker-246: Launching SystemDebugger_MADC_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-09-09 20:20:42.041
+!MESSAGE XSCT command with result: [ps7_post_config], Result: [null, ]. Thread: Worker-246: Launching SystemDebugger_MADC_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-09-09 20:20:42.042
+!MESSAGE XSCT Command: [targets -set -nocase -filter {name =~ "*A9*#0"}], Thread: Worker-246: Launching SystemDebugger_MADC_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-09-09 20:20:42.059
+!MESSAGE XSCT command with result: [targets -set -nocase -filter {name =~ "*A9*#0"}], Result: [null, ]. Thread: Worker-246: Launching SystemDebugger_MADC_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-09-09 20:20:42.059
+!MESSAGE XSCT Command: [dow /home/grzegorz/git/MADC_ARTY/Software/vitis/MADC/Debug/MADC.elf], Thread: Worker-246: Launching SystemDebugger_MADC_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-09-09 20:20:42.164
+!MESSAGE XSCT command with result: [dow /home/grzegorz/git/MADC_ARTY/Software/vitis/MADC/Debug/MADC.elf], Result: [null, ]. Thread: Worker-246: Launching SystemDebugger_MADC_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-09-09 20:20:42.164
+!MESSAGE XSCT Command: [configparams force-mem-access 0], Thread: Worker-246: Launching SystemDebugger_MADC_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-09-09 20:20:42.192
+!MESSAGE XSCT command with result: [configparams force-mem-access 0], Result: [null, ]. Thread: Worker-246: Launching SystemDebugger_MADC_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-09-09 20:20:42.197
+!MESSAGE XSCT Command: [targets -set -nocase -filter {name =~ "*A9*#0"}], Thread: Worker-246: Launching SystemDebugger_MADC_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-09-09 20:20:42.206
+!MESSAGE XSCT command with result: [targets -set -nocase -filter {name =~ "*A9*#0"}], Result: [null, ]. Thread: Worker-246: Launching SystemDebugger_MADC_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-09-09 20:20:42.206
+!MESSAGE XSCT Command: [con], Thread: Worker-246: Launching SystemDebugger_MADC_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-09-09 20:20:42.220
+!MESSAGE XSCT command with result: [con], Result: [null, ]. Thread: Worker-246: Launching SystemDebugger_MADC_system
+
+!ENTRY com.xilinx.sdk.utils 1 0 2026-09-09 20:20:42.221
+!MESSAGE Tool usage for 'TCF_APP_DEBUG' updated to '36'
+
+!ENTRY com.xilinx.sdk.utils 1 0 2026-09-09 20:20:42.221
+!MESSAGE Tool usage for 'TCF_SYSTEM_DEBUG' updated to '36'
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-09-09 20:54:28.859
+!MESSAGE XSCT Command: [disconnect tcfchan#87], Thread: Thread-5168
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-09-09 20:54:28.862
+!MESSAGE XSCT command with result: [disconnect tcfchan#87], Result: [null, ]. Thread: Thread-5168
+
+!ENTRY com.xilinx.sdk.utils 1 0 2026-09-09 20:54:45.956
+!MESSAGE Tool usage for 'SDX_NO_OP_BUILD' updated to '35'
