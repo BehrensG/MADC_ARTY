@@ -54,7 +54,7 @@ int main()
     	XGpio_DiscreteWrite(&Gpio,1,0x00);
     	usleep(300000);
 
-    	meas = madc_meas((double)2.0*vref);
+    	meas = madc_meas((double)vref);
     	meas_adj =gain*meas + offset;
     	p_cnt = MADC_mReadReg(XPAR_MADC_0_S00_AXI_BASEADDR, MADC_AXI_REG_P_CNT);
     	n_cnt = MADC_mReadReg(XPAR_MADC_0_S00_AXI_BASEADDR, MADC_AXI_REG_N_CNT);

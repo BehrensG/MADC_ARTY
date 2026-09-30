@@ -15,6 +15,7 @@
 #define MADC_AXI_REG_N_CNT 12
 #define MADC_AXI_REG_TOT_CNT 16
 #define MADC_AXI_REG_VREF 20
+#define MADC_AXI_REG_CALIB 24
 
 #define MADC_IDLE  1
 #define MADC_RUN   2
@@ -82,7 +83,7 @@
  *
  */
 XStatus MADC_Reg_SelfTest(void * baseaddr_p);
-
+double madc_calib(double vref);
 double madc_meas(double vref);
-void madc_cfg_nplc(u32 nplc);
+void madc_cfg_nplc(float nplc);
 #endif // MADC_H
