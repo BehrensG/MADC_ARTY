@@ -15,7 +15,7 @@ architecture madc_tb_arch of madc_tb is
     	generic(
     		DATA_SIZE : natural              := 32;
     		ADDR_SIZE : natural              := 8;
-    		NPLC      : natural              := 20000;
+    		NPLC      : natural              := 200000;
     		VREF      : natural              := 1;
     		NVC       : natural range 0 to 1 := 0
     	);
@@ -57,7 +57,7 @@ architecture madc_tb_arch of madc_tb is
     -- Constant
     constant DATA_SIZE : natural := 32;
     constant ADDR_SIZE : natural := 8;
-    constant NPLC      : natural := 20000;
+    constant NPLC      : natural := 200000;
     constant VREF      : natural := 1;
 
     constant STATUS_INDEX     : std_logic_vector(ADDR_SIZE - 1 downto 0) := std_logic_vector(to_unsigned(0, ADDR_SIZE));
@@ -231,7 +231,7 @@ begin
 
         wait for 1 us;
 
-        measurement := vref * ((real(to_integer(unsigned(p_cnt))) - real(to_integer(unsigned(n_cnt)))) / real(to_integer(unsigned(tot_cnt))));
+        measurement :=  vref * ((real(to_integer(unsigned(p_cnt))) - real(to_integer(unsigned(n_cnt)))) / real(to_integer(unsigned(tot_cnt))));
 
         report "P COUNT : " & to_string(to_integer(unsigned(p_cnt)));
         report "N COUNT : " & to_string(to_integer(unsigned(n_cnt)));
@@ -242,7 +242,7 @@ begin
     end process uut;
 
     cmp_gen_proc : process is
-        constant file_name : string := "PLC_1_0V.txt";
+        constant file_name : string := "PLC_1_P6V.txt";
     begin
         wait until axi_aresetn = '1';
         wait for 50 us;

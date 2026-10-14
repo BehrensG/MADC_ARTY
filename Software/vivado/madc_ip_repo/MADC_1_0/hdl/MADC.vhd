@@ -13,7 +13,7 @@ entity MADC is
 		DATA_SIZE : natural := 32;
 		ADDR_SIZE : natural := 8;
 		-- Custom parameters
-		NPLC      : natural := 20000;
+		NPLC      : natural := 200000;
 		VREF      : natural := 1;
 		NVC : natural range 0 to 1 := 0
 	);
@@ -92,7 +92,7 @@ component madc_ctr
 	generic(
 		DATA_SIZE : natural              := 32;
 		ADDR_SIZE : natural              := 8;
-		PLC       : natural              := 20000;
+		PLC       : natural              := 200000;
 		VREF      : natural              := 1;
 		NVC       : natural range 0 to 1 := 0
 	);

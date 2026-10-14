@@ -1,0 +1,24 @@
+#-----------------------------------------------------------
+# Vivado v2024.1 (64-bit)
+# SW Build 5076996 on Wed May 22 18:36:09 MDT 2024
+# IP Build 5075265 on Wed May 22 21:45:21 MDT 2024
+# SharedData Build 5076995 on Wed May 22 18:29:18 MDT 2024
+# Start of session at: Wed Oct 14 20:34:38 2026
+# Process ID: 166975
+# Current directory: /home/grzegorz/git/MADC_ARTY/Software/vivado/MADC_ARTY_Z7/MADC_ARTY_Z7.runs/impl_1
+# Command line: vivado -log MADC_ARTY_Z7_wrapper.vdi -applog -product Vivado -messageDb vivado.pb -mode batch -source MADC_ARTY_Z7_wrapper.tcl -notrace
+# Log file: /home/grzegorz/git/MADC_ARTY/Software/vivado/MADC_ARTY_Z7/MADC_ARTY_Z7.runs/impl_1/MADC_ARTY_Z7_wrapper.vdi
+# Journal file: /home/grzegorz/git/MADC_ARTY/Software/vivado/MADC_ARTY_Z7/MADC_ARTY_Z7.runs/impl_1/vivado.jou
+# Running On        :archlinux
+# Platform          :Arch
+# Operating System  :Arch Linux
+# Processor Detail  :Intel(R) Core(TM) i7-10750H CPU @ 2.60GHz
+# CPU Frequency     :3599.911 MHz
+# CPU Physical cores:6
+# CPU Logical cores :12
+# Host memory       :67060 MB
+# Swap memory       :4294 MB
+# Total Virtual     :71355 MB
+# Available Virtual :60447 MB
+#-----------------------------------------------------------
+source MADC_ARTY_Z7_wrapper.tcl -notrace

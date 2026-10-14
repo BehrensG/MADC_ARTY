@@ -47,7 +47,7 @@
 -- DO NOT MODIFY THIS FILE.
 
 -- IP VLNV: GB:user:MADC:1.0
--- IP Revision: 31
+-- IP Revision: 69
 
 LIBRARY ieee;
 USE ieee.std_logic_1164.ALL;
@@ -158,7 +158,7 @@ BEGIN
     GENERIC MAP (
       DATA_SIZE => 32,
       ADDR_SIZE => 8,
-      NPLC => 20000,
+      NPLC => 2000000,
       VREF => 1,
       NVC => 0
     )

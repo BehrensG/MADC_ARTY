@@ -46,7 +46,7 @@
 -- 
 -- DO NOT MODIFY THIS FILE.
 -- IP VLNV: GB:user:MADC:1.0
--- IP Revision: 31
+-- IP Revision: 69
 
 -- The following code must appear in the VHDL architecture header.
 

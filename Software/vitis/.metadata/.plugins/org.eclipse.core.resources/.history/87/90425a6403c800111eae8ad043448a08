@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="ASCII"?>
+<sdkproject:SdkProject xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:sdkproject="http://www.xilinx.com/sdkproject" name="MADC" location="/home/grzegorz/git/MADC_ARTY/Software/vitis/MADC" platform="/home/grzegorz/git/MADC_ARTY/Software/vitis/MADC_ARTY_Z7_wrapper/export/MADC_ARTY_Z7_wrapper/MADC_ARTY_Z7_wrapper.xpfm" platformUID="xilinx:arty-z7-10::0.0(custom)" systemProject="MADC_system" sysConfig="MADC_ARTY_Z7_wrapper" runtime="cpp" cpu="standalone_ps7_cortexa9_0" cpuInstance="ps7_cortexa9_0" os="standalone" mssSignature="4ce2ca93c5826d9ea0a3fdaa776ff4a3">
+  <configuration name="Debug" id="xilinx.gnu.armv7.exe.debug.624048245">
+    <configBuildOptions xsi:type="sdkproject:SdkOptions"/>
+    <lastBuildOptions xsi:type="sdkproject:SdkOptions"/>
+  </configuration>
+  <configuration name="Release" id="xilinx.gnu.armv7.exe.release.847231614" dirty="true">
+    <configBuildOptions xsi:type="sdkproject:SdkOptions"/>
+  </configuration>
+  <template appTemplateName="hello_world"/>
+</sdkproject:SdkProject>

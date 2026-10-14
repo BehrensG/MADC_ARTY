@@ -1,7 +1,38 @@
-20:54:45 **** Clean-only build of configuration Debug for project MADC ****
-make clean 
-rm -rf ./src/main.o ./src/platform.o ./src/main.d ./src/platform.d MADC.elf.size  MADC.elf
+21:40:50 **** Incremental Build of configuration Debug for project MADC ****
+make all 
+make --no-print-directory pre-build
+a9-linaro-pre-build-step
+ 
+make --no-print-directory main-build
+Building file: ../src/main.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I/home/grzegorz/git/MADC_ARTY/Software/vitis/MADC_ARTY_Z7_wrapper/export/MADC_ARTY_Z7_wrapper/sw/MADC_ARTY_Z7_wrapper/standalone_ps7_cortexa9_0/bspinclude/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'main':
+../src/main.c:60:13: warning: unused variable 'calib_state' [-Wunused-variable]
+   60 |         u32 calib_state = 0;
+      |             ^~~~~~~~~~~
+../src/main.c:59:16: warning: variable 'offset' set but not used [-Wunused-but-set-variable]
+   59 |         double offset = 0;
+      |                ^~~~~~
+../src/main.c:58:14: warning: unused variable 'calib' [-Wunused-variable]
+   58 |         u32* calib;
+      |              ^~~~~
+../src/main.c:53:16: warning: variable 'meas_adj' set but not used [-Wunused-but-set-variable]
+   53 |         double meas_adj = 0.0;
+      |                ^~~~~~~~
+Finished building: ../src/main.c
+ 
+Building target: MADC.elf
+Invoking: ARM v7 gcc linker
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L/home/grzegorz/git/MADC_ARTY/Software/vitis/MADC_ARTY_Z7_wrapper/export/MADC_ARTY_Z7_wrapper/sw/MADC_ARTY_Z7_wrapper/standalone_ps7_cortexa9_0/bsplib/lib -o "MADC.elf" ./src/main.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: MADC.elf
+ 
+Invoking: ARM v7 Print Size
+arm-none-eabi-size MADC.elf  |tee "MADC.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  21154	   1160	  22600	  44914	   af72	MADC.elf
+Finished building: MADC.elf.size
  
 
-20:54:45 Build Finished (took 116ms)
+21:40:50 Build Finished (took 216ms)
 

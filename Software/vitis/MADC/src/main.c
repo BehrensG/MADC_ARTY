@@ -23,12 +23,29 @@
 #include "sleep.h"
 #include "MADC.h"
 
-#define vref (double)7.06832
-#define gain (double)1.003219450
-#define offset (double)-0.000007067
+#define vref (double)7.0
+#define GAIN_PLC100 (double)1.00771447997068
+#define GAIN_PLC10 (double)1.00701226906593
+#define GAIN_PLC1 (double)0.982477893495776
 
+//#define offset (double)-0.000007067
+#define N_10_OFFSET 10009442
+#define P_10_OFFSET 10009557
+#define TOT_10 20020000
 #define GPIO_DEVICE_ID		XPAR_GPIO_0_DEVICE_ID
 XGpio Gpio;
+
+static void madc_wait(u32 status)
+{
+	u32 raw_data = 0;
+
+	do
+	{
+		raw_data = MADC_mReadReg(XPAR_MADC_0_S00_AXI_BASEADDR, MADC_AXI_REG_STATUS);
+	}
+	while(raw_data != status);
+}
+
 
 int main()
 {
@@ -38,6 +55,11 @@ int main()
 	u32 tot_cnt = 0;
 	u32 p_cnt = 0;
 	u32 n_cnt = 0;
+	u32* calib;
+	double offset = 0;
+	u32 calib_state = 0;
+	double gain = 0.0;
+	float plc = 10;
 
     init_platform();
 
@@ -45,20 +67,43 @@ int main()
     if (status != XST_SUCCESS) {
         return XST_FAILURE;
     }
+	XGpio_DiscreteWrite(&Gpio,1,0x01);
 
-    while(1)
+	usleep(300000);
+	XGpio_DiscreteWrite(&Gpio,1,0x00);
+	usleep(300000);
+
+	madc_cfg_nplc(plc);
+	if (1 == plc)
+	{
+		gain = GAIN_PLC100;
+	}
+	else if(10 == plc)
+	{
+		gain = GAIN_PLC100;
+	}
+	else if(100 == plc)
+	{
+		gain = GAIN_PLC100;
+
+	}
+	else
+	{
+		gain = GAIN_PLC100;
+	}
+
+	usleep(300);
+
+	while(1)
     {
-    	XGpio_DiscreteWrite(&Gpio,1,0x01);
-
-    	usleep(300000);
-    	XGpio_DiscreteWrite(&Gpio,1,0x00);
-    	usleep(300000);
-
-    	meas = madc_meas((double)vref);
-    	meas_adj =gain*meas + offset;
-    	p_cnt = MADC_mReadReg(XPAR_MADC_0_S00_AXI_BASEADDR, MADC_AXI_REG_P_CNT);
-    	n_cnt = MADC_mReadReg(XPAR_MADC_0_S00_AXI_BASEADDR, MADC_AXI_REG_N_CNT);
-    	tot_cnt = MADC_mReadReg(XPAR_MADC_0_S00_AXI_BASEADDR, MADC_AXI_REG_TOT_CNT);
+	    madc_wait(MADC_IDLE);
+	    usleep(10);
+	    n_cnt = MADC_mReadReg(XPAR_MADC_0_S00_AXI_BASEADDR, MADC_AXI_REG_N_CNT);
+	    p_cnt = MADC_mReadReg(XPAR_MADC_0_S00_AXI_BASEADDR, MADC_AXI_REG_P_CNT);
+	    tot_cnt = MADC_mReadReg(XPAR_MADC_0_S00_AXI_BASEADDR, MADC_AXI_REG_TOT_CNT);
+	    offset = vref*(((double)(P_10_OFFSET) - (double)(N_10_OFFSET))/(double)TOT_10)*2;
+	    meas = vref*(((double)(p_cnt) - (double)(n_cnt))/(double)tot_cnt)*2;
+    	meas_adj =gain*(meas);
     	usleep(300000);
     }
 

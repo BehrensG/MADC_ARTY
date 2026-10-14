@@ -66,3 +66,66 @@ platform config -updatehw {/home/grzegorz/git/MADC_ARTY/Software/vivado/MADC_ART
 platform generate -domains 
 platform clean
 platform clean
+platform active {MADC_ARTY_Z7_wrapper}
+platform config -updatehw {/home/grzegorz/git/MADC_ARTY/Software/vivado/MADC_ARTY_Z7/MADC_ARTY_Z7_wrapper.xsa}
+platform config -updatehw {/home/grzegorz/git/MADC_ARTY/Software/vivado/MADC_ARTY_Z7/MADC_ARTY_Z7_wrapper.xsa}
+platform generate
+platform config -updatehw {/home/grzegorz/git/MADC_ARTY/Software/vivado/MADC_ARTY_Z7/MADC_ARTY_Z7_wrapper.xsa}
+platform generate -domains 
+platform generate -domains standalone_ps7_cortexa9_0 
+platform config -updatehw {/home/grzegorz/git/MADC_ARTY/Software/vivado/MADC_ARTY_Z7/MADC_ARTY_Z7_wrapper.xsa}
+platform generate -domains 
+platform config -updatehw {/home/grzegorz/git/MADC_ARTY/Software/vivado/MADC_ARTY_Z7/MADC_ARTY_Z7_wrapper.xsa}
+platform generate -domains 
+platform config -updatehw {/home/grzegorz/git/MADC_ARTY/Software/vivado/MADC_ARTY_Z7/MADC_ARTY_Z7_wrapper.xsa}
+platform config -updatehw {/home/grzegorz/git/MADC_ARTY/Software/vivado/MADC_ARTY_Z7/MADC_ARTY_Z7_wrapper.xsa}
+platform generate -domains 
+platform config -updatehw {/home/grzegorz/git/MADC_ARTY/Software/vivado/MADC_ARTY_Z7/MADC_ARTY_Z7_wrapper.xsa}
+platform generate -domains 
+platform config -updatehw {/home/grzegorz/git/MADC_ARTY/Software/vivado/MADC_ARTY_Z7/MADC_ARTY_Z7_wrapper.xsa}
+platform generate -domains 
+platform config -updatehw {/home/grzegorz/git/MADC_ARTY/Software/vivado/MADC_ARTY_Z7/MADC_ARTY_Z7_wrapper.xsa}
+platform generate -domains 
+platform config -updatehw {/home/grzegorz/git/MADC_ARTY/Software/vivado/MADC_ARTY_Z7/MADC_ARTY_Z7_wrapper.xsa}
+platform generate -domains 
+platform active {MADC_ARTY_Z7_wrapper}
+platform config -updatehw {/home/grzegorz/git/MADC_ARTY/Software/vivado/MADC_ARTY_Z7/MADC_ARTY_Z7_wrapper.xsa}
+platform config -updatehw {/home/grzegorz/git/MADC_ARTY/Software/vivado/MADC_ARTY_Z7/MADC_ARTY_Z7_wrapper.xsa}
+platform generate
+platform config -updatehw {/home/grzegorz/git/MADC_ARTY/Software/vivado/MADC_ARTY_Z7/MADC_ARTY_Z7_wrapper.xsa}
+platform generate -domains 
+platform config -updatehw {/home/grzegorz/git/MADC_ARTY/Software/vivado/MADC_ARTY_Z7/MADC_ARTY_Z7_wrapper.xsa}
+platform generate -domains 
+platform config -updatehw {/home/grzegorz/git/MADC_ARTY/Software/vivado/MADC_ARTY_Z7/MADC_ARTY_Z7_wrapper.xsa}
+platform generate -domains 
+platform active {MADC_ARTY_Z7_wrapper}
+platform config -updatehw {/home/grzegorz/git/MADC_ARTY/Software/vivado/MADC_ARTY_Z7/MADC_ARTY_Z7_wrapper.xsa}
+platform generate -domains 
+platform config -updatehw {/home/grzegorz/git/MADC_ARTY/Software/vivado/MADC_ARTY_Z7/MADC_ARTY_Z7_wrapper.xsa}
+platform generate -domains 
+platform config -updatehw {/home/grzegorz/git/MADC_ARTY/Software/vivado/MADC_ARTY_Z7/MADC_ARTY_Z7_wrapper.xsa}
+platform generate -domains 
+platform config -updatehw {/home/grzegorz/git/MADC_ARTY/Software/vivado/MADC_ARTY_Z7/MADC_ARTY_Z7_wrapper.xsa}
+platform generate -domains 
+platform config -updatehw {/home/grzegorz/git/MADC_ARTY/Software/vivado/MADC_ARTY_Z7/MADC_ARTY_Z7_wrapper.xsa}
+platform generate -domains 
+platform active {MADC_ARTY_Z7_wrapper}
+platform config -updatehw {/home/grzegorz/git/MADC_ARTY/Software/vivado/MADC_ARTY_Z7/MADC_ARTY_Z7_wrapper.xsa}
+platform generate -domains 
+platform config -updatehw {/home/grzegorz/git/MADC_ARTY/Software/vivado/MADC_ARTY_Z7/MADC_ARTY_Z7_wrapper.xsa}
+platform generate -domains 
+platform config -updatehw {/home/grzegorz/git/MADC_ARTY/Software/vivado/MADC_ARTY_Z7/MADC_ARTY_Z7_wrapper.xsa}
+platform config -updatehw {/home/grzegorz/git/MADC_ARTY/Software/vivado/MADC_ARTY_Z7/MADC_ARTY_Z7_wrapper.xsa}
+platform generate -domains 
+platform config -updatehw {/home/grzegorz/git/MADC_ARTY/Software/vivado/MADC_ARTY_Z7/MADC_ARTY_Z7_wrapper.xsa}
+platform generate -domains 
+platform config -updatehw {/home/grzegorz/git/MADC_ARTY/Software/vivado/MADC_ARTY_Z7/MADC_ARTY_Z7_wrapper.xsa}
+platform generate -domains 
+platform config -updatehw {/home/grzegorz/git/MADC_ARTY/Software/vivado/MADC_ARTY_Z7/MADC_ARTY_Z7_wrapper.xsa}
+platform generate -domains 
+platform config -updatehw {/home/grzegorz/git/MADC_ARTY/Software/vivado/MADC_ARTY_Z7/MADC_ARTY_Z7_wrapper.xsa}
+platform generate -domains 
+platform config -updatehw {/home/grzegorz/git/MADC_ARTY/Software/vivado/MADC_ARTY_Z7/MADC_ARTY_Z7_wrapper.xsa}
+platform generate -domains 
+platform config -updatehw {/home/grzegorz/git/MADC_ARTY/Software/vivado/MADC_ARTY_Z7/MADC_ARTY_Z7_wrapper.xsa}
+platform generate -domains 

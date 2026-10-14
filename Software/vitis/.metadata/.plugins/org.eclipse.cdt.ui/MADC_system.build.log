@@ -1,8 +1,10 @@
-20:54:45 **** Clean-only build of configuration Debug for project MADC_system ****
-make clean 
-rm -rf ./_sds
-rm -rf package
-rm -f system.bif
+21:40:51 **** Incremental Build of configuration Debug for project MADC_system ****
+make all 
+Generating bif file for the system project
+Executing command '::scw::generate_bif -xpfm /home/grzegorz/git/MADC_ARTY/Software/vitis/MADC_ARTY_Z7_wrapper/export/MADC_ARTY_Z7_wrapper/MADC_ARTY_Z7_wrapper.xpfm -domains standalone_ps7_cortexa9_0 -bifpath /home/grzegorz/git/MADC_ARTY/Software/vitis/MADC_system/Debug/system.bif' on XSCT
+sdcard_gen --xpfm /home/grzegorz/git/MADC_ARTY/Software/vitis/MADC_ARTY_Z7_wrapper/export/MADC_ARTY_Z7_wrapper/MADC_ARTY_Z7_wrapper.xpfm --sys_config MADC_ARTY_Z7_wrapper --bif /home/grzegorz/git/MADC_ARTY/Software/vitis/MADC_system/Debug/system.bif --bitstream /home/grzegorz/git/MADC_ARTY/Software/vitis/MADC/_ide/bitstream/MADC_ARTY_Z7_wrapper.bit --elf /home/grzegorz/git/MADC_ARTY/Software/vitis/MADC/Debug/MADC.elf,ps7_cortexa9_0
+creating BOOT.BIN using /home/grzegorz/git/MADC_ARTY/Software/vitis/MADC/_ide/bitstream/MADC_ARTY_Z7_wrapper.bit
+Running /opt/Xilinx/Vitis/2024.1/bin/bootgen  -image /home/grzegorz/git/MADC_ARTY/Software/vitis/MADC_system/Debug/sd_card_temp/boot.bif -w -o i BOOT.BIN
 
-20:54:45 Build Finished (took 115ms)
+21:40:57 Build Finished (took 6s.425ms)
 

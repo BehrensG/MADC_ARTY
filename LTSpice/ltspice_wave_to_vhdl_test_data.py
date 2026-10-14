@@ -22,4 +22,4 @@ def ltspice_wav_to_txt(wav_path, txt_path):
 
 
 # Example usage:
-ltspice_wav_to_txt("wave.wav", "PLC_1_N5V.txt")
+ltspice_wav_to_txt("wave.wav", "PLC_100_P6V.txt")

@@ -7,23 +7,21 @@ use ieee.numeric_std.all;
 library unisim;
 use unisim.vcomponents.all;
 
-
-entity hardware_clk_gen_1mhz is
+entity hardware_clk_gen is
     port(
         clk_100mhz_in : in  std_logic;  -- Physical 100 MHz Board Clock
         rst           : in  std_logic;  -- Master Reset
-        clk_1mhz_out  : out std_logic;  -- Low-skew, true hardware 1 MHz clock
+        clk_out       : out std_logic;  -- Low-skew, true hardware 1 MHz clock
         pll_locked    : out std_logic   -- Status: High when clock is stable
     );
-end entity hardware_clk_gen_1mhz;
+end entity hardware_clk_gen;
 
-architecture hardware_clk_gen_1mhz_arch of hardware_clk_gen_1mhz is
+architecture hardware_clk_gen_arch of hardware_clk_gen is
 
     -- VHDL-2008 allows matching type initializations easily
     signal clk_fb        : std_logic;
     signal clk_10mhz_raw : std_logic;
     signal clk_10mhz_buf : std_logic;
-    signal ce_1mhz       : std_logic := '0';
 
 begin
 
@@ -60,38 +58,20 @@ begin
     bufg_10mhz : BUFG
         port map(
             I => clk_10mhz_raw,
-            O => clk_10mhz_buf
+            O => clk_out
         );
 
     ---------------------------------------------------------------------------
     -- STAGE 2: Down-convert 10 MHz to 1 MHz using a Clock-Gated Tree
     ---------------------------------------------------------------------------
-    -- Synchronous clock enable pulse generator running inside the 10 MHz domain
-    process(clk_10mhz_buf, rst)
-
-        variable ce_counter : integer range 0 to 9 := 0;
-    begin
-        if rst = '1' then
-            ce_counter := 0;
-            ce_1mhz    <= '0';
-        elsif rising_edge(clk_10mhz_buf) then
-            if ce_counter = 9 then
-                ce_counter := 0;
-                ce_1mhz    <= '1';      -- High for exactly 1 out of every 10 cycles
-            else
-                ce_counter := ce_counter + 1;
-                ce_1mhz    <= '0';
-            end if;
-        end if;
-    end process;
 
     -- Glitchless Global Clock Buffer with integrated Clock Enable.
     -- Passes the targeted 10 MHz clock edge through only when ce_1mhz is active.
-    bufgce_1mhz : BUFGCE
-        port map(
-            I  => clk_10mhz_buf,
-            CE => ce_1mhz,
-            O  => clk_1mhz_out
-        );
+  --  bufgce_1mhz : BUFGCE
+  --      port map(
+  --          I  => clk_10mhz_buf,
+   --         CE => '1',
+   --         O  => clk_out
+   --     );
 
-end architecture hardware_clk_gen_1mhz_arch;
+end architecture hardware_clk_gen_arch;

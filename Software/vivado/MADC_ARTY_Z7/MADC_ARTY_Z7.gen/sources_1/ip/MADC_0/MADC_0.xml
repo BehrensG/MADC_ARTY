@@ -593,11 +593,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Wed Sep 09 17:20:54 UTC 2026</spirit:value>
+            <spirit:value>Wed Oct 14 19:33:09 UTC 2026</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:db9cf7af</spirit:value>
+            <spirit:value>9:d121f89b</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -978,7 +978,7 @@
       <spirit:modelParameter spirit:dataType="integer">
         <spirit:name>NPLC</spirit:name>
         <spirit:displayName>Nplc</spirit:displayName>
-        <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.NPLC" spirit:minimum="0" spirit:rangeType="long">20000</spirit:value>
+        <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.NPLC" spirit:minimum="0" spirit:rangeType="long">2000000</spirit:value>
       </spirit:modelParameter>
       <spirit:modelParameter spirit:dataType="integer">
         <spirit:name>VREF</spirit:name>
@@ -994,12 +994,6 @@
   </spirit:model>
   <spirit:choices>
     <spirit:choice>
-      <spirit:name>choice_list_4a0f8ac9</spirit:name>
-      <spirit:enumeration>2000</spirit:enumeration>
-      <spirit:enumeration>20000</spirit:enumeration>
-      <spirit:enumeration>200000</spirit:enumeration>
-    </spirit:choice>
-    <spirit:choice>
       <spirit:name>choice_list_6fc15197</spirit:name>
       <spirit:enumeration>32</spirit:enumeration>
     </spirit:choice>
@@ -1007,6 +1001,14 @@
       <spirit:name>choice_list_9d8b0d81</spirit:name>
       <spirit:enumeration>ACTIVE_HIGH</spirit:enumeration>
       <spirit:enumeration>ACTIVE_LOW</spirit:enumeration>
+    </spirit:choice>
+    <spirit:choice>
+      <spirit:name>choice_list_c0947af7</spirit:name>
+      <spirit:enumeration>20000</spirit:enumeration>
+      <spirit:enumeration>200000</spirit:enumeration>
+      <spirit:enumeration>400000</spirit:enumeration>
+      <spirit:enumeration>2000000</spirit:enumeration>
+      <spirit:enumeration>20000000</spirit:enumeration>
     </spirit:choice>
     <spirit:choice>
       <spirit:name>choice_pairs_ce1226b1</spirit:name>
@@ -1070,7 +1072,7 @@
     <spirit:parameter>
       <spirit:name>NPLC</spirit:name>
       <spirit:displayName>Nplc</spirit:displayName>
-      <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="PARAM_VALUE.NPLC" spirit:choiceRef="choice_list_4a0f8ac9">20000</spirit:value>
+      <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="PARAM_VALUE.NPLC" spirit:choiceRef="choice_list_c0947af7">2000000</spirit:value>
     </spirit:parameter>
     <spirit:parameter>
       <spirit:name>VREF</spirit:name>
@@ -1086,7 +1088,7 @@
   <spirit:vendorExtensions>
     <xilinx:coreExtensions>
       <xilinx:displayName>MADC_v1.0</xilinx:displayName>
-      <xilinx:coreRevision>31</xilinx:coreRevision>
+      <xilinx:coreRevision>69</xilinx:coreRevision>
       <xilinx:configElementInfos>
         <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.S00_AXI.ADDR_WIDTH" xilinx:valueSource="auto"/>
         <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.S00_AXI.ARUSER_WIDTH" xilinx:valueSource="constant"/>
@@ -1107,16 +1109,17 @@
         <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.S00_AXI.RUSER_WIDTH" xilinx:valueSource="constant"/>
         <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.S00_AXI.WUSER_WIDTH" xilinx:valueSource="constant"/>
         <xilinx:configElementInfo xilinx:referenceId="PARAM_VALUE.ADDR_SIZE" xilinx:valueSource="user"/>
+        <xilinx:configElementInfo xilinx:referenceId="PARAM_VALUE.NPLC" xilinx:valueSource="user"/>
       </xilinx:configElementInfos>
     </xilinx:coreExtensions>
     <xilinx:packagingInfo>
       <xilinx:xilinxVersion>2024.1</xilinx:xilinxVersion>
       <xilinx:checksum xilinx:scope="busInterfaces" xilinx:value="bf417d16"/>
       <xilinx:checksum xilinx:scope="memoryMaps" xilinx:value="ed1368d5"/>
-      <xilinx:checksum xilinx:scope="fileGroups" xilinx:value="f5b86d05"/>
+      <xilinx:checksum xilinx:scope="fileGroups" xilinx:value="523c8aa8"/>
       <xilinx:checksum xilinx:scope="ports" xilinx:value="cd2f98c8"/>
-      <xilinx:checksum xilinx:scope="hdlParameters" xilinx:value="923cf986"/>
-      <xilinx:checksum xilinx:scope="parameters" xilinx:value="cb33229d"/>
+      <xilinx:checksum xilinx:scope="hdlParameters" xilinx:value="b0cc8f5a"/>
+      <xilinx:checksum xilinx:scope="parameters" xilinx:value="9e6ab1f0"/>
     </xilinx:packagingInfo>
   </spirit:vendorExtensions>
 </spirit:component>

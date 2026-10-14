@@ -2390,7 +2390,7 @@
       },
       "MADC_0": {
         "vlnv": "GB:user:MADC:1.0",
-        "ip_revision": "31",
+        "ip_revision": "69",
         "xci_name": "MADC_ARTY_Z7_MADC_0_0",
         "xci_path": "ip/MADC_ARTY_Z7_MADC_0_0/MADC_ARTY_Z7_MADC_0_0.xci",
         "inst_hier_path": "MADC_0",
@@ -2399,7 +2399,7 @@
             "value": "8"
           },
           "NPLC": {
-            "value": "20000"
+            "value": "2000000"
           }
         }
       }

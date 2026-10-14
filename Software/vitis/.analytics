@@ -135,3 +135,351 @@ timestamp=[2026-09-09 20:54:40], mode=PLATFORM_GENERATION, duration=0:00:05.472,
 timestamp=[2026-09-09 20:54:45], mode=PLATFORM_GENERATION, duration=0:00:04.845, duration_ms=4845, data={name=MADC_ARTY_Z7_wrapper}
 timestamp=[2026-09-09 20:54:45], mode=BUILD, duration=0:00:00.119, duration_ms=119, data={name=MADC, configuration=Debug, clean_build=true}
 timestamp=[2026-09-09 20:54:45], mode=BUILD, duration=0:00:00.118, duration_ms=118, data={name=MADC_system, configuration=Debug, clean_build=true}
+timestamp=[2026-10-01 19:25:57], mode=WORKBENCH_START, duration=0:00:05.964, duration_ms=5964, data={}
+timestamp=[2026-10-01 19:25:57], mode=WORKBENCH_UI_INIT, duration=0:00:00.652, duration_ms=652, data={editors_count=11, platform_editors_count=8, projects_count=4, platform_projects_count=1, active_platform_editor=false, projects=MADC,MADC_ARTY_Z7_wrapper,MADC_system,RemoteSystemsTempFiles}
+timestamp=[2026-10-01 19:25:57], mode=PLATFORM_REPOSITORY_INIT, duration=0:00:00.677, duration_ms=677, data={}
+timestamp=[2026-10-01 20:15:06], mode=WORKBENCH_START, duration=0:00:06.096, duration_ms=6096, data={}
+timestamp=[2026-10-01 20:15:07], mode=PLATFORM_REPOSITORY_INIT, duration=0:00:00.659, duration_ms=659, data={}
+timestamp=[2026-10-01 20:15:07], mode=WORKBENCH_UI_INIT, duration=0:00:01.119, duration_ms=1119, data={editors_count=11, platform_editors_count=8, projects_count=4, platform_projects_count=1, active_platform_editor=false, projects=MADC,MADC_ARTY_Z7_wrapper,MADC_system,RemoteSystemsTempFiles}
+timestamp=[2026-10-01 20:17:13], mode=PLATFORM_GENERATION, duration=0:00:10.800, duration_ms=10800, data={name=MADC_ARTY_Z7_wrapper}
+timestamp=[2026-10-01 20:22:19], mode=PLATFORM_GENERATION, duration=0:00:15.542, duration_ms=15542, data={name=MADC_ARTY_Z7_wrapper}
+timestamp=[2026-10-01 20:22:28], mode=BUILD, duration=0:00:00.283, duration_ms=283, data={name=MADC, configuration=Debug, clean_build=false}
+timestamp=[2026-10-01 20:22:39], mode=BUILD, duration=0:00:06.234, duration_ms=6234, data={name=MADC_system, configuration=Debug, clean_build=false}
+timestamp=[2026-10-01 20:24:15], mode=BUILD, duration=0:00:00.222, duration_ms=222, data={name=MADC, configuration=Debug, clean_build=false}
+timestamp=[2026-10-01 20:24:21], mode=BUILD, duration=0:00:06.229, duration_ms=6229, data={name=MADC_system, configuration=Debug, clean_build=false}
+timestamp=[2026-10-01 20:26:11], mode=BUILD, duration=0:00:00.222, duration_ms=222, data={name=MADC, configuration=Debug, clean_build=false}
+timestamp=[2026-10-01 20:26:17], mode=BUILD, duration=0:00:06.176, duration_ms=6176, data={name=MADC_system, configuration=Debug, clean_build=false}
+timestamp=[2026-10-01 20:27:05], mode=BUILD, duration=0:00:00.226, duration_ms=226, data={name=MADC, configuration=Debug, clean_build=false}
+timestamp=[2026-10-01 20:27:11], mode=BUILD, duration=0:00:06.177, duration_ms=6177, data={name=MADC_system, configuration=Debug, clean_build=false}
+timestamp=[2026-10-01 20:29:46], mode=BUILD, duration=0:00:00.221, duration_ms=221, data={name=MADC, configuration=Debug, clean_build=false}
+timestamp=[2026-10-01 20:29:53], mode=BUILD, duration=0:00:06.178, duration_ms=6178, data={name=MADC_system, configuration=Debug, clean_build=false}
+timestamp=[2026-10-01 20:30:59], mode=BUILD, duration=0:00:00.171, duration_ms=171, data={name=MADC, configuration=Debug, clean_build=false}
+timestamp=[2026-10-01 20:31:10], mode=BUILD, duration=0:00:00.232, duration_ms=232, data={name=MADC, configuration=Debug, clean_build=false}
+timestamp=[2026-10-01 20:31:16], mode=BUILD, duration=0:00:06.231, duration_ms=6231, data={name=MADC_system, configuration=Debug, clean_build=false}
+timestamp=[2026-10-01 20:33:37], mode=BUILD, duration=0:00:00.223, duration_ms=223, data={name=MADC, configuration=Debug, clean_build=false}
+timestamp=[2026-10-01 20:33:44], mode=BUILD, duration=0:00:06.230, duration_ms=6230, data={name=MADC_system, configuration=Debug, clean_build=false}
+timestamp=[2026-10-01 20:35:42], mode=BUILD, duration=0:00:00.222, duration_ms=222, data={name=MADC, configuration=Debug, clean_build=false}
+timestamp=[2026-10-01 20:35:48], mode=BUILD, duration=0:00:06.229, duration_ms=6229, data={name=MADC_system, configuration=Debug, clean_build=false}
+timestamp=[2026-10-01 20:38:15], mode=BUILD, duration=0:00:00.283, duration_ms=283, data={name=MADC, configuration=Debug, clean_build=false}
+timestamp=[2026-10-01 20:38:21], mode=BUILD, duration=0:00:06.380, duration_ms=6380, data={name=MADC_system, configuration=Debug, clean_build=false}
+timestamp=[2026-10-01 20:39:59], mode=BUILD, duration=0:00:00.225, duration_ms=225, data={name=MADC, configuration=Debug, clean_build=false}
+timestamp=[2026-10-01 20:40:05], mode=BUILD, duration=0:00:06.230, duration_ms=6230, data={name=MADC_system, configuration=Debug, clean_build=false}
+timestamp=[2026-10-01 20:40:07], mode=BUILD, duration=0:00:00.222, duration_ms=222, data={name=MADC, configuration=Debug, clean_build=false}
+timestamp=[2026-10-01 20:40:13], mode=BUILD, duration=0:00:06.229, duration_ms=6229, data={name=MADC_system, configuration=Debug, clean_build=false}
+timestamp=[2026-10-01 20:43:32], mode=BUILD, duration=0:00:00.223, duration_ms=223, data={name=MADC, configuration=Debug, clean_build=false}
+timestamp=[2026-10-01 20:43:38], mode=BUILD, duration=0:00:06.229, duration_ms=6229, data={name=MADC_system, configuration=Debug, clean_build=false}
+timestamp=[2026-10-01 20:44:11], mode=BUILD, duration=0:00:00.122, duration_ms=122, data={name=MADC, configuration=Debug, clean_build=false}
+timestamp=[2026-10-01 20:44:18], mode=BUILD, duration=0:00:06.232, duration_ms=6232, data={name=MADC_system, configuration=Debug, clean_build=false}
+timestamp=[2026-10-01 20:51:06], mode=BUILD, duration=0:00:00.193, duration_ms=193, data={name=MADC, configuration=Debug, clean_build=false}
+timestamp=[2026-10-01 20:51:16], mode=BUILD, duration=0:00:00.219, duration_ms=219, data={name=MADC, configuration=Debug, clean_build=false}
+timestamp=[2026-10-01 20:51:23], mode=BUILD, duration=0:00:06.177, duration_ms=6177, data={name=MADC_system, configuration=Debug, clean_build=false}
+timestamp=[2026-10-01 20:53:07], mode=BUILD, duration=0:00:00.269, duration_ms=269, data={name=MADC, configuration=Debug, clean_build=false}
+timestamp=[2026-10-01 20:53:14], mode=BUILD, duration=0:00:06.226, duration_ms=6226, data={name=MADC_system, configuration=Debug, clean_build=false}
+timestamp=[2026-10-01 20:56:37], mode=BUILD, duration=0:00:00.220, duration_ms=220, data={name=MADC, configuration=Debug, clean_build=false}
+timestamp=[2026-10-01 20:56:43], mode=BUILD, duration=0:00:06.180, duration_ms=6180, data={name=MADC_system, configuration=Debug, clean_build=false}
+timestamp=[2026-10-01 20:57:33], mode=BUILD, duration=0:00:00.221, duration_ms=221, data={name=MADC, configuration=Debug, clean_build=false}
+timestamp=[2026-10-01 20:57:40], mode=BUILD, duration=0:00:06.176, duration_ms=6176, data={name=MADC_system, configuration=Debug, clean_build=false}
+timestamp=[2026-10-01 20:58:28], mode=BUILD, duration=0:00:00.240, duration_ms=240, data={name=MADC, configuration=Debug, clean_build=false}
+timestamp=[2026-10-01 20:58:35], mode=BUILD, duration=0:00:06.226, duration_ms=6226, data={name=MADC_system, configuration=Debug, clean_build=false}
+timestamp=[2026-10-01 20:59:02], mode=BUILD, duration=0:00:00.271, duration_ms=271, data={name=MADC, configuration=Debug, clean_build=false}
+timestamp=[2026-10-01 20:59:08], mode=BUILD, duration=0:00:06.229, duration_ms=6229, data={name=MADC_system, configuration=Debug, clean_build=false}
+timestamp=[2026-10-01 21:00:25], mode=BUILD, duration=0:00:00.220, duration_ms=220, data={name=MADC, configuration=Debug, clean_build=false}
+timestamp=[2026-10-01 21:00:32], mode=BUILD, duration=0:00:06.226, duration_ms=6226, data={name=MADC_system, configuration=Debug, clean_build=false}
+timestamp=[2026-10-01 21:01:24], mode=BUILD, duration=0:00:00.292, duration_ms=292, data={name=MADC, configuration=Debug, clean_build=false}
+timestamp=[2026-10-01 21:01:31], mode=BUILD, duration=0:00:06.230, duration_ms=6230, data={name=MADC_system, configuration=Debug, clean_build=false}
+timestamp=[2026-10-01 21:02:45], mode=BUILD, duration=0:00:00.235, duration_ms=235, data={name=MADC, configuration=Debug, clean_build=false}
+timestamp=[2026-10-01 21:02:51], mode=BUILD, duration=0:00:06.182, duration_ms=6182, data={name=MADC_system, configuration=Debug, clean_build=false}
+timestamp=[2026-10-01 21:05:20], mode=BUILD, duration=0:00:00.229, duration_ms=229, data={name=MADC, configuration=Debug, clean_build=false}
+timestamp=[2026-10-01 21:05:27], mode=BUILD, duration=0:00:06.347, duration_ms=6347, data={name=MADC_system, configuration=Debug, clean_build=false}
+timestamp=[2026-10-01 21:06:14], mode=BUILD, duration=0:00:00.229, duration_ms=229, data={name=MADC, configuration=Debug, clean_build=false}
+timestamp=[2026-10-01 21:06:21], mode=BUILD, duration=0:00:06.398, duration_ms=6398, data={name=MADC_system, configuration=Debug, clean_build=false}
+timestamp=[2026-10-01 21:10:01], mode=BUILD, duration=0:00:00.266, duration_ms=266, data={name=MADC, configuration=Debug, clean_build=false}
+timestamp=[2026-10-01 21:10:08], mode=BUILD, duration=0:00:06.234, duration_ms=6234, data={name=MADC_system, configuration=Debug, clean_build=false}
+timestamp=[2026-10-01 21:10:48], mode=BUILD, duration=0:00:00.339, duration_ms=339, data={name=MADC, configuration=Debug, clean_build=false}
+timestamp=[2026-10-01 21:10:55], mode=BUILD, duration=0:00:06.182, duration_ms=6182, data={name=MADC_system, configuration=Debug, clean_build=false}
+timestamp=[2026-10-01 21:12:44], mode=BUILD, duration=0:00:00.292, duration_ms=292, data={name=MADC, configuration=Debug, clean_build=false}
+timestamp=[2026-10-01 21:12:51], mode=BUILD, duration=0:00:06.190, duration_ms=6190, data={name=MADC_system, configuration=Debug, clean_build=false}
+timestamp=[2026-10-01 21:13:27], mode=BUILD, duration=0:00:00.233, duration_ms=233, data={name=MADC, configuration=Debug, clean_build=false}
+timestamp=[2026-10-01 21:13:33], mode=BUILD, duration=0:00:06.183, duration_ms=6183, data={name=MADC_system, configuration=Debug, clean_build=false}
+timestamp=[2026-10-01 21:14:28], mode=BUILD, duration=0:00:00.308, duration_ms=308, data={name=MADC, configuration=Debug, clean_build=false}
+timestamp=[2026-10-01 21:14:35], mode=BUILD, duration=0:00:06.233, duration_ms=6233, data={name=MADC_system, configuration=Debug, clean_build=false}
+timestamp=[2026-10-01 21:15:08], mode=BUILD, duration=0:00:00.235, duration_ms=235, data={name=MADC, configuration=Debug, clean_build=false}
+timestamp=[2026-10-01 21:15:15], mode=BUILD, duration=0:00:06.237, duration_ms=6237, data={name=MADC_system, configuration=Debug, clean_build=false}
+timestamp=[2026-10-01 21:17:59], mode=BUILD, duration=0:00:00.232, duration_ms=232, data={name=MADC, configuration=Debug, clean_build=false}
+timestamp=[2026-10-01 21:18:06], mode=BUILD, duration=0:00:06.347, duration_ms=6347, data={name=MADC_system, configuration=Debug, clean_build=false}
+timestamp=[2026-10-01 21:18:23], mode=BUILD, duration=0:00:00.392, duration_ms=392, data={name=MADC, configuration=Debug, clean_build=false}
+timestamp=[2026-10-01 21:18:30], mode=BUILD, duration=0:00:06.289, duration_ms=6289, data={name=MADC_system, configuration=Debug, clean_build=false}
+timestamp=[2026-10-01 21:19:28], mode=BUILD, duration=0:00:00.295, duration_ms=295, data={name=MADC, configuration=Debug, clean_build=false}
+timestamp=[2026-10-01 21:19:35], mode=BUILD, duration=0:00:06.428, duration_ms=6428, data={name=MADC_system, configuration=Debug, clean_build=false}
+timestamp=[2026-10-01 21:27:56], mode=PLATFORM_GENERATION, duration=0:00:07.659, duration_ms=7659, data={name=MADC_ARTY_Z7_wrapper}
+timestamp=[2026-10-01 21:28:28], mode=BUILD, duration=0:00:00.280, duration_ms=280, data={name=MADC, configuration=Debug, clean_build=false}
+timestamp=[2026-10-01 21:28:40], mode=BUILD, duration=0:00:06.234, duration_ms=6234, data={name=MADC_system, configuration=Debug, clean_build=false}
+timestamp=[2026-10-01 21:29:34], mode=BUILD, duration=0:00:00.456, duration_ms=456, data={name=MADC, configuration=Debug, clean_build=false}
+timestamp=[2026-10-01 21:29:41], mode=BUILD, duration=0:00:06.236, duration_ms=6236, data={name=MADC_system, configuration=Debug, clean_build=false}
+timestamp=[2026-10-01 21:30:17], mode=BUILD, duration=0:00:00.379, duration_ms=379, data={name=MADC, configuration=Debug, clean_build=false}
+timestamp=[2026-10-01 21:30:24], mode=BUILD, duration=0:00:06.297, duration_ms=6297, data={name=MADC_system, configuration=Debug, clean_build=false}
+timestamp=[2026-10-01 21:31:00], mode=BUILD, duration=0:00:00.230, duration_ms=230, data={name=MADC, configuration=Debug, clean_build=false}
+timestamp=[2026-10-01 21:31:07], mode=BUILD, duration=0:00:06.300, duration_ms=6300, data={name=MADC_system, configuration=Debug, clean_build=false}
+timestamp=[2026-10-01 21:33:23], mode=PLATFORM_GENERATION, duration=0:00:06.015, duration_ms=6015, data={name=MADC_ARTY_Z7_wrapper}
+timestamp=[2026-10-01 21:33:25], mode=BUILD, duration=0:00:00.278, duration_ms=278, data={name=MADC, configuration=Debug, clean_build=false}
+timestamp=[2026-10-01 21:33:32], mode=BUILD, duration=0:00:06.481, duration_ms=6481, data={name=MADC_system, configuration=Debug, clean_build=false}
+timestamp=[2026-10-01 21:33:38], mode=BUILD, duration=0:00:00.278, duration_ms=278, data={name=MADC, configuration=Debug, clean_build=false}
+timestamp=[2026-10-01 21:33:45], mode=BUILD, duration=0:00:06.481, duration_ms=6481, data={name=MADC_system, configuration=Debug, clean_build=false}
+timestamp=[2026-10-01 21:43:26], mode=BUILD, duration=0:00:00.329, duration_ms=329, data={name=MADC, configuration=Debug, clean_build=false}
+timestamp=[2026-10-01 21:43:33], mode=BUILD, duration=0:00:06.298, duration_ms=6298, data={name=MADC_system, configuration=Debug, clean_build=false}
+timestamp=[2026-10-01 21:44:38], mode=BUILD, duration=0:00:00.301, duration_ms=301, data={name=MADC, configuration=Debug, clean_build=false}
+timestamp=[2026-10-01 21:44:45], mode=BUILD, duration=0:00:06.276, duration_ms=6276, data={name=MADC_system, configuration=Debug, clean_build=false}
+timestamp=[2026-10-01 21:47:33], mode=BUILD, duration=0:00:00.262, duration_ms=262, data={name=MADC, configuration=Debug, clean_build=false}
+timestamp=[2026-10-01 21:47:39], mode=BUILD, duration=0:00:06.187, duration_ms=6187, data={name=MADC_system, configuration=Debug, clean_build=false}
+timestamp=[2026-10-01 21:47:43], mode=BUILD, duration=0:00:00.333, duration_ms=333, data={name=MADC, configuration=Debug, clean_build=false}
+timestamp=[2026-10-01 21:47:50], mode=BUILD, duration=0:00:06.240, duration_ms=6240, data={name=MADC_system, configuration=Debug, clean_build=false}
+timestamp=[2026-10-01 21:49:10], mode=BUILD, duration=0:00:00.426, duration_ms=426, data={name=MADC, configuration=Debug, clean_build=false}
+timestamp=[2026-10-01 21:49:17], mode=BUILD, duration=0:00:06.274, duration_ms=6274, data={name=MADC_system, configuration=Debug, clean_build=false}
+timestamp=[2026-10-01 21:49:41], mode=BUILD, duration=0:00:00.234, duration_ms=234, data={name=MADC, configuration=Debug, clean_build=false}
+timestamp=[2026-10-01 21:49:48], mode=BUILD, duration=0:00:06.464, duration_ms=6464, data={name=MADC_system, configuration=Debug, clean_build=false}
+timestamp=[2026-10-01 21:49:57], mode=BUILD, duration=0:00:00.133, duration_ms=133, data={name=MADC, configuration=Debug, clean_build=false}
+timestamp=[2026-10-01 21:50:03], mode=BUILD, duration=0:00:06.236, duration_ms=6236, data={name=MADC_system, configuration=Debug, clean_build=false}
+timestamp=[2026-10-01 21:50:31], mode=BUILD, duration=0:00:00.325, duration_ms=325, data={name=MADC, configuration=Debug, clean_build=false}
+timestamp=[2026-10-01 21:50:38], mode=BUILD, duration=0:00:06.413, duration_ms=6413, data={name=MADC_system, configuration=Debug, clean_build=false}
+timestamp=[2026-10-01 21:52:15], mode=BUILD, duration=0:00:00.326, duration_ms=326, data={name=MADC, configuration=Debug, clean_build=false}
+timestamp=[2026-10-01 21:52:22], mode=BUILD, duration=0:00:06.341, duration_ms=6341, data={name=MADC_system, configuration=Debug, clean_build=false}
+timestamp=[2026-10-01 21:53:10], mode=BUILD, duration=0:00:00.390, duration_ms=390, data={name=MADC, configuration=Debug, clean_build=false}
+timestamp=[2026-10-01 21:53:17], mode=BUILD, duration=0:00:06.427, duration_ms=6427, data={name=MADC_system, configuration=Debug, clean_build=false}
+timestamp=[2026-10-01 21:54:11], mode=BUILD, duration=0:00:00.336, duration_ms=336, data={name=MADC, configuration=Debug, clean_build=false}
+timestamp=[2026-10-01 21:54:18], mode=BUILD, duration=0:00:06.466, duration_ms=6466, data={name=MADC_system, configuration=Debug, clean_build=false}
+timestamp=[2026-10-01 21:55:39], mode=BUILD, duration=0:00:00.289, duration_ms=289, data={name=MADC, configuration=Debug, clean_build=false}
+timestamp=[2026-10-01 21:55:46], mode=BUILD, duration=0:00:06.488, duration_ms=6488, data={name=MADC_system, configuration=Debug, clean_build=false}
+timestamp=[2026-10-01 21:56:57], mode=BUILD, duration=0:00:00.370, duration_ms=370, data={name=MADC, configuration=Debug, clean_build=false}
+timestamp=[2026-10-01 21:57:04], mode=BUILD, duration=0:00:06.440, duration_ms=6440, data={name=MADC_system, configuration=Debug, clean_build=false}
+timestamp=[2026-10-01 21:57:27], mode=BUILD, duration=0:00:00.320, duration_ms=320, data={name=MADC, configuration=Debug, clean_build=false}
+timestamp=[2026-10-01 21:57:35], mode=BUILD, duration=0:00:06.364, duration_ms=6364, data={name=MADC_system, configuration=Debug, clean_build=false}
+timestamp=[2026-10-01 22:04:04], mode=PLATFORM_GENERATION, duration=0:00:07.959, duration_ms=7959, data={name=MADC_ARTY_Z7_wrapper}
+timestamp=[2026-10-01 22:04:07], mode=BUILD, duration=0:00:00.280, duration_ms=280, data={name=MADC, configuration=Debug, clean_build=false}
+timestamp=[2026-10-01 22:04:19], mode=BUILD, duration=0:00:06.286, duration_ms=6286, data={name=MADC_system, configuration=Debug, clean_build=false}
+timestamp=[2026-10-01 22:09:17], mode=BUILD, duration=0:00:00.361, duration_ms=361, data={name=MADC, configuration=Debug, clean_build=false}
+timestamp=[2026-10-01 22:09:24], mode=BUILD, duration=0:00:06.378, duration_ms=6378, data={name=MADC_system, configuration=Debug, clean_build=false}
+timestamp=[2026-10-01 22:10:30], mode=BUILD, duration=0:00:00.345, duration_ms=345, data={name=MADC, configuration=Debug, clean_build=false}
+timestamp=[2026-10-01 22:10:37], mode=BUILD, duration=0:00:06.364, duration_ms=6364, data={name=MADC_system, configuration=Debug, clean_build=false}
+timestamp=[2026-10-01 22:11:24], mode=BUILD, duration=0:00:00.340, duration_ms=340, data={name=MADC, configuration=Debug, clean_build=false}
+timestamp=[2026-10-01 22:11:31], mode=BUILD, duration=0:00:06.357, duration_ms=6357, data={name=MADC_system, configuration=Debug, clean_build=false}
+timestamp=[2026-10-01 22:12:06], mode=BUILD, duration=0:00:00.312, duration_ms=312, data={name=MADC, configuration=Debug, clean_build=false}
+timestamp=[2026-10-01 22:12:13], mode=BUILD, duration=0:00:06.353, duration_ms=6353, data={name=MADC_system, configuration=Debug, clean_build=false}
+timestamp=[2026-10-01 22:14:55], mode=BUILD, duration=0:00:00.296, duration_ms=296, data={name=MADC, configuration=Debug, clean_build=false}
+timestamp=[2026-10-01 22:15:02], mode=BUILD, duration=0:00:06.365, duration_ms=6365, data={name=MADC_system, configuration=Debug, clean_build=false}
+timestamp=[2026-10-01 22:15:56], mode=BUILD, duration=0:00:00.292, duration_ms=292, data={name=MADC, configuration=Debug, clean_build=false}
+timestamp=[2026-10-01 22:16:03], mode=BUILD, duration=0:00:06.530, duration_ms=6530, data={name=MADC_system, configuration=Debug, clean_build=false}
+timestamp=[2026-10-01 22:16:43], mode=BUILD, duration=0:00:00.345, duration_ms=345, data={name=MADC, configuration=Debug, clean_build=false}
+timestamp=[2026-10-01 22:16:49], mode=BUILD, duration=0:00:06.384, duration_ms=6384, data={name=MADC_system, configuration=Debug, clean_build=false}
+timestamp=[2026-10-01 22:17:37], mode=BUILD, duration=0:00:00.231, duration_ms=231, data={name=MADC, configuration=Debug, clean_build=false}
+timestamp=[2026-10-01 22:17:44], mode=BUILD, duration=0:00:06.287, duration_ms=6287, data={name=MADC_system, configuration=Debug, clean_build=false}
+timestamp=[2026-10-01 22:20:56], mode=BUILD, duration=0:00:00.345, duration_ms=345, data={name=MADC, configuration=Debug, clean_build=false}
+timestamp=[2026-10-01 22:21:03], mode=BUILD, duration=0:00:06.672, duration_ms=6672, data={name=MADC_system, configuration=Debug, clean_build=false}
+timestamp=[2026-10-01 22:34:31], mode=PLATFORM_GENERATION, duration=0:00:08.507, duration_ms=8507, data={name=MADC_ARTY_Z7_wrapper}
+timestamp=[2026-10-01 22:34:50], mode=BUILD, duration=0:00:00.278, duration_ms=278, data={name=MADC, configuration=Debug, clean_build=false}
+timestamp=[2026-10-01 22:35:02], mode=BUILD, duration=0:00:06.185, duration_ms=6185, data={name=MADC_system, configuration=Debug, clean_build=false}
+timestamp=[2026-10-01 22:42:14], mode=PLATFORM_GENERATION, duration=0:00:08.462, duration_ms=8462, data={name=MADC_ARTY_Z7_wrapper}
+timestamp=[2026-10-01 22:42:23], mode=BUILD, duration=0:00:00.282, duration_ms=282, data={name=MADC, configuration=Debug, clean_build=false}
+timestamp=[2026-10-01 22:42:36], mode=BUILD, duration=0:00:06.286, duration_ms=6286, data={name=MADC_system, configuration=Debug, clean_build=false}
+timestamp=[2026-10-01 22:42:58], mode=BUILD, duration=0:00:00.499, duration_ms=499, data={name=MADC, configuration=Debug, clean_build=false}
+timestamp=[2026-10-01 22:43:06], mode=BUILD, duration=0:00:06.733, duration_ms=6733, data={name=MADC_system, configuration=Debug, clean_build=false}
+timestamp=[2026-10-01 22:43:41], mode=BUILD, duration=0:00:00.368, duration_ms=368, data={name=MADC, configuration=Debug, clean_build=false}
+timestamp=[2026-10-01 22:43:48], mode=BUILD, duration=0:00:06.687, duration_ms=6687, data={name=MADC_system, configuration=Debug, clean_build=false}
+timestamp=[2026-10-01 22:44:58], mode=BUILD, duration=0:00:00.303, duration_ms=303, data={name=MADC, configuration=Debug, clean_build=false}
+timestamp=[2026-10-01 22:45:06], mode=BUILD, duration=0:00:06.620, duration_ms=6620, data={name=MADC_system, configuration=Debug, clean_build=false}
+timestamp=[2026-10-01 22:50:58], mode=PLATFORM_GENERATION, duration=0:00:08.032, duration_ms=8032, data={name=MADC_ARTY_Z7_wrapper}
+timestamp=[2026-10-01 22:51:05], mode=BUILD, duration=0:00:00.283, duration_ms=283, data={name=MADC, configuration=Debug, clean_build=false}
+timestamp=[2026-10-01 22:51:17], mode=BUILD, duration=0:00:06.186, duration_ms=6186, data={name=MADC_system, configuration=Debug, clean_build=false}
+timestamp=[2026-10-01 22:51:44], mode=BUILD, duration=0:00:00.465, duration_ms=465, data={name=MADC, configuration=Debug, clean_build=false}
+timestamp=[2026-10-01 22:51:51], mode=BUILD, duration=0:00:06.513, duration_ms=6513, data={name=MADC_system, configuration=Debug, clean_build=false}
+timestamp=[2026-10-01 23:00:10], mode=PLATFORM_GENERATION, duration=0:00:08.148, duration_ms=8148, data={name=MADC_ARTY_Z7_wrapper}
+timestamp=[2026-10-01 23:00:22], mode=BUILD, duration=0:00:00.333, duration_ms=333, data={name=MADC, configuration=Debug, clean_build=false}
+timestamp=[2026-10-01 23:00:34], mode=BUILD, duration=0:00:06.237, duration_ms=6237, data={name=MADC_system, configuration=Debug, clean_build=false}
+timestamp=[2026-10-01 23:07:05], mode=PLATFORM_GENERATION, duration=0:00:08.282, duration_ms=8282, data={name=MADC_ARTY_Z7_wrapper}
+timestamp=[2026-10-01 23:07:14], mode=BUILD, duration=0:00:00.283, duration_ms=283, data={name=MADC, configuration=Debug, clean_build=false}
+timestamp=[2026-10-01 23:07:26], mode=BUILD, duration=0:00:06.188, duration_ms=6188, data={name=MADC_system, configuration=Debug, clean_build=false}
+timestamp=[2026-10-01 23:07:47], mode=BUILD, duration=0:00:00.304, duration_ms=304, data={name=MADC, configuration=Debug, clean_build=false}
+timestamp=[2026-10-01 23:07:55], mode=BUILD, duration=0:00:06.647, duration_ms=6647, data={name=MADC_system, configuration=Debug, clean_build=false}
+timestamp=[2026-10-01 23:15:25], mode=PLATFORM_GENERATION, duration=0:00:08.639, duration_ms=8639, data={name=MADC_ARTY_Z7_wrapper}
+timestamp=[2026-10-01 23:15:39], mode=BUILD, duration=0:00:00.335, duration_ms=335, data={name=MADC, configuration=Debug, clean_build=false}
+timestamp=[2026-10-01 23:15:52], mode=BUILD, duration=0:00:06.238, duration_ms=6238, data={name=MADC_system, configuration=Debug, clean_build=false}
+timestamp=[2026-10-01 23:16:36], mode=BUILD, duration=0:00:00.491, duration_ms=491, data={name=MADC, configuration=Debug, clean_build=false}
+timestamp=[2026-10-01 23:16:43], mode=BUILD, duration=0:00:06.999, duration_ms=6999, data={name=MADC_system, configuration=Debug, clean_build=false}
+timestamp=[2026-10-02 17:55:01], mode=WORKBENCH_START, duration=0:00:07.910, duration_ms=7910, data={}
+timestamp=[2026-10-02 17:55:02], mode=WORKBENCH_UI_INIT, duration=0:00:00.741, duration_ms=741, data={editors_count=11, platform_editors_count=8, projects_count=4, platform_projects_count=1, active_platform_editor=false, projects=MADC,MADC_ARTY_Z7_wrapper,MADC_system,RemoteSystemsTempFiles}
+timestamp=[2026-10-02 17:55:02], mode=PLATFORM_REPOSITORY_INIT, duration=0:00:00.663, duration_ms=663, data={}
+timestamp=[2026-10-02 18:09:26], mode=PLATFORM_GENERATION, duration=0:00:05.406, duration_ms=5406, data={name=MADC_ARTY_Z7_wrapper}
+timestamp=[2026-10-02 18:09:47], mode=PLATFORM_GENERATION, duration=0:00:10.922, duration_ms=10922, data={name=MADC_ARTY_Z7_wrapper}
+timestamp=[2026-10-02 18:09:47], mode=BUILD, duration=0:00:00.191, duration_ms=191, data={name=MADC, configuration=Debug, clean_build=false}
+timestamp=[2026-10-02 18:16:17], mode=PLATFORM_GENERATION, duration=0:00:16.103, duration_ms=16103, data={name=MADC_ARTY_Z7_wrapper}
+timestamp=[2026-10-02 18:16:25], mode=BUILD, duration=0:00:00.269, duration_ms=269, data={name=MADC, configuration=Debug, clean_build=false}
+timestamp=[2026-10-02 18:16:37], mode=BUILD, duration=0:00:06.279, duration_ms=6279, data={name=MADC_system, configuration=Debug, clean_build=false}
+timestamp=[2026-10-02 18:17:31], mode=BUILD, duration=0:00:00.221, duration_ms=221, data={name=MADC, configuration=Debug, clean_build=false}
+timestamp=[2026-10-02 18:17:38], mode=BUILD, duration=0:00:06.226, duration_ms=6226, data={name=MADC_system, configuration=Debug, clean_build=false}
+timestamp=[2026-10-02 18:36:28], mode=BUILD, duration=0:00:00.221, duration_ms=221, data={name=MADC, configuration=Debug, clean_build=false}
+timestamp=[2026-10-02 18:36:35], mode=BUILD, duration=0:00:06.327, duration_ms=6327, data={name=MADC_system, configuration=Debug, clean_build=false}
+timestamp=[2026-10-02 18:43:01], mode=PLATFORM_GENERATION, duration=0:00:07.117, duration_ms=7117, data={name=MADC_ARTY_Z7_wrapper}
+timestamp=[2026-10-02 18:43:31], mode=BUILD, duration=0:00:00.271, duration_ms=271, data={name=MADC, configuration=Debug, clean_build=false}
+timestamp=[2026-10-02 18:43:43], mode=BUILD, duration=0:00:06.181, duration_ms=6181, data={name=MADC_system, configuration=Debug, clean_build=false}
+timestamp=[2026-10-02 18:45:05], mode=BUILD, duration=0:00:00.220, duration_ms=220, data={name=MADC, configuration=Debug, clean_build=false}
+timestamp=[2026-10-02 18:45:12], mode=BUILD, duration=0:00:06.188, duration_ms=6188, data={name=MADC_system, configuration=Debug, clean_build=false}
+timestamp=[2026-10-02 18:46:04], mode=BUILD, duration=0:00:00.221, duration_ms=221, data={name=MADC, configuration=Debug, clean_build=false}
+timestamp=[2026-10-02 18:46:11], mode=BUILD, duration=0:00:06.308, duration_ms=6308, data={name=MADC_system, configuration=Debug, clean_build=false}
+timestamp=[2026-10-02 18:48:17], mode=BUILD, duration=0:00:00.220, duration_ms=220, data={name=MADC, configuration=Debug, clean_build=false}
+timestamp=[2026-10-02 18:48:24], mode=BUILD, duration=0:00:06.179, duration_ms=6179, data={name=MADC_system, configuration=Debug, clean_build=false}
+timestamp=[2026-10-02 18:49:20], mode=BUILD, duration=0:00:00.221, duration_ms=221, data={name=MADC, configuration=Debug, clean_build=false}
+timestamp=[2026-10-02 18:49:26], mode=BUILD, duration=0:00:06.179, duration_ms=6179, data={name=MADC_system, configuration=Debug, clean_build=false}
+timestamp=[2026-10-02 18:51:14], mode=BUILD, duration=0:00:00.222, duration_ms=222, data={name=MADC, configuration=Debug, clean_build=false}
+timestamp=[2026-10-02 18:51:20], mode=BUILD, duration=0:00:06.187, duration_ms=6187, data={name=MADC_system, configuration=Debug, clean_build=false}
+timestamp=[2026-10-02 18:53:26], mode=BUILD, duration=0:00:00.121, duration_ms=121, data={name=MADC, configuration=Debug, clean_build=false}
+timestamp=[2026-10-02 18:53:33], mode=BUILD, duration=0:00:06.279, duration_ms=6279, data={name=MADC_system, configuration=Debug, clean_build=false}
+timestamp=[2026-10-02 19:02:40], mode=BUILD, duration=0:00:00.220, duration_ms=220, data={name=MADC, configuration=Debug, clean_build=false}
+timestamp=[2026-10-02 19:02:46], mode=BUILD, duration=0:00:06.178, duration_ms=6178, data={name=MADC_system, configuration=Debug, clean_build=false}
+timestamp=[2026-10-02 19:08:02], mode=BUILD, duration=0:00:00.222, duration_ms=222, data={name=MADC, configuration=Debug, clean_build=false}
+timestamp=[2026-10-02 19:08:29], mode=BUILD, duration=0:00:00.220, duration_ms=220, data={name=MADC, configuration=Debug, clean_build=false}
+timestamp=[2026-10-02 19:08:36], mode=BUILD, duration=0:00:06.177, duration_ms=6177, data={name=MADC_system, configuration=Debug, clean_build=false}
+timestamp=[2026-10-02 19:09:04], mode=BUILD, duration=0:00:00.139, duration_ms=139, data={name=MADC, configuration=Debug, clean_build=false}
+timestamp=[2026-10-02 19:09:11], mode=BUILD, duration=0:00:06.338, duration_ms=6338, data={name=MADC_system, configuration=Debug, clean_build=false}
+timestamp=[2026-10-02 19:10:22], mode=BUILD, duration=0:00:00.223, duration_ms=223, data={name=MADC, configuration=Debug, clean_build=false}
+timestamp=[2026-10-02 19:10:28], mode=BUILD, duration=0:00:06.239, duration_ms=6239, data={name=MADC_system, configuration=Debug, clean_build=false}
+timestamp=[2026-10-02 19:15:27], mode=BUILD, duration=0:00:00.221, duration_ms=221, data={name=MADC, configuration=Debug, clean_build=false}
+timestamp=[2026-10-02 19:15:33], mode=BUILD, duration=0:00:06.233, duration_ms=6233, data={name=MADC_system, configuration=Debug, clean_build=false}
+timestamp=[2026-10-02 19:16:24], mode=BUILD, duration=0:00:00.121, duration_ms=121, data={name=MADC, configuration=Debug, clean_build=false}
+timestamp=[2026-10-02 19:16:31], mode=BUILD, duration=0:00:06.236, duration_ms=6236, data={name=MADC_system, configuration=Debug, clean_build=false}
+timestamp=[2026-10-02 19:32:07], mode=BUILD, duration=0:00:00.224, duration_ms=224, data={name=MADC, configuration=Debug, clean_build=false}
+timestamp=[2026-10-02 19:32:13], mode=BUILD, duration=0:00:06.180, duration_ms=6180, data={name=MADC_system, configuration=Debug, clean_build=false}
+timestamp=[2026-10-02 19:32:39], mode=BUILD, duration=0:00:00.173, duration_ms=173, data={name=MADC, configuration=Debug, clean_build=false}
+timestamp=[2026-10-02 19:32:45], mode=BUILD, duration=0:00:00.220, duration_ms=220, data={name=MADC, configuration=Debug, clean_build=false}
+timestamp=[2026-10-02 19:32:51], mode=BUILD, duration=0:00:06.230, duration_ms=6230, data={name=MADC_system, configuration=Debug, clean_build=false}
+timestamp=[2026-10-02 19:35:08], mode=BUILD, duration=0:00:00.172, duration_ms=172, data={name=MADC, configuration=Debug, clean_build=false}
+timestamp=[2026-10-02 19:35:17], mode=BUILD, duration=0:00:00.222, duration_ms=222, data={name=MADC, configuration=Debug, clean_build=false}
+timestamp=[2026-10-02 19:35:24], mode=BUILD, duration=0:00:06.233, duration_ms=6233, data={name=MADC_system, configuration=Debug, clean_build=false}
+timestamp=[2026-10-02 19:38:45], mode=BUILD, duration=0:00:00.222, duration_ms=222, data={name=MADC, configuration=Debug, clean_build=false}
+timestamp=[2026-10-02 19:38:51], mode=BUILD, duration=0:00:06.232, duration_ms=6232, data={name=MADC_system, configuration=Debug, clean_build=false}
+timestamp=[2026-10-02 19:41:15], mode=BUILD, duration=0:00:00.223, duration_ms=223, data={name=MADC, configuration=Debug, clean_build=false}
+timestamp=[2026-10-02 19:41:21], mode=BUILD, duration=0:00:06.181, duration_ms=6181, data={name=MADC_system, configuration=Debug, clean_build=false}
+timestamp=[2026-10-02 19:45:06], mode=BUILD, duration=0:00:00.271, duration_ms=271, data={name=MADC, configuration=Debug, clean_build=false}
+timestamp=[2026-10-02 19:45:13], mode=BUILD, duration=0:00:06.182, duration_ms=6182, data={name=MADC_system, configuration=Debug, clean_build=false}
+timestamp=[2026-10-02 20:11:55], mode=PLATFORM_GENERATION, duration=0:00:07.017, duration_ms=7017, data={name=MADC_ARTY_Z7_wrapper}
+timestamp=[2026-10-02 20:12:06], mode=BUILD, duration=0:00:00.275, duration_ms=275, data={name=MADC, configuration=Debug, clean_build=false}
+timestamp=[2026-10-02 20:12:18], mode=BUILD, duration=0:00:06.336, duration_ms=6336, data={name=MADC_system, configuration=Debug, clean_build=false}
+timestamp=[2026-10-02 22:09:10], mode=PLATFORM_GENERATION, duration=0:00:07.063, duration_ms=7063, data={name=MADC_ARTY_Z7_wrapper}
+timestamp=[2026-10-02 22:09:31], mode=BUILD, duration=0:00:00.267, duration_ms=267, data={name=MADC, configuration=Debug, clean_build=false}
+timestamp=[2026-10-02 22:09:42], mode=BUILD, duration=0:00:06.174, duration_ms=6174, data={name=MADC_system, configuration=Debug, clean_build=false}
+timestamp=[2026-10-02 22:13:44], mode=BUILD, duration=0:00:00.237, duration_ms=237, data={name=MADC, configuration=Debug, clean_build=false}
+timestamp=[2026-10-02 22:13:51], mode=BUILD, duration=0:00:06.180, duration_ms=6180, data={name=MADC_system, configuration=Debug, clean_build=false}
+timestamp=[2026-10-02 22:14:00], mode=BUILD, duration=0:00:00.366, duration_ms=366, data={name=MADC, configuration=Debug, clean_build=false}
+timestamp=[2026-10-02 22:14:06], mode=BUILD, duration=0:00:06.178, duration_ms=6178, data={name=MADC_system, configuration=Debug, clean_build=false}
+timestamp=[2026-10-02 22:15:01], mode=BUILD, duration=0:00:00.223, duration_ms=223, data={name=MADC, configuration=Debug, clean_build=false}
+timestamp=[2026-10-02 22:15:07], mode=BUILD, duration=0:00:06.163, duration_ms=6163, data={name=MADC_system, configuration=Debug, clean_build=false}
+timestamp=[2026-10-02 22:16:12], mode=BUILD, duration=0:00:00.228, duration_ms=228, data={name=MADC, configuration=Debug, clean_build=false}
+timestamp=[2026-10-02 22:16:18], mode=BUILD, duration=0:00:06.183, duration_ms=6183, data={name=MADC_system, configuration=Debug, clean_build=false}
+timestamp=[2026-10-02 22:17:26], mode=BUILD, duration=0:00:00.237, duration_ms=237, data={name=MADC, configuration=Debug, clean_build=false}
+timestamp=[2026-10-02 22:17:33], mode=BUILD, duration=0:00:06.179, duration_ms=6179, data={name=MADC_system, configuration=Debug, clean_build=false}
+timestamp=[2026-10-02 22:20:05], mode=BUILD, duration=0:00:00.245, duration_ms=245, data={name=MADC, configuration=Debug, clean_build=false}
+timestamp=[2026-10-02 22:20:12], mode=BUILD, duration=0:00:06.280, duration_ms=6280, data={name=MADC_system, configuration=Debug, clean_build=false}
+timestamp=[2026-10-02 22:21:42], mode=BUILD, duration=0:00:00.373, duration_ms=373, data={name=MADC, configuration=Debug, clean_build=false}
+timestamp=[2026-10-02 22:21:49], mode=BUILD, duration=0:00:06.242, duration_ms=6242, data={name=MADC_system, configuration=Debug, clean_build=false}
+timestamp=[2026-10-02 22:23:07], mode=BUILD, duration=0:00:00.223, duration_ms=223, data={name=MADC, configuration=Debug, clean_build=false}
+timestamp=[2026-10-02 22:23:14], mode=BUILD, duration=0:00:06.237, duration_ms=6237, data={name=MADC_system, configuration=Debug, clean_build=false}
+timestamp=[2026-10-02 22:25:01], mode=BUILD, duration=0:00:00.223, duration_ms=223, data={name=MADC, configuration=Debug, clean_build=false}
+timestamp=[2026-10-02 22:25:07], mode=BUILD, duration=0:00:06.241, duration_ms=6241, data={name=MADC_system, configuration=Debug, clean_build=false}
+timestamp=[2026-10-02 22:25:12], mode=BUILD, duration=0:00:00.295, duration_ms=295, data={name=MADC, configuration=Debug, clean_build=false}
+timestamp=[2026-10-02 22:25:19], mode=BUILD, duration=0:00:06.234, duration_ms=6234, data={name=MADC_system, configuration=Debug, clean_build=false}
+timestamp=[2026-10-02 22:26:17], mode=BUILD, duration=0:00:00.222, duration_ms=222, data={name=MADC, configuration=Debug, clean_build=false}
+timestamp=[2026-10-02 22:26:24], mode=BUILD, duration=0:00:06.243, duration_ms=6243, data={name=MADC_system, configuration=Debug, clean_build=false}
+timestamp=[2026-10-02 22:29:54], mode=BUILD, duration=0:00:00.279, duration_ms=279, data={name=MADC, configuration=Debug, clean_build=false}
+timestamp=[2026-10-02 22:30:00], mode=BUILD, duration=0:00:06.232, duration_ms=6232, data={name=MADC_system, configuration=Debug, clean_build=false}
+timestamp=[2026-10-08 18:58:40], mode=WORKBENCH_START, duration=0:00:06.544, duration_ms=6544, data={}
+timestamp=[2026-10-08 18:58:40], mode=WORKBENCH_UI_INIT, duration=0:00:00.636, duration_ms=636, data={editors_count=12, platform_editors_count=8, projects_count=4, platform_projects_count=1, active_platform_editor=false, projects=MADC,MADC_ARTY_Z7_wrapper,MADC_system,RemoteSystemsTempFiles}
+timestamp=[2026-10-08 18:58:40], mode=PLATFORM_REPOSITORY_INIT, duration=0:00:00.736, duration_ms=736, data={}
+timestamp=[2026-10-08 18:58:56], mode=BUILD, duration=0:00:00.368, duration_ms=368, data={name=MADC, configuration=Debug, clean_build=false}
+timestamp=[2026-10-08 18:59:04], mode=BUILD, duration=0:00:07.086, duration_ms=7086, data={name=MADC_system, configuration=Debug, clean_build=false}
+timestamp=[2026-10-08 20:51:59], mode=BUILD, duration=0:00:00.221, duration_ms=221, data={name=MADC, configuration=Debug, clean_build=false}
+timestamp=[2026-10-08 20:52:06], mode=BUILD, duration=0:00:06.379, duration_ms=6379, data={name=MADC_system, configuration=Debug, clean_build=false}
+timestamp=[2026-10-08 20:53:02], mode=BUILD, duration=0:00:00.218, duration_ms=218, data={name=MADC, configuration=Debug, clean_build=false}
+timestamp=[2026-10-08 20:53:08], mode=BUILD, duration=0:00:06.280, duration_ms=6280, data={name=MADC_system, configuration=Debug, clean_build=false}
+timestamp=[2026-10-08 20:56:58], mode=BUILD, duration=0:00:00.217, duration_ms=217, data={name=MADC, configuration=Debug, clean_build=false}
+timestamp=[2026-10-08 20:57:05], mode=BUILD, duration=0:00:06.230, duration_ms=6230, data={name=MADC_system, configuration=Debug, clean_build=false}
+timestamp=[2026-10-08 20:57:33], mode=BUILD, duration=0:00:00.218, duration_ms=218, data={name=MADC, configuration=Debug, clean_build=false}
+timestamp=[2026-10-08 20:57:39], mode=BUILD, duration=0:00:06.179, duration_ms=6179, data={name=MADC_system, configuration=Debug, clean_build=false}
+timestamp=[2026-10-08 20:58:07], mode=BUILD, duration=0:00:00.218, duration_ms=218, data={name=MADC, configuration=Debug, clean_build=false}
+timestamp=[2026-10-08 20:58:13], mode=BUILD, duration=0:00:06.174, duration_ms=6174, data={name=MADC_system, configuration=Debug, clean_build=false}
+timestamp=[2026-10-08 21:30:19], mode=PLATFORM_GENERATION, duration=0:00:07.414, duration_ms=7414, data={name=MADC_ARTY_Z7_wrapper}
+timestamp=[2026-10-08 21:30:35], mode=BUILD, duration=0:00:00.264, duration_ms=264, data={name=MADC, configuration=Debug, clean_build=false}
+timestamp=[2026-10-08 21:43:29], mode=PLATFORM_GENERATION, duration=0:00:07.299, duration_ms=7299, data={name=MADC_ARTY_Z7_wrapper}
+timestamp=[2026-10-08 21:43:43], mode=BUILD, duration=0:00:00.268, duration_ms=268, data={name=MADC, configuration=Debug, clean_build=false}
+timestamp=[2026-10-08 21:43:55], mode=BUILD, duration=0:00:06.424, duration_ms=6424, data={name=MADC_system, configuration=Debug, clean_build=false}
+timestamp=[2026-10-08 21:50:06], mode=PLATFORM_GENERATION, duration=0:00:07.407, duration_ms=7407, data={name=MADC_ARTY_Z7_wrapper}
+timestamp=[2026-10-08 21:50:17], mode=BUILD, duration=0:00:00.266, duration_ms=266, data={name=MADC, configuration=Debug, clean_build=false}
+timestamp=[2026-10-08 21:50:29], mode=BUILD, duration=0:00:06.226, duration_ms=6226, data={name=MADC_system, configuration=Debug, clean_build=false}
+timestamp=[2026-10-08 21:56:51], mode=PLATFORM_GENERATION, duration=0:00:07.158, duration_ms=7158, data={name=MADC_ARTY_Z7_wrapper}
+timestamp=[2026-10-08 21:56:58], mode=BUILD, duration=0:00:00.266, duration_ms=266, data={name=MADC, configuration=Debug, clean_build=false}
+timestamp=[2026-10-08 21:57:11], mode=BUILD, duration=0:00:06.225, duration_ms=6225, data={name=MADC_system, configuration=Debug, clean_build=false}
+timestamp=[2026-10-08 22:02:53], mode=PLATFORM_GENERATION, duration=0:00:07.177, duration_ms=7177, data={name=MADC_ARTY_Z7_wrapper}
+timestamp=[2026-10-08 22:03:03], mode=BUILD, duration=0:00:00.268, duration_ms=268, data={name=MADC, configuration=Debug, clean_build=false}
+timestamp=[2026-10-08 22:03:16], mode=BUILD, duration=0:00:06.227, duration_ms=6227, data={name=MADC_system, configuration=Debug, clean_build=false}
+timestamp=[2026-10-14 20:07:48], mode=WORKBENCH_START, duration=0:00:06.914, duration_ms=6914, data={}
+timestamp=[2026-10-14 20:07:49], mode=WORKBENCH_UI_INIT, duration=0:00:00.789, duration_ms=789, data={editors_count=12, platform_editors_count=8, projects_count=4, platform_projects_count=1, active_platform_editor=false, projects=MADC,MADC_ARTY_Z7_wrapper,MADC_system,RemoteSystemsTempFiles}
+timestamp=[2026-10-14 20:07:49], mode=PLATFORM_REPOSITORY_INIT, duration=0:00:00.681, duration_ms=681, data={}
+timestamp=[2026-10-14 20:10:22], mode=PLATFORM_GENERATION, duration=0:00:07.491, duration_ms=7491, data={name=MADC_ARTY_Z7_wrapper}
+timestamp=[2026-10-14 20:10:41], mode=BUILD, duration=0:00:00.279, duration_ms=279, data={name=MADC, configuration=Debug, clean_build=false}
+timestamp=[2026-10-14 20:10:53], mode=BUILD, duration=0:00:06.297, duration_ms=6297, data={name=MADC_system, configuration=Debug, clean_build=false}
+timestamp=[2026-10-14 20:16:57], mode=PLATFORM_GENERATION, duration=0:00:07.206, duration_ms=7206, data={name=MADC_ARTY_Z7_wrapper}
+timestamp=[2026-10-14 20:17:08], mode=BUILD, duration=0:00:00.268, duration_ms=268, data={name=MADC, configuration=Debug, clean_build=false}
+timestamp=[2026-10-14 20:17:20], mode=BUILD, duration=0:00:06.228, duration_ms=6228, data={name=MADC_system, configuration=Debug, clean_build=false}
+timestamp=[2026-10-14 20:24:07], mode=PLATFORM_GENERATION, duration=0:00:07.199, duration_ms=7199, data={name=MADC_ARTY_Z7_wrapper}
+timestamp=[2026-10-14 20:24:29], mode=BUILD, duration=0:00:00.268, duration_ms=268, data={name=MADC, configuration=Debug, clean_build=false}
+timestamp=[2026-10-14 20:24:42], mode=BUILD, duration=0:00:06.235, duration_ms=6235, data={name=MADC_system, configuration=Debug, clean_build=false}
+timestamp=[2026-10-14 20:25:25], mode=BUILD, duration=0:00:00.219, duration_ms=219, data={name=MADC, configuration=Debug, clean_build=false}
+timestamp=[2026-10-14 20:25:32], mode=BUILD, duration=0:00:06.229, duration_ms=6229, data={name=MADC_system, configuration=Debug, clean_build=false}
+timestamp=[2026-10-14 20:26:44], mode=BUILD, duration=0:00:00.222, duration_ms=222, data={name=MADC, configuration=Debug, clean_build=false}
+timestamp=[2026-10-14 20:26:51], mode=BUILD, duration=0:00:06.279, duration_ms=6279, data={name=MADC_system, configuration=Debug, clean_build=false}
+timestamp=[2026-10-14 20:30:27], mode=BUILD, duration=0:00:00.222, duration_ms=222, data={name=MADC, configuration=Debug, clean_build=false}
+timestamp=[2026-10-14 20:30:33], mode=BUILD, duration=0:00:06.281, duration_ms=6281, data={name=MADC_system, configuration=Debug, clean_build=false}
+timestamp=[2026-10-14 20:41:05], mode=PLATFORM_GENERATION, duration=0:00:07.114, duration_ms=7114, data={name=MADC_ARTY_Z7_wrapper}
+timestamp=[2026-10-14 20:41:45], mode=BUILD, duration=0:00:00.269, duration_ms=269, data={name=MADC, configuration=Debug, clean_build=false}
+timestamp=[2026-10-14 20:41:57], mode=BUILD, duration=0:00:06.280, duration_ms=6280, data={name=MADC_system, configuration=Debug, clean_build=false}
+timestamp=[2026-10-14 20:42:52], mode=BUILD, duration=0:00:00.221, duration_ms=221, data={name=MADC, configuration=Debug, clean_build=false}
+timestamp=[2026-10-14 20:42:58], mode=BUILD, duration=0:00:06.277, duration_ms=6277, data={name=MADC_system, configuration=Debug, clean_build=false}
+timestamp=[2026-10-14 20:51:30], mode=PLATFORM_GENERATION, duration=0:00:07.053, duration_ms=7053, data={name=MADC_ARTY_Z7_wrapper}
+timestamp=[2026-10-14 20:51:37], mode=BUILD, duration=0:00:00.270, duration_ms=270, data={name=MADC, configuration=Debug, clean_build=false}
+timestamp=[2026-10-14 20:51:49], mode=BUILD, duration=0:00:06.280, duration_ms=6280, data={name=MADC_system, configuration=Debug, clean_build=false}
+timestamp=[2026-10-14 20:53:31], mode=BUILD, duration=0:00:00.221, duration_ms=221, data={name=MADC, configuration=Debug, clean_build=false}
+timestamp=[2026-10-14 20:53:38], mode=BUILD, duration=0:00:06.280, duration_ms=6280, data={name=MADC_system, configuration=Debug, clean_build=false}
+timestamp=[2026-10-14 20:59:29], mode=PLATFORM_GENERATION, duration=0:00:07.013, duration_ms=7013, data={name=MADC_ARTY_Z7_wrapper}
+timestamp=[2026-10-14 20:59:41], mode=BUILD, duration=0:00:00.272, duration_ms=272, data={name=MADC, configuration=Debug, clean_build=false}
+timestamp=[2026-10-14 20:59:53], mode=BUILD, duration=0:00:06.232, duration_ms=6232, data={name=MADC_system, configuration=Debug, clean_build=false}
+timestamp=[2026-10-14 21:00:25], mode=BUILD, duration=0:00:00.220, duration_ms=220, data={name=MADC, configuration=Debug, clean_build=false}
+timestamp=[2026-10-14 21:00:31], mode=BUILD, duration=0:00:06.231, duration_ms=6231, data={name=MADC_system, configuration=Debug, clean_build=false}
+timestamp=[2026-10-14 21:01:56], mode=BUILD, duration=0:00:00.171, duration_ms=171, data={name=MADC, configuration=Debug, clean_build=false}
+timestamp=[2026-10-14 21:02:04], mode=BUILD, duration=0:00:00.221, duration_ms=221, data={name=MADC, configuration=Debug, clean_build=false}
+timestamp=[2026-10-14 21:02:10], mode=BUILD, duration=0:00:06.231, duration_ms=6231, data={name=MADC_system, configuration=Debug, clean_build=false}
+timestamp=[2026-10-14 21:04:52], mode=BUILD, duration=0:00:00.220, duration_ms=220, data={name=MADC, configuration=Debug, clean_build=false}
+timestamp=[2026-10-14 21:04:58], mode=BUILD, duration=0:00:06.229, duration_ms=6229, data={name=MADC_system, configuration=Debug, clean_build=false}
+timestamp=[2026-10-14 21:13:14], mode=PLATFORM_GENERATION, duration=0:00:07.181, duration_ms=7181, data={name=MADC_ARTY_Z7_wrapper}
+timestamp=[2026-10-14 21:13:21], mode=BUILD, duration=0:00:00.272, duration_ms=272, data={name=MADC, configuration=Debug, clean_build=false}
+timestamp=[2026-10-14 21:13:35], mode=BUILD, duration=0:00:06.231, duration_ms=6231, data={name=MADC_system, configuration=Debug, clean_build=false}
+timestamp=[2026-10-14 21:13:45], mode=BUILD, duration=0:00:00.120, duration_ms=120, data={name=MADC, configuration=Debug, clean_build=false}
+timestamp=[2026-10-14 21:13:51], mode=BUILD, duration=0:00:06.282, duration_ms=6282, data={name=MADC_system, configuration=Debug, clean_build=false}
+timestamp=[2026-10-14 21:14:50], mode=BUILD, duration=0:00:00.224, duration_ms=224, data={name=MADC, configuration=Debug, clean_build=false}
+timestamp=[2026-10-14 21:14:56], mode=BUILD, duration=0:00:06.380, duration_ms=6380, data={name=MADC_system, configuration=Debug, clean_build=false}
+timestamp=[2026-10-14 21:16:37], mode=BUILD, duration=0:00:00.221, duration_ms=221, data={name=MADC, configuration=Debug, clean_build=false}
+timestamp=[2026-10-14 21:16:43], mode=BUILD, duration=0:00:06.333, duration_ms=6333, data={name=MADC_system, configuration=Debug, clean_build=false}
+timestamp=[2026-10-14 21:18:12], mode=BUILD, duration=0:00:00.220, duration_ms=220, data={name=MADC, configuration=Debug, clean_build=false}
+timestamp=[2026-10-14 21:18:19], mode=BUILD, duration=0:00:06.431, duration_ms=6431, data={name=MADC_system, configuration=Debug, clean_build=false}
+timestamp=[2026-10-14 21:20:45], mode=BUILD, duration=0:00:00.271, duration_ms=271, data={name=MADC, configuration=Debug, clean_build=false}
+timestamp=[2026-10-14 21:20:51], mode=BUILD, duration=0:00:06.230, duration_ms=6230, data={name=MADC_system, configuration=Debug, clean_build=false}
+timestamp=[2026-10-14 21:21:13], mode=BUILD, duration=0:00:00.220, duration_ms=220, data={name=MADC, configuration=Debug, clean_build=false}
+timestamp=[2026-10-14 21:21:19], mode=BUILD, duration=0:00:06.231, duration_ms=6231, data={name=MADC_system, configuration=Debug, clean_build=false}
+timestamp=[2026-10-14 21:27:26], mode=PLATFORM_GENERATION, duration=0:00:07.179, duration_ms=7179, data={name=MADC_ARTY_Z7_wrapper}
+timestamp=[2026-10-14 21:27:52], mode=BUILD, duration=0:00:00.272, duration_ms=272, data={name=MADC, configuration=Debug, clean_build=false}
+timestamp=[2026-10-14 21:28:04], mode=BUILD, duration=0:00:06.329, duration_ms=6329, data={name=MADC_system, configuration=Debug, clean_build=false}
+timestamp=[2026-10-14 21:28:46], mode=BUILD, duration=0:00:00.222, duration_ms=222, data={name=MADC, configuration=Debug, clean_build=false}
+timestamp=[2026-10-14 21:28:53], mode=BUILD, duration=0:00:06.228, duration_ms=6228, data={name=MADC_system, configuration=Debug, clean_build=false}
+timestamp=[2026-10-14 21:37:00], mode=PLATFORM_GENERATION, duration=0:00:07.163, duration_ms=7163, data={name=MADC_ARTY_Z7_wrapper}
+timestamp=[2026-10-14 21:37:12], mode=BUILD, duration=0:00:00.271, duration_ms=271, data={name=MADC, configuration=Debug, clean_build=false}
+timestamp=[2026-10-14 21:37:24], mode=BUILD, duration=0:00:06.282, duration_ms=6282, data={name=MADC_system, configuration=Debug, clean_build=false}
+timestamp=[2026-10-14 21:38:00], mode=BUILD, duration=0:00:00.222, duration_ms=222, data={name=MADC, configuration=Debug, clean_build=false}
+timestamp=[2026-10-14 21:38:06], mode=BUILD, duration=0:00:06.329, duration_ms=6329, data={name=MADC_system, configuration=Debug, clean_build=false}
+timestamp=[2026-10-14 21:40:50], mode=BUILD, duration=0:00:00.220, duration_ms=220, data={name=MADC, configuration=Debug, clean_build=false}
+timestamp=[2026-10-14 21:40:57], mode=BUILD, duration=0:00:06.428, duration_ms=6428, data={name=MADC_system, configuration=Debug, clean_build=false}
